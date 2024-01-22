@@ -1,6 +1,14 @@
 {{ customer.email }}
 <p>{{ customer.name }}</p>
 
+{%  paginate customer.orders by 10 %}
+  {%  for order in customer.orders %}  
+    {{ order.item_count }}
+    {{ order.fulfillment_status }}
+  {% endfor %} 
+
+{% endpaginate %} 
+
 {% if customer.default_address %}
   <p>{{ customer.default_address.address1 }}</p>
 
