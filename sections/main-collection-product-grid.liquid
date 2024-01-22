@@ -1,5 +1,5 @@
 <h1>{{ collection.title }} - {{ collection.all_products_count }}</h1>
-
+<div class="description">{{ collection.description }}</div>
 {%  paginate  collection.products by 2 %} 
   {% for product in collection.products %}
     {{ product.featured_image |  img_url: 'medium' | img_tag }}
