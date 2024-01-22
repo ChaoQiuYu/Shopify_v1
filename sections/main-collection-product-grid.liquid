@@ -3,7 +3,7 @@
 {%  paginate  collection.products by 2 %} 
   {% for product in collection.products %}
     {{ product.title }}
-    {{ product.featured_image |  image_url: 'medium' | image_tag }}<br>
+    {{ product.featured_image |  img_url: 'medium' | img_tag }}<br>
   {% endfor %}
 {% endpaginate %} 
 {% schema %}
