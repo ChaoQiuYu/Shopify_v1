@@ -1,9 +1,9 @@
-{{ collection.all_products_count }}
+<h1>{{ collection.title }} - {{ collection.all_products_count }}</h1>
 
 {%  paginate  collection.products by 2 %} 
   {% for product in collection.products %}
     {{ product.title }}
-    {{ product.image |  image_url: 'medium' }}<br>
+    {{ product.featured_image |  image_url: 'medium' }}<br>
   {% endfor %}
 {% endpaginate %} 
 {% schema %}
