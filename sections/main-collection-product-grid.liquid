@@ -1,4 +1,11 @@
 {{ collection.all_products_count }}
+
+{%  paginate  collection.products by 2 %} 
+  {% for product in collection.products %}
+    {{ product.title }}
+    {{ product.image }}
+  {% endfor %}
+{% endpaginate %} 
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
