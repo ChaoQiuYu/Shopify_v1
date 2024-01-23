@@ -5,7 +5,7 @@
   {{ image | img_tag }}
 {% endfor %}
 
-{% form 'product',product ,id:custome_id%}
+{% form 'product',product ,id:"custom_id"%}
   <!-- form content -->
   <select name="id">
   {% for variant in product.variants %}
@@ -23,7 +23,7 @@
 {% endform %}
 
 {%  javascript  %}  
-  let addToCartForm = document.querySelector('#custome_id');
+  let addToCartForm = document.querySelector('#custom_id');
   addToCartForm.addEventListener("submit",addToCartFunction)
 
   function addToCartFunction(e) {
