@@ -1,4 +1,5 @@
-{{ product.title }}
+<h1>{{ product.title }}</h1>
+<p>{{product.vendor}}</p>
 
 {%  for image in product.images %}  
   {{ image | img_tag }}
