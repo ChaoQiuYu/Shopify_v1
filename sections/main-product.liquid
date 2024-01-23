@@ -24,19 +24,23 @@
 
 {%  javascript  %}  
   let addToCartForm = document.querySelector('#custome_id"]');
-  addToCartForm.addEventListener("submit",myfunction)
-  let formData = new FormData(addToCartForm);
+  addToCartForm.addEventListener("submit",addToCartFunction)
 
-  fetch(window.Shopify.routes.root + 'cart/add.js', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => {
-    return response.json();
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+  function addToCartFunction() {
+    let formData = new FormData(addToCartForm);
+
+fetch(window.Shopify.routes.root + 'cart/add.js', {
+  method: 'POST',
+  body: formData
+})
+.then(response => {
+  return response.json();
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+  }
+ 
 
 {% endjavascript %} 
 
