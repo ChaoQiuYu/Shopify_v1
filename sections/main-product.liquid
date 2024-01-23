@@ -1,5 +1,8 @@
 {{ product.title }}
 
+{%  for image in product.images %}  
+  {{ image | img_tag }}
+{% endfor %}
 {% schema %}
 {
   "name": "t:sections.main-product.name",
