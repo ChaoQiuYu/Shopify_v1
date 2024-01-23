@@ -5,7 +5,7 @@
   {{ image | img_tag }}
 {% endfor %}
 
-{% form 'product',product %}
+{% form 'product',product ,id:custome_id%}
   <!-- form content -->
   <select name="id">
   {% for variant in product.variants %}
@@ -23,19 +23,19 @@
 {% endform %}
 
 {%  javascript  %}  
-  let addToCartForm = document.querySelector('form[action$="/cart/add"]');
-let formData = new FormData(addToCartForm);
+  let addToCartForm = document.querySelector('#custome_id"]');
+  let formData = new FormData(addToCartForm);
 
-fetch(window.Shopify.routes.root + 'cart/add.js', {
-  method: 'POST',
-  body: formData
-})
-.then(response => {
-  return response.json();
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+  fetch(window.Shopify.routes.root + 'cart/add.js', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    return response.json();
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 
 {% endjavascript %} 
 
