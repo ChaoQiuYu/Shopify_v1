@@ -2,6 +2,8 @@
 
 <head>
   {{ content_for_header }}
+  {{ 'custom.css'|  asset_url |  stylesheet_tag }}
+
 </head>
 
 <body class="demo-{{ template.name }}">
