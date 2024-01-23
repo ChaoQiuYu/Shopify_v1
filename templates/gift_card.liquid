@@ -8,7 +8,8 @@
 </head>
 
 <body class="demo-{{ template.name }}">
-
+  <img src="{{ 'gift-card/card.svg' |  shopify_asset_url }}" alt="">
+  <div id="qr-code"></div>
 <script>
   new QRCode(document.getElementById('qr-code'), {
     text: '{{ gift_card.qr_identifier }}',
