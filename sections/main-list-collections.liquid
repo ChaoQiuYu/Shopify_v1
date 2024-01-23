@@ -1,5 +1,6 @@
 {%  for collection in collections %}  
   <h1>{{- collection.title | link_to: collection.url }}</h1>
+  {{ collection.image | img_tag }}
 {% endfor %} 
 {% schema %}
 {
