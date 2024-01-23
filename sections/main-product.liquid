@@ -5,7 +5,7 @@
   {{ image | img_tag }}
 {% endfor %}
 
-{% form 'product' %}
+{% form 'product',product %}
   <!-- form content -->
   <select name="id">
   {% for variant in product.variants %}
