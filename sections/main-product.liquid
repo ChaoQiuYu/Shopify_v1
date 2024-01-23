@@ -24,6 +24,7 @@
 
 {%  javascript  %}  
   let addToCartForm = document.querySelector('#custome_id"]');
+  addToCartForm.addEventListener("submit",myfunction)
   let formData = new FormData(addToCartForm);
 
   fetch(window.Shopify.routes.root + 'cart/add.js', {
