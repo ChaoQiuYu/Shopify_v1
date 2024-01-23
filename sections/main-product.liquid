@@ -1,6 +1,6 @@
 <h1>{{ product.title }}</h1>
 <p>{{product.vendor}}</p>
-
+<p>{{ product.price |  money_with_currency }}</p>
 {%  for image in product.images %}  
   {{ image | img_tag }}
 {% endfor %}
