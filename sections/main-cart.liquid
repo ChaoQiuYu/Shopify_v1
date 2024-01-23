@@ -23,7 +23,6 @@
             {{ item.price }}
         {% endfor %}
     </div>
-    <input type="text" name="Customer name">
     <input type="submit" name="checkout" value="Checkout">
     {{ cart.items_subtotal_price |  money_with_currency}}
 </form>
