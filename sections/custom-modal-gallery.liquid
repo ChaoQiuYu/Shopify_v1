@@ -1,61 +1,68 @@
-{{ 'modal-gallery.css' |  asset_url |  stylesheet_tag }}
+{{ 'modal-gallery.css' | asset_url | stylesheet_tag }}
 
 <div class="row">
-    {% for block in section.blocks%}
-        <div class="column">
-            <img src="{{block.settings.modal_image | img_url:"grande"}}" style="width:100%" onclick="openModal();currentSlid({{ forloop.index }})" class="hover-shadow cursor">
-        </div>
-    {%endfor%}
+  {% for block in section.blocks %}
+    <div class="column">
+      <img
+        src="{{block.settings.modal_image | img_url:"grande"}}"
+        style="width:100%"
+        onclick="openModal();currentSlid({{ forloop.index }})"
+        class="hover-shadow cursor">
+    </div>
+  {% endfor %}
 </div>
 
 <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 
-        <div class="mySlides">
-            <div class="numbertext">1 / 4</div>
-            <img src="img_nature_wide.jpg" style="width:100%">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
-
-        {%  for block in  section.blocks%}  
-            <div class="column">
-                <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)"
-                    alt="Nature and sunrise">
-            </div>
-        {% endfor %}
-
-
-        
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img_nature_wide.jpg" style="width:100%">
     </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    {% for block in section.blocks %}
+      <div class="column">
+        <img
+          class="demo cursor"
+          src="img_nature_wide.jpg"
+          style="width:100%"
+          onclick="currentSlide(1)"
+          alt="{{ block.settings.title }}">
+      </div>
+    {% endfor %}
+
+
+  </div>
 </div>
 
 <script>
     function openModal() {
         document.getElementById("myModal").style.display = "block";
     }
-
+  
     function closeModal() {
         document.getElementById("myModal").style.display = "none";
     }
-
+  
     var slideIndex = 1;
     showSlides(slideIndex);
-
+  
     function plusSlides(n) {
         showSlides(slideIndex += n);
     }
-
+  
     function currentSlide(n) {
         showSlides(slideIndex = n);
     }
-
+  
     function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
@@ -76,50 +83,48 @@
 </script>
 
 {% schema %}
-    {
-      "name": "Custom Gallery Modal",
-      "class": "custom-modal-modal",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text-section",
-          "default": "hello there",
-          "label": "add text here"
-        }
-      ],
-      "blocks": [
-        {
-          "type": "text",
-          "name": "cutom text",
-          "settings": [
-            {
-              "type": "text",
-              "id": "title",
-              "default": "hello there",
-              "label": "add text here"
-            },{
-                "type": "image_picker",
-                "id": "modal_image",
-                "label": "select image"
-            }
-          ]
-        }
-      ],
-      "presets": [
-        {
-          "name": "Custom Gallery Modal",
-          "blocks": [
-              {
-                  "type":"text"
-              },
-              {
-                  "type":"text"
-              },
-              {
-                  "type":"text"
-              }
-          ]
-        }
-      ]
-    }
-  {% endschema %}
+  {
+    "name": "Custom Gallery Modal",
+    "class": "custom-modal-modal",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text-section",
+        "default": "hello there",
+        "label": "add text here"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "cutom text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "default": "hello there",
+            "label": "add text here"
+          }, {
+            "type": "image_picker",
+            "id": "modal_image",
+            "label": "select image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Gallery Modal",
+        "blocks": [
+          {
+            "type": "text"
+          }, {
+            "type": "text"
+          }, {
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
