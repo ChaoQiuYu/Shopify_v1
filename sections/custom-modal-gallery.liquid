@@ -3,7 +3,7 @@
 <div class="row">
     {% for block in section.blocks%}
         <div class="column">
-            <img src="{{block.settings.modal_image |  img_url:"grande"}}" style="width:100%" onclick="openModal();currentSlid(1)" class="hover-shadow cursor">
+            <img src="{{block.settings.modal_image | img_url:"grande"}}" style="width:100%" onclick="openModal();currentSlid({{ forloop.index }})" class="hover-shadow cursor">
         </div>
     {%endfor%}
 </div>
