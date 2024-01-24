@@ -1,4 +1,4 @@
-{{ section.settings['text-block'] }}
+{{ section.settings['text-section'] }}
 {% schema %}
   {
     "name": "Custom text section",
@@ -6,24 +6,24 @@
     "settings": [
       {
         "type": "text",
-        "id": "text-block",
+        "id": "text-section",
         "default": "hello there",
         "label": "add text here"
       }
     ],
     "blocks": [
-        {
+      {
+        "type": "text",
+        "name": "cutom text",
+        "settings": [
+          {
             "type": "text",
-            "name":"cutom text",
-            "settings": [
-                {
-                    "type": "text",
-        "id": "text-block",
-        "default": "hello there",
-        "label": "add text here"
-                }
-            ]
-        }
+            "id": "text-block",
+            "default": "hello there",
+            "label": "add text here"
+          }
+        ]
+      }
     ],
     "presets": [
       {
