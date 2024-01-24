@@ -7,6 +7,12 @@
   <input type="submit" value="Search">
 </form>
 
+{% for item in search.results %}
+  <!-- item details -->
+
+  {{ item.content | highlight: search.terms }}
+{% endfor %}
+
 {% schema %}
 {
   "name": "t:sections.main-search.name",
