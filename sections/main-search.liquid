@@ -10,6 +10,7 @@
 {% for item in search.results %}
   <!-- item details -->
   {{ item.title }}<br>
+  {{ item.feature_image |  img_tag }}
   {{ item.content | highlight: search.terms }}
 {% endfor %}
 
