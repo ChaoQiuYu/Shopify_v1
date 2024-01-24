@@ -1,19 +1,20 @@
+{{ section.settings['text-block'] }}
 {% schema %}
-{
+  {
     "name": "Custom text section",
-    "class":"custom-text",
+    "class": "custom-text",
     "settings": [
-        {
-            "type" : "text",
-            "id": "text-block",
-            "default":"hello there",
-            "label":"add text here"
-        }
-        ],
-        "presets": [
-            {
-                "name":"custom text section"
-            }
-        ]
-}
+      {
+        "type": "text",
+        "id": "text-block",
+        "default": "hello there",
+        "label": "add text here"
+      }
+    ],
+    "presets": [
+      {
+        "name": "custom text section"
+      }
+    ]
+  }
 {% endschema %}
