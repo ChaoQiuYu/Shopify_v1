@@ -3,6 +3,8 @@
 <head>
   {{ content_for_header }}
   {{ 'custom.css'|  asset_url |  stylesheet_tag }}
+
+{% render 'gp-head' %}
 </head>
 
 <body class="demo-{{ template.name }}">
@@ -14,7 +16,7 @@
   <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
     {{ content_for_layout }}
   </main>
-  {% comment %} {% sections 'footer-group' %} {% endcomment %}
+  
 </body>
 
 </html>
