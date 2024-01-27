@@ -2,7 +2,7 @@
 <div class="description">{{ collection.description }}this is description</div>
 {%  paginate  collection.products by 2 %} 
   {% for product in collection.products %}
-    {% comment %} {{ product.featured_image |  img_url: 'medium' | img_tag }} {% endcomment %}
+    {{ product.featured_image |  img_url: 'medium' | img_tag }}
     <p>{{ product.title }}</p>
     <br>
   {% endfor %}
