@@ -2790,7 +2790,7 @@ details[open] > .header__submenu {
   }
 
   .header--top-center .header__inline-menu {
-    justify-self: left;
+    justify-self: start;
   }
 
   .header--top-center .header__inline-menu > .list-menu--inline {
