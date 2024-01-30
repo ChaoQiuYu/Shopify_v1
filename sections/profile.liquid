@@ -1,6 +1,17 @@
 {% schema  %}  
     {
         "name":"Profile",
+        "settings": [
+            {
+                "id":"header",
+                "type": "text",
+                "label": "Profile setting"
+            },{
+                "type": "image_picker",
+                "id": "user_img",
+                "label": "User photo"
+            }
+        ],
         "presets": [
             {
                 "category":"Profile",
