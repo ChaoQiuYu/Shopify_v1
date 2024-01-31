@@ -157,12 +157,21 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "profile_yk44a6": {
+      "type": "profile",
+      "settings": {
+        "user_name": "json",
+        "user_img": "shopify:\/\/shop_images\/O1CN01seYtWO1W1vll2thBc__2217001552729-0-cib.jpg",
+        "user_bio": "<p>herer<\/p>"
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "bf25535a-4ab6-4b56-b476-a21cff4fb7f4",
-    "780c3219-a7d6-4e86-8dd8-2fd33e885d00"
+    "780c3219-a7d6-4e86-8dd8-2fd33e885d00",
+    "profile_yk44a6"
   ]
 }
