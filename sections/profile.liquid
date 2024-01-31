@@ -1,11 +1,15 @@
+<div>
+    <h3>{{ section.settings.user_name }}</h3>
+</div>
+
 {% schema  %}  
     {
         "name":"Profile",
         "settings": [
             {
-                "id":"header",
+                "id":"user_name",
                 "type": "text",
-                "label": "Profile setting"
+                "label": "User name"
             },{
                 "type": "image_picker",
                 "id": "user_img",
