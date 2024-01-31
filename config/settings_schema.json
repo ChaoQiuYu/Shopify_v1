@@ -13,6 +13,11 @@
       {
         "type": "header",
         "content": "Mini cart"
+      },
+      {
+        "type": "text",
+        "id": "text_data",
+        "label": "Test data"
       }
     ]
   },
