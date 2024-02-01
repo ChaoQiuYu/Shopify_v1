@@ -266,8 +266,7 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  {% render 'gp-head' %}
-</head>
+  </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -285,6 +284,8 @@
     </main>
 
     {% sections 'footer-group' %}
+
+    {{ 'app.js' |  asset_url |  script_tag }}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
