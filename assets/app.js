@@ -14915,14 +14915,36 @@ const stringifySymbol = (v, i = "") => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
-/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'lazysizes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'lazysizes/plugins/parent-fit/ls.parent-fit'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+// Lazy loading
 
+// import a plugin
+
+
+window.Vue = vue__WEBPACK_IMPORTED_MODULE_1__["default"];
+var axios = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'axios'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+window.axios = axios;
 var jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 window.jQuery = window.$ = jQuery;
 
 
-__webpack_require__(/*! ./product */ "./src/js/product.js");
+window.Noty = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'noty'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+// Vue custom filter
+__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './filters/money.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+// Vue Components
+
+__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/ProductForm.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/CartForm.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/MiniCart.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+// javascript
+__webpack_require__(/*! ./product.js */ "./src/js/product.js");
+__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './header.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 /***/ }),
 
