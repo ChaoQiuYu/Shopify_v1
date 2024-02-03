@@ -5,6 +5,7 @@
 {%  schema  %} 
     {
         "name":"Image Slider",
+        
         "settings": [
             {
                 "type": "header",
@@ -15,6 +16,25 @@
                 "id":"title",
                 "label":"Heading",
                 "default": "Slider title"
+            }
+        ],
+
+        "blocks": [
+            {
+                "type": "image",
+                "name":"Image",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "id":"title",
+                        "type": "text",
+                        "label": "Image title"
+                    }
+                ]
             }
         ],
 
