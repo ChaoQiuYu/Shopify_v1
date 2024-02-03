@@ -9,7 +9,7 @@
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 {% for block in section.blocks %}
-                  <li data-target="#carouselExampleCaptions" data-slide-to="{{forloop.index0}}"  class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to={{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
               {% endfor %}
             </ol>
             <div class="carousel-inner">
