@@ -14931,16 +14931,6 @@ var jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquer
 window.jQuery = window.$ = jQuery;
 
 
-window.Noty = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'noty'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-// Vue custom filter
-__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './filters/money.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-// Vue Components
-
-__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/ProductForm.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/CartForm.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/MiniCart.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 // javascript
 __webpack_require__(/*! ./product.js */ "./src/js/product.js");
