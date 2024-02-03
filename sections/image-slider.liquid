@@ -12,10 +12,9 @@
     <div class="carousel-inner">
         {%  for block in section.blocks %} 
             <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                <img src="{{ block.settings.image |  img_url: 'medium' }}" class="d-block w-100" alt="...">
+                <img src="{{ block.settings.image |  img_url: 'medium' }}" class="d-block w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h5>{{ block.settings.title }}</h5>
                 </div>
             </div>
         {% endfor %}
