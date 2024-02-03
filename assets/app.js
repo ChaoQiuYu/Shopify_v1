@@ -14926,7 +14926,6 @@ window.jQuery = window.$ = jQuery;
 
 // javascript
 __webpack_require__(/*! ./product.js */ "./src/js/product.js");
-__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './header.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 /***/ }),
 
