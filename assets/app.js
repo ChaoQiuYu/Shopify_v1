@@ -14935,24 +14935,10 @@ __webpack_require__(/*! ./product */ "./src/js/product.js");
 var slick = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
 $(".product-slider").slick({
   // normal options...
-  infinite: false,
-  // the magic
-  responsive: [{
-    breakpoint: 1024,
-    settings: {
-      slidesToShow: 3,
-      infinite: true
-    }
-  }, {
-    breakpoint: 600,
-    settings: {
-      slidesToShow: 2,
-      dots: true
-    }
-  }, {
-    breakpoint: 300,
-    settings: "unslick" // destroys slick
-  }]
+  infinite: true,
+  arrows: false,
+  slidesToShow: 1,
+  asNavFor: '.product-slider-nav'
 });
 
 /***/ }),
