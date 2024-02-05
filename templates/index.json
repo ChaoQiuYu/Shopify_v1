@@ -44,7 +44,6 @@
       "blocks": {
         "image_TRKMkt": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/O1CN01seYtWO1W1vll2thBc__2217001552729-0-cib.jpg",
             "title": "453453"
@@ -66,7 +65,7 @@
         "image_Ug33PB": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "image": "shopify:\/\/shop_images\/O1CN018VUm8X28c4L7RiOeK__2905037952-0-cib.jpg",
             "title": ""
           }
         }
@@ -79,6 +78,47 @@
       ],
       "custom_css": [
 
+      ],
+      "settings": {
+        "title": "54664564"
+      }
+    },
+    "image_slider_adGNQ8": {
+      "type": "image-slider",
+      "blocks": {
+        "image_DW4RVa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/O1CN01seYtWO1W1vll2thBc__2217001552729-0-cib.jpg",
+            "title": "453453"
+          }
+        },
+        "image_Pe8yXn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
+            "title": "67576"
+          }
+        },
+        "image_MHmPb9": {
+          "type": "image",
+          "settings": {
+            "title": ""
+          }
+        },
+        "image_YhmaQU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_DW4RVa",
+        "image_Pe8yXn",
+        "image_MHmPb9",
+        "image_YhmaQU"
       ],
       "settings": {
         "title": "54664564"
@@ -113,6 +153,7 @@
         "image_BzraAy",
         "image_4e9xKr"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -243,6 +284,7 @@
   "order": [
     "image_banner",
     "image_slider_7mrVqc",
+    "image_slider_adGNQ8",
     "image_slider_JcNJ4i",
     "featured_collection",
     "bf25535a-4ab6-4b56-b476-a21cff4fb7f4",
