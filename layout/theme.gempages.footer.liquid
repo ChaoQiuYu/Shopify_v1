@@ -4,6 +4,8 @@
   {{ content_for_header }}
   {{ 'custom.css'|  asset_url |  stylesheet_tag }}
 {% render 'gp-head' %}
+
+  {% render 'shogun-head' %}
 </head>
 
 <body class="demo-{{ template.name }}">
