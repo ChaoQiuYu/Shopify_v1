@@ -18,7 +18,7 @@
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -27,6 +27,8 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+        "image_2": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
         "image_overlay_opacity": 20,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -39,126 +41,32 @@
         "show_text_below": false
       }
     },
-    "image_slider_7mrVqc": {
+    "image_slider_miLbwc": {
       "type": "image-slider",
       "blocks": {
-        "image_TRKMkt": {
+        "image_AEBPhC": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/O1CN01seYtWO1W1vll2thBc__2217001552729-0-cib.jpg",
-            "title": "453453"
+            "image": "{{ shop.brand.square_logo }}",
+            "title": "124456"
           }
         },
-        "image_4bP7gk": {
+        "image_Et86BX": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
-            "title": "67576"
-          }
-        },
-        "image_b68DgH": {
-          "type": "image",
-          "settings": {
-            "title": ""
-          }
-        },
-        "image_Ug33PB": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/O1CN018VUm8X28c4L7RiOeK__2905037952-0-cib.jpg",
             "title": ""
           }
         }
       },
       "block_order": [
-        "image_TRKMkt",
-        "image_4bP7gk",
-        "image_b68DgH",
-        "image_Ug33PB"
+        "image_AEBPhC",
+        "image_Et86BX"
       ],
       "custom_css": [
 
       ],
       "settings": {
-        "title": "54664564"
-      }
-    },
-    "image_slider_adGNQ8": {
-      "type": "image-slider",
-      "blocks": {
-        "image_DW4RVa": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/O1CN01seYtWO1W1vll2thBc__2217001552729-0-cib.jpg",
-            "title": "453453"
-          }
-        },
-        "image_Pe8yXn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
-            "title": "67576"
-          }
-        },
-        "image_MHmPb9": {
-          "type": "image",
-          "settings": {
-            "title": ""
-          }
-        },
-        "image_YhmaQU": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_DW4RVa",
-        "image_Pe8yXn",
-        "image_MHmPb9",
-        "image_YhmaQU"
-      ],
-      "settings": {
-        "title": "54664564"
-      }
-    },
-    "image_slider_JcNJ4i": {
-      "type": "image-slider",
-      "blocks": {
-        "image_BjnTdK": {
-          "type": "image",
-          "settings": {
-            "title": ""
-          }
-        },
-        "image_BzraAy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
-            "title": "1234345"
-          }
-        },
-        "image_4e9xKr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9c8f4ee87fb1559f125882ac0b14e528_7907a1da-b72d-4863-a0be-065823cb82d4.png",
-            "title": "56455687696867"
-          }
-        }
-      },
-      "block_order": [
-        "image_BjnTdK",
-        "image_BzraAy",
-        "image_4e9xKr"
-      ],
-      "disabled": true,
-      "custom_css": [
-
-      ],
-      "settings": {
-        "title": "54664564"
+        "title": "Slider title"
       }
     },
     "featured_collection": {
@@ -283,9 +191,7 @@
   },
   "order": [
     "image_banner",
-    "image_slider_7mrVqc",
-    "image_slider_adGNQ8",
-    "image_slider_JcNJ4i",
+    "image_slider_miLbwc",
     "featured_collection",
     "bf25535a-4ab6-4b56-b476-a21cff4fb7f4",
     "780c3219-a7d6-4e86-8dd8-2fd33e885d00"
