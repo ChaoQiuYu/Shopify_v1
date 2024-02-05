@@ -6,7 +6,7 @@
         "image_AEBPhC": {
           "type": "image",
           "settings": {
-            "image": "{{ shop.brand.square_logo }}",
+            "image": "shopify:\/\/shop_images\/2024-01-29_19.15.12.png",
             "title": "124456"
           }
         },
