@@ -37,6 +37,8 @@
 
     {{ content_for_header }}
 
+    {{ "app.css" | asset_url | stylesheet_tag }}
+
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
@@ -284,7 +286,9 @@
       {{ content_for_layout }}
     </main>
 
-    {% sections 'footer-group' %}
+    {% sections 'f ooter-group' %}
+
+    {{ 'app.js' |  asset_url |  script_tag }}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
@@ -335,5 +339,7 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {{ 'app.js' | asset_url | script_tag }}
   </body>
 </html>
