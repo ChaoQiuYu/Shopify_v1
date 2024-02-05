@@ -3,6 +3,7 @@
 <head>
   {{ content_for_header }}
   {{ 'custom.css'|  asset_url |  stylesheet_tag }}
+{% render 'gp-head' %}
 </head>
 
 <body class="demo-{{ template.name }}">
