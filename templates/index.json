@@ -39,6 +39,78 @@
         "show_text_below": false
       }
     },
+    "image_slider_7mrVqc": {
+      "type": "image-slider",
+      "blocks": {
+        "image_4bP7gk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
+            "title": "67576"
+          }
+        },
+        "image_b68DgH": {
+          "type": "image",
+          "settings": {
+            "title": ""
+          }
+        },
+        "image_Ug33PB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4bP7gk",
+        "image_b68DgH",
+        "image_Ug33PB"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "54664564"
+      }
+    },
+    "image_slider_JcNJ4i": {
+      "type": "image-slider",
+      "blocks": {
+        "image_BjnTdK": {
+          "type": "image",
+          "settings": {
+            "title": ""
+          }
+        },
+        "image_BzraAy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
+            "title": "1234345"
+          }
+        },
+        "image_4e9xKr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9c8f4ee87fb1559f125882ac0b14e528_7907a1da-b72d-4863-a0be-065823cb82d4.png",
+            "title": "56455687696867"
+          }
+        }
+      },
+      "block_order": [
+        "image_BjnTdK",
+        "image_BzraAy",
+        "image_4e9xKr"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "54664564"
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -65,38 +137,6 @@
         "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
-      }
-    },
-    "image_slider_7mrVqc": {
-      "type": "image-slider",
-      "blocks": {
-        "image_4bP7gk": {
-          "type": "image",
-          "settings": {
-            "title": ""
-          }
-        },
-        "image_b68DgH": {
-          "type": "image",
-          "settings": {
-            "title": ""
-          }
-        },
-        "image_Ug33PB": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_4bP7gk",
-        "image_b68DgH",
-        "image_Ug33PB"
-      ],
-      "settings": {
-        "title": "Slider title"
       }
     },
     "bf25535a-4ab6-4b56-b476-a21cff4fb7f4": {
@@ -193,8 +233,9 @@
   },
   "order": [
     "image_banner",
-    "featured_collection",
     "image_slider_7mrVqc",
+    "image_slider_JcNJ4i",
+    "featured_collection",
     "bf25535a-4ab6-4b56-b476-a21cff4fb7f4",
     "780c3219-a7d6-4e86-8dd8-2fd33e885d00"
   ]
