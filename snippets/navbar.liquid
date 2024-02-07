@@ -14,8 +14,8 @@
                 {% for link in linklists[section.settings.menu].links %}
                 {% if link.links != blank %}
                 <li class="nav-item dropdown">
-                    <a href="{{ link.url }}" class="nav-link dropdown-bs-toggle" href="#" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="{{ link.url }}" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ link.title }}
 
                     </a>
