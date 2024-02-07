@@ -3025,7 +3025,6 @@ var jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquer
 window.jQuery = window.$ = jQuery;
 
 
-
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
