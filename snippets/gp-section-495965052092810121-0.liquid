@@ -281,6 +281,13 @@
         style="--gtc:minmax(0, 12fr);--gg:var(--g-s-s);--gg-mobile:var(--g-s-s)"
         {%- endif -%}
       >
+        {%- if product.media.size == 1 -%}
+        {% for media in product.media %}
+          <div class="product-image !h-0 opacity-0">
+            <img src="{{ media | image_url }}" alt="{{ media.alt }}">
+          </div>
+        {% endfor %}
+        {%- endif -%}
         
     
   <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-carousel.js" defer="defer"></script>

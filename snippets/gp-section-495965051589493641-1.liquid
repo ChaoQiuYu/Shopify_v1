@@ -113,6 +113,13 @@
         style="--gtc:minmax(0, 12fr);--gg:var(--g-s-s);--gg-mobile:var(--g-s-s)"
         {%- endif -%}
       >
+        {%- if product.media.size == 1 -%}
+        {% for media in product.media %}
+          <div class="product-image !h-0 opacity-0">
+            <img src="{{ media | image_url }}" alt="{{ media.alt }}">
+          </div>
+        {% endfor %}
+        {%- endif -%}
         
     
   <script src="https://d2ls1pfffhvy22.cloudfront.net/assets/gp-carousel.js" defer="defer"></script>
@@ -1113,7 +1120,7 @@
                 style="--jc:left"
               >
                 
-  <div class="overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--height:16px;--bs:none;--bc:transparent">
+  <div class="overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--height-iconCollapseSize:16px;--height-configIconSize:16px;--bs:none;--bc:transparent">
     <div
       data-index="0"
       class="g0uOAstaqC gp-accordion-item overflow-hidden"
@@ -1138,7 +1145,7 @@
         <span
             style="--c:#575757;width:16px;height:16px"
             data-index="0"
-            class="g0uOAstaqC gp-accordion-item_icon gp-collapsible-icon rotate-90 inline-flex items-center justify-center overflow-hidden transition-all duration-200 [&>svg]:!h-[var(--height)] [&>svg]:!w-auto"
+            class="g0uOAstaqC gp-accordion-item_icon gp-collapsible-icon rotate-90 inline-flex items-center justify-center overflow-hidden transition-all duration-200 [&>svg]:!h-[var(--height-iconCollapseSize)] [&>svg]:!w-auto"
           ><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 12.1763V3.82365C4 3.15846 4.88548 2.7686 5.52991 3.15006L12.5853 7.32641C13.1382 7.65374 13.1382 8.34626 12.5853 8.67359L5.52991 12.8499C4.88548 13.2314 4 12.8415 4 12.1763Z" fill="currentColor"/>
                     </svg></span>
