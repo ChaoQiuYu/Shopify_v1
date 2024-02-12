@@ -59,20 +59,7 @@
 {% render 'gp-head' %}
 </head>
 
-<body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
-
-  {% comment %} <a class="in-page-link sr-only" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a> {% endcomment %}
-
-  {% section 'header' %}
-
-  <main role="main" id="app">
+<body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}"><main role="main" id="app">
     {{ content_for_layout }}
-  </main>
-
-  {% section 'footer' %}
-
-  {{ 'app.js' | asset_url | script_tag }}
-
-
-</body>
+  </main></body>
 </html>
