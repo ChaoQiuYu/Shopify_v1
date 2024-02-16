@@ -284,11 +284,11 @@
 
     {% sections 'header-group' %}
 
-    <main id="app" class="content-for-layout focus-none" role="main" tabindex="-1">
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
-    {% sections 'footer-group' %}
+    {% sections 'f ooter-group' %}
 
     {{ 'app.js' |  asset_url |  script_tag }}
 
