@@ -288,7 +288,7 @@
       {{ content_for_layout }}
     </main>
 
-    {% sections 'f ooter-group' %}
+    {% comment %} {% sections 'footer-group' %} {% endcomment %}
 
     {{ 'app.js' |  asset_url |  script_tag }}
 
