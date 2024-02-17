@@ -14,7 +14,8 @@
             <li
             data-target="#carouselExampleCaptions"
             data-slide-to="{{ forloop.index0 }}"
-            class="active"></li>
+            {%  if forloop.index0 == 0 %} class="active" {% endif %}
+            ></li>
         {% endfor %}
       </ol>
       <div class="carousel-inner">
