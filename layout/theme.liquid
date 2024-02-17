@@ -51,10 +51,9 @@
     };
   </script>
 
-  {{ content_for_header }}
+{{ content_for_header }}
 
-
-  {{ 'app.css' | asset_url | stylesheet_tag }}
+{{ "app.css" | asset_url | stylesheet_tag }}
 
 </head>
 
@@ -64,7 +63,7 @@
 
   {% section 'header' %}
 
-  <main>
+  <main id="app" class="content-for-layout focus-none" role="main" tabindex="-1">
     {{ content_for_layout }}
   </main>
 
