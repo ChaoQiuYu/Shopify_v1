@@ -14,7 +14,7 @@
       {% for block in section.blocks %}
         <li
         data-target="#carouselExampleCaptions"
-        data-slide-to="0"
+        data-slide-to="{{ forloop.index0 }}"
         class="active"></li>
       </div>
     {% endfor %}
