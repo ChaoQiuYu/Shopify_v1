@@ -9,14 +9,17 @@
       id="carouselExampleCaptions"
       class="carousel slide"
       data-bs-ride="carousel">
-      {% comment %} <ol class="carousel-indicators">
+      <ol class="carousel-indicators">
+
+      {% for block in section.blocks %}
         <li
-          data-target="#carouselExampleCaptions"
-          data-slide-to="0"
-          class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      </ol> {% endcomment %}
+        data-target="#carouselExampleCaptions"
+        data-slide-to="0"
+        class="active"></li>
+      </div>
+    {% endfor %}
+     
+      </ol>
       <div class="carousel-inner">
 
         {% for block in section.blocks %}
