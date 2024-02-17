@@ -10,15 +10,12 @@
       class="carousel slide"
       data-bs-ride="carousel">
       <ol class="carousel-indicators">
-
-      {% for block in section.blocks %}
-        <li
-        data-target="#carouselExampleCaptions"
-        data-slide-to="{{ forloop.index0 }}"
-        class="active"></li>
-      </div>
-    {% endfor %}
-     
+        {% for block in section.blocks %}
+            <li
+            data-target="#carouselExampleCaptions"
+            data-slide-to="{{ forloop.index0 }}"
+            class="active"></li>
+        {% endfor %}
       </ol>
       <div class="carousel-inner">
 
