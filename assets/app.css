@@ -6126,6 +6126,7 @@ textarea.form-control-lg {
   margin-right: 15%;
   margin-bottom: 1rem;
   margin-left: 15%;
+  display: none;
 }
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
