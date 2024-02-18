@@ -2,7 +2,6 @@
   
     {% assign productCount = collection.all_products_count | minus: paginate.current_offset %}
   
-    <div class="{%if section.settings.is_full_width %} container-fluid {%else%} container {%endif%} vh-100">
   
           <header role="banner" 
                   class="d-flex align-items-center" 
@@ -109,7 +108,6 @@
   
   
   
-    </div>
   
     
   {% endpaginate %}
