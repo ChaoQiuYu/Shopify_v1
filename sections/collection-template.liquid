@@ -40,15 +40,15 @@
                     </div>
                     <ul class="list-group list-group-flush">
                         {% for tag in collection.all_tags %}
-                        {% if current_tags contains tag %}
-                        <li class="list-group-item bg-primary">
-                            {{ tag | link_to_remove_tag: tag }}
-                        </li>
-                        {% else %}
-                        <li class="list-group-item">
-                            {{ tag | link_to_tag: tag }}
-                        </li>
-                        {% endif %}
+                            {% if current_tags contains tag %}
+                                <li class="list-group-item bg-primary">
+                                    {{ tag | link_to_remove_tag: tag }}
+                                </li>
+                            {% else %}
+                                <li class="list-group-item">
+                                    {{ tag | link_to_tag: tag }}
+                                </li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>
