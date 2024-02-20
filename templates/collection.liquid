@@ -1,6 +1,7 @@
 {% paginate collection.products by 3 %}
 
-        <header role="banner">
+        <div class="contain">
+            <header role="banner">
           <h1>{{ collection.title }}</h1>
           {% if collection.description != blank %}
             <div class="rte">
@@ -57,4 +58,5 @@
           {% if paginate.pages > 1 %}
             {% include 'pagination' %}
           {% endif %}
+        </div>
   {% endpaginate %}
