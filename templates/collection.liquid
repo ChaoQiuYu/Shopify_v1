@@ -39,7 +39,7 @@
                     </a>
                   {% endif %}
                   <p>
-                    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+                    <a href="{{ product.url | within: collection }}" style="text-decoration: none;">{{ product.title }}</a>
                   </p>
                   {% include 'product-price' %}
                 </div>
