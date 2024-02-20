@@ -10,14 +10,14 @@
       </header>
   
           {% if collection.all_tags.size > 0 %}
-              <ul >
+              <ul>
                 {% for tag in collection.all_tags %}
                   {% if current_tags contains tag %}
-                    <li class="active" style="text-decoration: none;">
+                    <li class="active">
                       {{ tag | link_to_remove_tag: tag }}
                     </li>
                   {% else %}
-                    <li style="text-decoration: none;">
+                    <li>
                       {{ tag | link_to_tag: tag }}
                     </li>
                   {% endif %}
