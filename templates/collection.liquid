@@ -10,7 +10,7 @@
       </header>
   
           {% if collection.all_tags.size > 0 %}
-              <ul>
+              <ul style="text-decoration: none;">
                 {% for tag in collection.all_tags %}
                   {% if current_tags contains tag %}
                     <li class="active">
