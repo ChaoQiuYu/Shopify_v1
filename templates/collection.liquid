@@ -70,7 +70,7 @@
               {% endunless %}
             </p>
           </div>
-          
+        {% else %}
           {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
             {% for i in (1..8) %}
               <a href="#">
