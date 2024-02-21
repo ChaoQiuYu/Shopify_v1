@@ -51,16 +51,13 @@
                   {{ 'products.product.on_sale' | t }}
                   {{ product.price | money }}
                 {% endif %}
-    
               {% else %}
-    
                 {% if product.price_varies %}
                   {%- assign price = product.price | money -%}
                   {{ 'products.product.from_text_html' | t: price: price }}
                 {% else %}
                   {{ product.price | money }}
                 {% endif %}
-    
               {% endif %}
     
               {% if product.compare_at_price > product.price %}
@@ -73,8 +70,7 @@
               {% endunless %}
             </p>
           </div>
-    
-        {% else %}
+          
           {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
             {% for i in (1..8) %}
               <a href="#">
