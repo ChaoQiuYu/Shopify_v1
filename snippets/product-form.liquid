@@ -1,6 +1,5 @@
 {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %}
 
-
   <select name="id" v-model="form.id" id="variant_id"  class="form-control">
     {% for variant in product.variants %}
       <option
@@ -25,7 +24,7 @@
   </select>
 </noscript>
 
-<div class="form-group">
+{% comment %} <div class="form-group">
     <div class="row align-items-end">
       <div class="col-md-6">
           <label for="Quantity" class="form-label">{{ 'products.product.quantity' | t }}</label>
@@ -52,5 +51,5 @@
     </div>
     
 
-</div>
+</div> {% endcomment %}
 {% endform %}
