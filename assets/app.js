@@ -3052,7 +3052,7 @@ $(".product-slider").slick({
       infinite: true
     }
   }, {
-    breakpoint: 600,
+    breakpoint: 300,
     settings: {
       slidesToShow: 1,
       dots: true
