@@ -11,7 +11,7 @@
               {% if product.images.size >= 1 %}
                   {% for image in product.images %}
                     <div>
-                      <a href="{{ image.src | img_url: '480x480' }}" data-thumbnail-id="{{ image.id }}" data-product-single-thumbnail{% if featured_image == image %} aria-current="true"{% endif %}>
+                      <a href="{{ image.src | img_url: '500x500' }}" data-thumbnail-id="{{ image.id }}" data-product-single-thumbnail{% if featured_image == image %} aria-current="true"{% endif %}>
                         <img class="img-fluid" src="{{ image.src | img_url: '500x500', crop:'center' }}" alt="{{ image.alt | escape }}">
                       </a>
                     </div>
