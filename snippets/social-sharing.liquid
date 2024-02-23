@@ -9,7 +9,7 @@
   {% endif %}
 
   {% if settings.share_twitter %}
-    <a target="_blank" href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}">
+    <a target="_blank" href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}" style="text-decoration: none;">
       {% include 'icon-twitter' %}
       <span aria-hidden="true">{{ 'general.social.share_on_twitter' | t }}</span>
       <span>{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
