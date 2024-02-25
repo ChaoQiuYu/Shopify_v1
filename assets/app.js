@@ -3046,6 +3046,7 @@ __webpack_require__(/*! ./components/MiniCart.js */ "./src/js/components/MiniCar
 
 // javascript
 __webpack_require__(/*! ./product.js */ "./src/js/product.js");
+__webpack_require__(/*! ./header.js */ "./src/js/header.js");
 
 /***/ }),
 
@@ -3330,6 +3331,19 @@ if (document.querySelector('.shopify-product-form')) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/js/header.js":
+/*!**************************!*\
+  !*** ./src/js/header.js ***!
+  \**************************/
+/***/ (() => {
+
+// PREVENT INSIDE CLICK DROPDOWN 
+$('body').on("click", ".dropdown-menu", function (e) {
+  $(this).parent().is(".show") && e.stopPropagation();
+});
 
 /***/ }),
 
