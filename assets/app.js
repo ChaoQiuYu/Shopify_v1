@@ -3035,17 +3035,16 @@ window.jQuery = window.$ = jQuery; //分配给windows变量、美元符号
 
 
 
-__webpack_require__(/*! ./product */ "./src/js/product.js");
+
+// require('./product');
 
 // Vue Components
-
 __webpack_require__(/*! ./components/ProductForm.js */ "./src/js/components/ProductForm.js");
 __webpack_require__(/*! ./components/CartForm.js */ "./src/js/components/CartForm.js");
 __webpack_require__(/*! ./components/MiniCart.js */ "./src/js/components/MiniCart.js");
 
 // javascript
 __webpack_require__(/*! ./product.js */ "./src/js/product.js");
-__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './header.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 /***/ }),
 
@@ -3057,7 +3056,7 @@ __webpack_require__(Object(function webpackMissingModule() { var e = new Error("
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './../shared/cartData.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
@@ -3071,7 +3070,7 @@ if (document.querySelector('.cart-form')) {
     delimiters: ['${', '}'],
     data: function data() {
       return {
-        cartData: Object(function webpackMissingModule() { var e = new Error("Cannot find module './../shared/cartData.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()).state.cartData
+        cartData: _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData
       };
     },
     computed: {
@@ -3098,7 +3097,7 @@ if (document.querySelector('.cart-form')) {
         axios.post('/cart/update.js', {
           updates: result
         }).then(function (response) {
-          Object(function webpackMissingModule() { var e = new Error("Cannot find module './../shared/cartData.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()).state.cartData[0] = response.data;
+          _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0] = response.data;
           new Noty({
             type: 'success',
             timeout: 3000,
@@ -3155,7 +3154,7 @@ if (document.querySelector('.cart-form')) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './../shared/cartData.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
 /* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/cloneDeep */ "./node_modules/lodash/cloneDeep.js");
 /* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_1__);
 
@@ -3166,7 +3165,7 @@ if (document.querySelector('.mini-cart')) {
     delimiters: ['${', '}'],
     data: function data() {
       return {
-        cartData: Object(function webpackMissingModule() { var e = new Error("Cannot find module './../shared/cartData.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()).state.cartData
+        cartData: _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData
       };
     },
     computed: {
@@ -3176,7 +3175,7 @@ if (document.querySelector('.mini-cart')) {
     },
     created: function created() {
       // mini cart is on every page, that's why, we cal it once here
-      Object(function webpackMissingModule() { var e = new Error("Cannot find module './../shared/cartData.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()).getCart();
+      _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.getCart();
     },
     methods: {
       // Remove item from cart
@@ -3271,7 +3270,7 @@ if (document.querySelector('.mini-cart')) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './../shared/cartData.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../shared/cartData.js */ "./src/js/shared/cartData.js");
 
 if (document.querySelector('.shopify-product-form')) {
   var productForm = new Vue({
@@ -3290,7 +3289,7 @@ if (document.querySelector('.shopify-product-form')) {
         axios.post('/cart/add.js', this.form).then(function (response) {
           // add data to mini cart object
           // check if product already exist
-          var found = Object(function webpackMissingModule() { var e = new Error("Cannot find module './../shared/cartData.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()).state.cartData[0].items.find(function (product) {
+          var found = _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.find(function (product) {
             return product.variant_id == response.data.variant_id;
           });
           if (found) {
@@ -3300,7 +3299,7 @@ if (document.querySelector('.shopify-product-form')) {
             // this.form.quantity = 1;
           } else {
             // add item at the start of array
-            Object(function webpackMissingModule() { var e = new Error("Cannot find module './../shared/cartData.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()).state.cartData[0].items.unshift(response.data);
+            _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0].items.unshift(response.data);
           }
           // open mini cart
           // $('.mini-cart').dropdown('show');
@@ -3371,6 +3370,39 @@ $(".product-slider-nav").slick({
   // 启用中心模式
   focusOnSelect: true // 在导航元素上点击时，将焦点设置到相应的主轮播元素
 });
+
+/***/ }),
+
+/***/ "./src/js/shared/cartData.js":
+/*!***********************************!*\
+  !*** ./src/js/shared/cartData.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   store: () => (/* binding */ store)
+/* harmony export */ });
+// Shared data between cart and mini-cart
+
+var store = {
+  state: {
+    cartData: []
+  },
+  getCart: function getCart() {
+    var _this = this;
+    axios.get('/cart.js').then(function (response) {
+      _this.state.cartData.push(response.data);
+    })["catch"](function (error) {
+      new Noty({
+        type: 'error',
+        layout: 'topRight',
+        text: 'There was an error !!'
+      }).show();
+    });
+  }
+};
 
 /***/ }),
 
