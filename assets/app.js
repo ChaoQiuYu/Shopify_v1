@@ -3022,7 +3022,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js");
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
-window.Vue = vue__WEBPACK_IMPORTED_MODULE_0__["default"];
+var vm = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
+  el: "#app"
+});
 
 // import 'jquery';
 var jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
