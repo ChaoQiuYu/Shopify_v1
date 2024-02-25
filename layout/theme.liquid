@@ -56,9 +56,6 @@
 
   {{ "app.css" | asset_url | stylesheet_tag }}
 
-{% render 'gp-head' %}
-
-  {% render 'shogun-head' %}
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
@@ -69,7 +66,7 @@
 
   {% section 'header' %}
 
-  <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+  <main id="app" class="content-for-layout focus-none" role="main" tabindex="-1">
     {{ content_for_layout }}
   </main>
 
