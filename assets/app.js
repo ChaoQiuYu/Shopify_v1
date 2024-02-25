@@ -3033,6 +3033,9 @@ var vm = new (vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default())({
 var jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 window.jQuery = window.$ = jQuery; //分配给windows变量、美元符号
 
+// let axios = require('axios');
+// window.axios = axios;
+
 
 
 
