@@ -3023,7 +3023,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
 var vm = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
-  el: "#app"
+  el: "#MainContent"
 });
 
 // import 'jquery';
