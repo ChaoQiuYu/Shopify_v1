@@ -3035,6 +3035,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/dist/browser/
 window.axios = axios;
 
 
+window.Noty = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'noty'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 // require('./product');
 
