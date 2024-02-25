@@ -112,7 +112,7 @@
     display: none;
 }
 
-/* @charset "UTF-8"; */
+@charset "UTF-8";
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -464,7 +464,7 @@ sup {
 
 a {
   color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
   --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
@@ -12089,4 +12089,21 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.mini-cart .dropdown-menu {
+  min-width: 380px;
+  right: 0;
+  left: auto;
+}
+.mini-cart .title {
+  font-size: 16px;
+}
+.mini-cart .quantity {
+  width: 120px;
+}
+.mini-cart .quantity input {
+  max-width: 48px;
+}
+.mini-cart .quantity .input-group-text:hover {
+  cursor: pointer;
 }
