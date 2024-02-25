@@ -1,6 +1,6 @@
 <div class="container">
 
-  {% if cart.item_count > 0 %}
+  {% comment %} {% if cart.item_count > 0 %} {% endcomment %}
     <h1 class="my-4">{{ 'cart.general.title' | t }}</h1>
 
     <form action="/cart" method="post" class="cart-form" novalidate>
@@ -138,7 +138,7 @@
       </div>
 
     </form>
-  {% else %}
+  {% comment %} {% else %} {% endcomment %}
 
   <h1>{{ 'cart.general.title' | t }}</h1>
 
@@ -161,6 +161,6 @@
   </div>
 
 
-{% endif %}
+{% comment %} {% endif %} {% endcomment %}
 
 </div> 
