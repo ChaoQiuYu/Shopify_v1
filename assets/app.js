@@ -3072,11 +3072,13 @@ if (document.querySelector('.cart-form')) {
     //这是一个 Vue 实例的创建。它挂载到具有类名为 cart-form 的元素上
     delimiters: ['${', '}'],
     data: function data() {
+      // 返回一个包含组件数据属性的对象，这里有一个名为 cartData 的属性
       return {
         cartData: _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData
       };
     },
     computed: {
+      //包含计算属性，这里有 cart_total_price 和 cart 两个计算属性
       cart_total_price: function cart_total_price() {
         var total = 0;
         this.cartData[0].items.forEach(function (item) {
@@ -3089,6 +3091,7 @@ if (document.querySelector('.cart-form')) {
       }
     },
     methods: {
+      //在 methods 中使用了 axios 库来进行 AJAX 请求，如 axios.post 用于更新购物车、axios.get 用于获取购物车信息。
       total_price: function total_price(item) {
         return item.price * item.quantity;
       },
@@ -3099,7 +3102,8 @@ if (document.querySelector('.cart-form')) {
         console.log(result);
         axios.post('/cart/update.js', {
           updates: result
-        }).then(function (response) {
+        }) //更新购物车
+        .then(function (response) {
           _shared_cartData_js__WEBPACK_IMPORTED_MODULE_0__.store.state.cartData[0] = response.data;
           new Noty({
             type: 'success',
@@ -3117,6 +3121,7 @@ if (document.querySelector('.cart-form')) {
       },
       getCart: function getCart() {
         var _this = this;
+        //获取购物车信息
         axios.get('/cart.js').then(function (response) {
           _this.cart = response.data;
         })["catch"](function (error) {
