@@ -119,14 +119,14 @@
         <div class="col-md-4">
           <div class="cart-sidebar">
               {% if settings.cart_notes_enable %}
-                  <label class="form-label" for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+                  <label class="form-label" for="CartSpecialInstructions">Special instructions for seller</label>
                   <textarea class="form-control" name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
               {% endif %}
         
-                <p>{{ 'cart.general.subtotal' | t }}</p>
+                <p>Subtotal</p>
                 <p v-if='cart'>${ cart_total_price | money }</p>
                 {% if cart.total_discounts > 0 %}
-                  <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
+                  <p>You're saving {{ cart.total_discounts | money }}</p>
                 {% endif %}
                 <p>{{ 'cart.general.shipping_at_checkout' | t }}</p>
                 <input type="button" @click="updateCart" name="update" class="btn btn-success" value="{{ 'cart.general.update' | t }}">
