@@ -3069,6 +3069,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 if (document.querySelector('.cart-form')) {
   var productForm = new Vue({
     el: ".cart-form",
+    //这是一个 Vue 实例的创建。它挂载到具有类名为 cart-form 的元素上
     delimiters: ['${', '}'],
     data: function data() {
       return {
