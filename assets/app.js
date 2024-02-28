@@ -3259,6 +3259,7 @@ if (document.querySelector('.mini-cart')) {
           console.log(error);
           new Noty({
             type: 'error',
+            timeout: 3000,
             layout: 'topRight',
             text: 'There was something wrong!!'
           }).show();
