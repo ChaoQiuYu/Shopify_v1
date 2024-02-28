@@ -212,7 +212,7 @@
           "is_full_width": false,
           "header_align": "right",
           "header_height": 120,
-          "collection_nav": "",
+          "collection_nav": "link-list",
           "hide_tags": false
         }
       }
