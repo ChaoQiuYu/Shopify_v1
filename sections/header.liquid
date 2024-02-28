@@ -93,7 +93,12 @@
     }
   </style>
 {% endif %}
-
+{% if section.settings.custom_section_title != blank or section.settings.custom_section_content != blank %}
+  <div class="custom-section">
+    <h2>{{ section.settings.custom_section_title }}</h2>
+    <p>{{ section.settings.custom_section_content }}</p>
+  </div>
+{% endif %}
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
