@@ -105,7 +105,7 @@
     "social_instagram_link": "",
     "social_youtube_link": "",
     "social_tiktok_link": "",
-    "social_twitter_link": "",
+    "social_twitter_link": "1",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
     "social_tumblr_link": "",
@@ -134,13 +134,6 @@
       "header": {
         "type": "header",
         "settings": {
-          "announcement_bar_enabled": false,
-          "announcement_bar_home_page_only": true,
-          "announcement_bar_text": "Announce something here",
-          "announcement_bar_link": "",
-          "logo": "shopify:\/\/shop_images\/o79gi1_56827f55ea15e0b6ac5fb0fb5d7f0307716ff503.jpg",
-          "logo_max_width": 100,
-          "menu": "main-menu"
         }
       },
       "image-slider": {
