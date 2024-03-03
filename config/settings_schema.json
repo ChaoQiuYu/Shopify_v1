@@ -34,38 +34,6 @@
     ]
   },
   {
-    "name": "image-slider",
-    "settings": [
-      {
-        "type": "text",
-        "label": "Custom Section Title",
-        "id": "custom_section_title"
-      },
-      {
-        "type": "textarea",
-        "label": "Custom Section Content",
-        "id": "custom_section_content"
-      }
-    ]
-  },
-  {
-    "name": "Generic Section",
-    "settings": [
-      {
-        "type": "text",
-        "label": "Title",
-        "id": "generic_section_title",
-        "default": "Default Title"
-      },
-      {
-        "type": "textarea",
-        "label": "Content",
-        "id": "generic_section_content",
-        "default": "Default Content"
-      }
-    ]
-  },
-  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
