@@ -56,6 +56,9 @@
 
   {{ "app.css" | asset_url | stylesheet_tag }}
 
+{% render 'gp-head' %}
+
+  {% render 'shogun-head' %}
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
@@ -65,10 +68,6 @@
   </a>
 
   {% section 'header' %}
-
-  <div id="app">
-        <!-- 这里是你的 Vue 应用的内容 -->
-   </div>
 
   <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
     {{ content_for_layout }}
