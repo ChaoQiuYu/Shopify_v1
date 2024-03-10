@@ -3037,7 +3037,8 @@ window.axios = axios;
 
 window.Noty = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js");
 
-// require('./product');
+// Vue custom filter
+__webpack_require__(/*! ./filters/money.js */ "./src/js/filters/money.js");
 
 // Vue Components
 __webpack_require__(/*! ./components/ProductForm.js */ "./src/js/components/ProductForm.js");
@@ -3338,6 +3339,20 @@ if (document.querySelector('.shopify-product-form')) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/js/filters/money.js":
+/*!*********************************!*\
+  !*** ./src/js/filters/money.js ***!
+  \*********************************/
+/***/ (() => {
+
+Vue.filter('money', function (value) {
+  var sign = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '$';
+  if (!value) return 0;
+  return sign + (value / 100).toFixed(2);
+});
 
 /***/ }),
 
