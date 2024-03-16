@@ -25,11 +25,9 @@
                                 <ul style="list-style-type: none;">
                                     <li>
                                         <a href="{{ childlink.url }}" class="dropdown-item">
+                                            {% include 'icon-twitter'%}
                                             {{ childlink.title }}
                                         </a>
-                                    </li>
-                                    <li href="{{ childlink.url }}" class="dropdown-item">
-                                        {% include 'icon-twitter'%}
                                     </li>
                                 </ul>
                                 {% endfor %}
