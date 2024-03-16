@@ -19,15 +19,12 @@
                         
                         {{ link.title }}
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="display: flex;">
                         {% for childlink in link.links %}
-                        <a href="{{ childlink.url }}" class="dropdown-item">
-                            {% if childlink.image %}
-                                <img src="{{ childlink.image | asset_url }}" alt="{{ childlink.title }}">
-                              {% endif %}
+                        <a href="{{ childlink.url }}" class="dropdown-item" >
+                            图片
                             {{ childlink.title }}
                         </a>
-                        <img src="">
                         {% endfor %}
                     </div>
                 </li>
