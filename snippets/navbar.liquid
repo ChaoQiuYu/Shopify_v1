@@ -28,8 +28,8 @@
                                             {{ childlink.title }}
                                         </a>
                                     </li>
-                                    <li href="{{ childlink.url }}" class="dropdown-item">
-                                       <img src={{ childlink.image |  img_tag }} >
+                                    <li href="{{ childlink.url }}">
+                                       <img src="{{ childlink in link.l }}">
                                     </li>
                                 </ul>
                                 {% endfor %}
