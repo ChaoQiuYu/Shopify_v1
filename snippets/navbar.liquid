@@ -23,8 +23,14 @@
                         <div style="display: flex;">
                             {% for childlink in link.links %}
                                 <a href="{{ childlink.url }}" class="dropdown-item">
-                                          <img src="{{ childlink.image.src |  img_url: 'medium' }}" alt="{{ childlink.title }}" width="50" height="50">
-                                          {{ childlink.title }}
+                                    <ul>
+                                        <li>
+                                            <img src="{{ childlink.image.src |  img_url: 'medium' }}" alt="{{ childlink.title }}">
+                                        </li>
+                                        <li>{{ childlink.title }}</li>
+                                    </ul>
+                                          
+                                          
                                 </a>
                                 {% endfor %}
                         </div>
