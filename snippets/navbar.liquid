@@ -20,7 +20,7 @@
                         {{ link.title }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <div>
+                        <div style="display: flex;">
                             {% for childlink in link.links %}
                                 <ul>
                                     <li>
@@ -36,7 +36,6 @@
                                 </ul>
                                 {% endfor %}
                         </div>
-                       
                     </div>
                 </li>
                 {% else %}
