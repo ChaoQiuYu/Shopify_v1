@@ -16,14 +16,15 @@
                 <li class="nav-item dropdown">
                     <a href="{{ link.url }}" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        {% if link.image %}
-                            <img src="{{ link.image | asset_url }}" alt="{{ link.title }}">
-                          {% endif %}
+                        
                         {{ link.title }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         {% for childlink in link.links %}
                         <a href="{{ childlink.url }}" class="dropdown-item">
+                            {% if childlink.image %}
+                                <img src="{{ childlink.image | asset_url }}" alt="{{ link.title }}">
+                              {% endif %}
                             {{ childlink.title }}
                         </a>
                         <img src="">
