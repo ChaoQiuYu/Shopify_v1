@@ -20,17 +20,23 @@
                         {{ link.title }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        {% for childlink in link.links %}
+                        <div>
+                            {% for childlink in link.links %}
+                                <ul>
+                                    <li>
+                                        <a href="{{ childlink.url }}" class="dropdown-item">
+                                            {{ childlink.title }}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            图片
+                                        </a>
+                                    </li>
+                                </ul>
+                                {% endfor %}
+                        </div>
                        
-                        <ul>
-                            <li>
-                                <a href="{{ childlink.url }}" class="dropdown-item">
-                            
-                                {{ childlink.title }}
-                            </a>
-                            </li>
-                        </ul>
-                        {% endfor %}
                     </div>
                 </li>
                 {% else %}
