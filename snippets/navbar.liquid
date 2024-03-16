@@ -16,6 +16,9 @@
                 <li class="nav-item dropdown">
                     <a href="{{ link.url }}" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
+                        {% if link.image %}
+                            <img src="{{ link.image | asset_url }}" alt="{{ link.title }}">
+                          {% endif %}
                         {{ link.title }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
