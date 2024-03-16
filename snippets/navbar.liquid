@@ -22,14 +22,16 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div style="display: flex;">
                             {% for childlink in link.links %}
+                                <a href="{{ childlink.url }}" class="dropdown-item">
                                 <ul style="list-style-type: none;">
                                     <li>
-                                        <a href="{{ childlink.url }}" class="dropdown-item">
+                                        
                                             {% include 'icon-twitter'%}
                                             {{ childlink.title }}
-                                        </a>
                                     </li>
                                 </ul>
+                                                                        </a>
+
                                 {% endfor %}
                         </div>
                     </div>
