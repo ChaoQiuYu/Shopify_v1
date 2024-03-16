@@ -22,12 +22,10 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div style="display: flex;">
                             {% for childlink in link.links %}
-
                                 <a href="{{ childlink.url }}" class="dropdown-item">
                                           <img src="{{ childlink.image }}" alt="{{ childlink.title }}" width="50" height="50">
                                           {{ childlink.title }}
                                 </a>
-
                                 {% endfor %}
                         </div>
                     </div>
