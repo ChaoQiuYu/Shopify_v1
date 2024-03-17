@@ -25,12 +25,10 @@
                                 <a href="{{ childlink.url }}" class="dropdown-item">
                                     <ul style="list-style-type: none;">
                                         <li>
-                                            {{ collection.image |  img_tag }}
+                                            <img src="{{ childlink.image |  img_url: 'medium' }}" alt="{{ childlink.title }}">
                                         </li>
                                         <li style="text-align: center;">{{ childlink.title }}</li>
                                     </ul>
-                    
-                                          
                                 </a>
                                 {% endfor %}
                         </div>
