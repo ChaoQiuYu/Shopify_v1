@@ -12,7 +12,7 @@
         {% if collection.description != blank %}
           <div class="text-{{section.settings.header_align}} ">
             {{ collection.description }}
-            {{ collection.image |  img_url: 'medium' }}
+            {{ collection.image |  img_tag }}
           </div>
         {% endif %}
       </div>
