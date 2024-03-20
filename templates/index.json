@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "image-slider": {
+      "type": "image-slider",
+      "settings": {
+      }
+    },
+    "list-collections": {
+      "type": "collection-template",
+      "disabled": true,
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "image-slider",
+    "list-collections"
+  ]
+}
