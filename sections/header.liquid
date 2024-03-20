@@ -84,11 +84,24 @@
         "id": "menu",
         "label": "Menu",
         "default": "main-menu"
-      }, {
-        "type": "image_picker",
-        "id": "collection_image",
-        "label": "Collection image"
       }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+          }, {
+          "type": "text",
+          "id": "title",
+          "label": "Image title"
+          }
+        ]
+}
     ]
   }
 {% endschema %}
