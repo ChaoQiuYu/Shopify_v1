@@ -4,15 +4,9 @@
       "type": "image-slider",
       "settings": {
       }
-    },
-    "collection-template": {
-      "type": "collection-template",
-      "settings": {
-      }
     }
   },
   "order": [
-    "image-slider",
-    "collection-template"
+    "image-slider"
   ]
 }
