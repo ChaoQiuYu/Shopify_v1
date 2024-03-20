@@ -23,12 +23,14 @@
                         <div style="display: flex;">
                             {% for childlink in link.links %}
                                 <a href="{{ childlink.url }}" class="dropdown-item">
+                                    {% if link == collections %}
                                     <ul style="list-style-type: none;">
                                         <li>
                                             <img src="{{ childlink.image |  img_url: 'medium' }}" alt="{{ childlink.title }}">
                                         </li>
                                         <li style="text-align: center;">{{ childlink.title }}</li>
                                     </ul>
+                                    {%endif%}
                                 </a>
                                 {% endfor %}
                         </div>
