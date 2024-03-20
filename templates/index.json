@@ -5,7 +5,7 @@
       "settings": {
       }
     },
-    "list-collections": {
+    "collection-template": {
       "type": "collection-template",
       "disabled": true,
       "settings": {
@@ -14,6 +14,6 @@
   },
   "order": [
     "image-slider",
-    "list-collections"
+    "collection-template"
   ]
 }
