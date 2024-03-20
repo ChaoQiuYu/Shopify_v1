@@ -7,7 +7,6 @@
     },
     "collection-template": {
       "type": "collection-template",
-      "disabled": true,
       "settings": {
       }
     }
