@@ -11,20 +11,49 @@
             "title": ""
           }
         },
+        "image_HWHnmX": {
+          "type": "image",
+          "settings": {
+            "title": ""
+          }
+        },
+        "image_H3YwMC": {
+          "type": "image",
+          "settings": {
+            "title": ""
+          }
+        },
         "image_bBxyVq": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/2681466_5.jpg",
             "title": ""
           }
+        },
+        "image_WP4qMW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2681466_5.jpg",
+            "title": ""
+          }
+        },
+        "image_atLdg3": {
+          "type": "image",
+          "settings": {
+            "title": ""
+          }
         }
       },
       "block_order": [
         "image_ARUr8e",
-        "image_bBxyVq"
+        "image_HWHnmX",
+        "image_H3YwMC",
+        "image_bBxyVq",
+        "image_WP4qMW",
+        "image_atLdg3"
       ],
       "settings": {
-        "announcement_bar_enabled": false,
+        "announcement_bar_enabled": true,
         "announcement_bar_home_page_only": true,
         "announcement_bar_text": "Announce something here",
         "announcement_bar_link": "shopify:\/\/collections\/thermos",
