@@ -56,7 +56,9 @@
 
   {{ "app.css" | asset_url | stylesheet_tag }}
 
-</head>
+{% render 'gp-head' %}
+
+{% include 'pagefly-app-header' %}</head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
 

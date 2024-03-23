@@ -40,9 +40,9 @@ This file can be re-written at any time.
   <meta name="description" content="{{ page_description | escape }}">
   {%- endif -%}
 
-  {% comment %} {% include 'social-meta-tags' %}
+{% comment %} {% include 'social-meta-tags' %} {% endcomment %}
 
-  {% include 'css-variables' %} {% endcomment %}
+  {% comment %} {% include 'css-variables' %}  {% endcomment %}
 
 
 
@@ -63,9 +63,6 @@ This file can be re-written at any time.
 
   {{ "app.css" | asset_url | stylesheet_tag }}
 
-{% render 'gp-head' %}
-
-  {% render 'shogun-head' %}
 
 </head>
 

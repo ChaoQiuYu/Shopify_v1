@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "image-slider": {
+      "type": "image-slider",
+      "blocks": {
+        "image_WeKrtt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "title": "first"
+          }
+        },
+        "image_VVMkfV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
+            "title": "second"
+          }
+        }
+      },
+      "block_order": [
+        "image_WeKrtt",
+        "image_VVMkfV"
+      ],
+      "settings": {
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "image-slider"
+  ]
+}
