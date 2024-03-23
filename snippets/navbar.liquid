@@ -24,25 +24,15 @@
                     {% for childlink in link.links %}
     <a href="{{ childlink.url }}" class="dropdown-item">
         <ul style="list-style-type: none;">
-            {% if childlink.type == 'collection_link' %}
-                {% assign collection_handle = childlink.collection_handle %}
-                {% assign collection = collections[collection_handle] %}
-                <li>
-                    {% if collection %}
-                        <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ childlink.title }}">
-                    {% endif %}
-                </li>
-            {% else %}
-                <!-- 如果不是系列链接，您可以在这里添加默认图像或其他预览图像 -->
-                <li>
-                    <img src="placeholder_image_url.jpg" alt="Placeholder Image">
-                </li>
-            {% endif %}
+            <li>
+                {% if childlink.navigation_image %}
+                    <img src="{{ childlink.navigation_image | img_url: 'medium' }}" alt="{{ childlink.title }}">
+                {% endif %}
+            </li>
             <li style="text-align: center;">{{ childlink.title }}</li>
         </ul>
     </a>
 {% endfor %}
-
                         </div>
                     </div>
                 </li>
