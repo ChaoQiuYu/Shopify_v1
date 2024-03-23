@@ -8,7 +8,7 @@
         "image_da6qFw": {
           "type": "image",
           "settings": {
-            "image": "{{ shop.brand.cover_image }}",
+            "image": "shopify:\/\/shop_images\/O1CN014a0AlL1Gy3xxYqa6o__2703990690-0-cib_2df4f598-6280-430e-91da-7e25e8971e1e.jpg",
             "title": "2333443"
           }
         },
