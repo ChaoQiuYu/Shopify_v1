@@ -29,7 +29,7 @@
         {% assign collection = collections[selected_collection_id] %}
         {% if collection %}
           <li>
-             <img src="{{ collection.image.src }}" alt="{{ collection.title }}">
+             <img src="{{ collection.image }}" alt="{{ collection.title }}">
           </li>
           <li style="text-align: center;">{{ collection.title }}</li>
         {% endif %}
