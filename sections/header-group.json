@@ -8,7 +8,7 @@
         "image_da6qFw": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
+            "image": "{{ shop.brand.cover_image }}",
             "title": "2333443"
           }
         },
