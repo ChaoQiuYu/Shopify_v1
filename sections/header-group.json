@@ -8,7 +8,25 @@
         "image_da6qFw": {
           "type": "image",
           "settings": {
-            "image": "{{ shop.brand.cover_image }}",
+            "image": "shopify:\/\/shop_images\/InfographicshowingthesizedifferenceoftheSwigLife32ozConfettiTumblercomparedtothe40ozConfettiMegaMug_1.jpg",
+            "title": "2333443"
+          }
+        },
+        "image_grnLWH": {
+          "type": "image",
+          "settings": {
+            "title": ""
+          }
+        },
+        "image_FMRfbH": {
+          "type": "image",
+          "settings": {
+            "title": ""
+          }
+        },
+        "image_f3Di7C": {
+          "type": "image",
+          "settings": {
             "title": ""
           }
         },
@@ -27,6 +45,9 @@
       },
       "block_order": [
         "image_da6qFw",
+        "image_grnLWH",
+        "image_FMRfbH",
+        "image_f3Di7C",
         "image_BwPMmf",
         "image_KN4Wak"
       ],
