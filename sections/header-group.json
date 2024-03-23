@@ -8,7 +8,7 @@
         "announcement_bar_enabled": false,
         "announcement_bar_home_page_only": true,
         "announcement_bar_text": "Announce something here",
-        "announcement_bar_link": "",
+        "announcement_bar_link": "shopify:\/\/products\/cup",
         "logo": "shopify:\/\/shop_images\/WechatIMG1030-removebg-preview.png",
         "logo_max_width": 100,
         "menu": "main-menu"
