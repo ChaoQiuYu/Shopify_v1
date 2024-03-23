@@ -21,16 +21,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div style="display: flex;">
-                           
-在您提供的代码中，出现这个问题的原因是因为 collection 变量没有在循环中正确设置。在您当前的代码中，您正在循环遍历导航链接的列表，但是没有为每个链接设置相关的系列集合。因此，collection.image 没有被正确定义，导致图片无法在导航菜单中显示。
-
-要解决这个问题，您需要确保在循环中为每个链接设置相关的系列集合。您可以使用链接对象中的某些属性来判断是否应该显示图片，并且从系列集合中提取相应的图像信息。
-
-下面是修改后的代码示例，假设您的导航链接类型为 "collection_link"，并且您的导航链接包含了 collection_handle 属性来指定相关的系列集合：
-
-liquid
-Copy code
-{% for childlink in link.links %}
+                    {% for childlink in link.links %}
     <a href="{{ childlink.url }}" class="dropdown-item">
         <ul style="list-style-type: none;">
             {% if childlink.type == 'collection_link' %}
@@ -42,7 +33,7 @@ Copy code
                     {% endif %}
                 </li>
             {% else %}
-               
+                <!-- 如果不是系列链接，您可以在这里添加默认图像或其他预览图像 -->
                 <li>
                     <img src="placeholder_image_url.jpg" alt="Placeholder Image">
                 </li>
@@ -51,6 +42,7 @@ Copy code
         </ul>
     </a>
 {% endfor %}
+
                         </div>
                     </div>
                 </li>
