@@ -27,13 +27,22 @@
             {% if childlink.type == 'collection_link' %}
                 {% assign collection = collections[childlink.object] %}
                 <li>
-                    <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ childlink.title }}">
+                    {% if collection %}
+                        <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ childlink.title }}">
+                    {% else %}
+                        <img src="placeholder_image_url.jpg" alt="Placeholder Image">
+                    {% endif %}
+                </li>
+            {% else %}
+                <li>
+                    <img src="default_image_url.jpg" alt="Default Image">
                 </li>
             {% endif %}
             <li style="text-align: center;">{{ childlink.title }}</li>
         </ul>
     </a>
 {% endfor %}
+
                         </div>
                     </div>
                 </li>
