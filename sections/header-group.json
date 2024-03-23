@@ -5,40 +5,20 @@
     "header": {
       "type": "header",
       "blocks": {
-        "image_ARUr8e": {
+        "image_da6qFw": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/InfographicshowingthesizedifferenceoftheSwigLife32ozConfettiTumblercomparedtothe40ozConfettiMegaMug_1.jpg",
+            "image": "{{ shop.brand.cover_image }}",
             "title": ""
           }
         },
-        "image_HWHnmX": {
-          "type": "image",
-          "settings": {
-            "title": ""
-          }
-        },
-        "image_H3YwMC": {
+        "image_BwPMmf": {
           "type": "image",
           "settings": {
             "title": ""
           }
         },
-        "image_bBxyVq": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2681466_5.jpg",
-            "title": ""
-          }
-        },
-        "image_WP4qMW": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2681466_5.jpg",
-            "title": ""
-          }
-        },
-        "image_atLdg3": {
+        "image_KN4Wak": {
           "type": "image",
           "settings": {
             "title": ""
@@ -46,18 +26,15 @@
         }
       },
       "block_order": [
-        "image_ARUr8e",
-        "image_HWHnmX",
-        "image_H3YwMC",
-        "image_bBxyVq",
-        "image_WP4qMW",
-        "image_atLdg3"
+        "image_da6qFw",
+        "image_BwPMmf",
+        "image_KN4Wak"
       ],
       "settings": {
         "announcement_bar_enabled": true,
         "announcement_bar_home_page_only": true,
         "announcement_bar_text": "Announce something here",
-        "announcement_bar_link": "shopify:\/\/collections\/马克杯",
+        "announcement_bar_link": "shopify:\/\/collections\/thermos",
         "logo": "shopify:\/\/shop_images\/WechatIMG1030-removebg-preview.png",
         "logo_max_width": 100,
         "menu": "main-menu"
