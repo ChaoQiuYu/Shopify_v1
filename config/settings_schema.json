@@ -8,6 +8,17 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "导航链接图像",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "navigation_image",
+        "label": "导航链接图像",
+        "info": "为导航链接添加图像"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {
