@@ -29,13 +29,13 @@
         {% assign collection = collections[selected_collection_id] %}
         {% if collection %}
           <li>
-             <img src="{{ collection.image |  img_url: 'master'}}" alt="{{ collection.title }}">
+             <img src="{{ collection.image }}" alt="{{ collection.title }}">
           </li>
           <li style="text-align: center;">{{ collection.title }}</li>
         {% endif %}
       {% else %}
         <li>
-          <img src="{{ childlink.image |  img_url: 'master'}}" alt="{{ childlink.title }}">
+          <img src="{{ childlink.image }}" alt="{{ childlink.title }}">
         </li>
         <li style="text-align: center;">{{ childlink.title }}</li>
       {% endif %}
