@@ -3057,6 +3057,7 @@ __webpack_require__(/*! ./components/MiniCart.js */ "./src/js/components/MiniCar
 // javascript
 __webpack_require__(/*! ./product.js */ "./src/js/product.js");
 __webpack_require__(/*! ./header.js */ "./src/js/header.js");
+__webpack_require__(/*! ./getImage.js */ "./src/js/getImage.js");
 
 /***/ }),
 
@@ -3361,6 +3362,52 @@ Vue.filter('money', function (value) {
   var sign = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '$';
   if (!value) return 0;
   return sign + (value / 100).toFixed(2);
+});
+
+/***/ }),
+
+/***/ "./src/js/getImage.js":
+/*!****************************!*\
+  !*** ./src/js/getImage.js ***!
+  \****************************/
+/***/ (() => {
+
+// 定义一个函数来根据产品系列 ID 获取展示图片的 URL
+function getCollectionImage(collectionId) {
+  // 发起 AJAX 请求或调用 storefront API 获取产品系列信息
+  // 这里假设你已经有了一个用于获取产品系列信息的函数，例如 fetchCollectionInfo
+
+  fetchCollectionInfo(collectionId).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    // 从 API 响应中获取展示图片的 URL
+    var imageUrl = data.collection.image.src;
+
+    // 更新导航栏下拉框中相应子菜单的图片链接
+    var imageElement = document.querySelector("#collection-".concat(collectionId, " img"));
+    if (imageElement) {
+      imageElement.src = imageUrl;
+    }
+  })["catch"](function (error) {
+    console.error('Error fetching collection info:', error);
+  });
+}
+
+// 示例：获取产品系列信息的函数
+function fetchCollectionInfo(collectionId) {
+  // 这里可以使用 Shopify 的 AJAX API 或 storefront API 来获取产品系列信息
+  // 返回一个 Promise 对象
+  return fetch("/collections/".concat(collectionId, ".json"));
+}
+
+// 示例：在页面加载完成后执行获取图片链接的操作
+document.addEventListener('DOMContentLoaded', function () {
+  // 假设在导航栏下拉框的子菜单中每个链接都有一个类名为 collection-link，以及一个自定义属性 data-collection-id 用于存储产品系列 ID
+  var collectionLinks = document.querySelectorAll('.collection-link');
+  collectionLinks.forEach(function (link) {
+    var collectionId = link.getAttribute('data-collection-id');
+    getCollectionImage(collectionId);
+  });
 });
 
 /***/ }),
