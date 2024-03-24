@@ -21,28 +21,12 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div style="display: flex;">
-                          {% for childlink in link.links %}
-  <a href="{{ childlink.url }}" class="dropdown-item">
-    <ul style="list-style-type: none;">
-      {% if childlink.object_type == 'collection' %}
-        {% assign selected_collection_id = settings.collection_link %}
-        {% assign collection = collections[selected_collection_id] %}
-        {% if collection %}
-          <li>
-             <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
-          </li>
-          <li style="text-align: center;">{{ collection.title }}</li>
-        {% endif %}
-      {% else %}
-        <li>
-          <img src="{{ childlink.image | img_url: 'medium' }}" alt="{{ childlink.title }}">
-        </li>
-        <li style="text-align: center;">{{ childlink.title }}</li>
-      {% endif %}
-    </ul>
-  </a>
-{% endfor %}
-
+                            {% for childlink in link.links %}
+                                <a href="{{ childlink.url }}" class="dropdown-item">
+                                    <img src="{{ childlink.image_src }}" alt="{{ childlink.title }}">
+                                    {{ childlink.title }}
+                                </a>
+                                {% endfor %}
                         </div>
                     </div>
                 </li>
