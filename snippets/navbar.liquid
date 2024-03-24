@@ -24,7 +24,7 @@
                             {% for childlink in link.links %}
                                 <a href="{{ childlink.url }}" class="dropdown-item">
                                     <img src="{{ getCollectionImage(childlink.object_id) }}" alt="{{ childlink.title }}">
-                                    {{ childlink.title }}
+                                    <span>{{ childlink.title }}</span>
                                 </a>
                                 {% endfor %}
                         </div>
