@@ -23,7 +23,7 @@
                         <div style="display: flex;">
                             {% for childlink in link.links %}
                                 <a href="{{ childlink.url }}" class="dropdown-item">
-                                    <img src="{{ getCollectionImage(childlink.object_id)}}" alt="{{ childlink.title }}">
+                                    <img src="{{ getCollectionImage(childlink.id) }}" alt="{{ childlink.title }}">
                                     <span>{{ childlink.title }}</span>
                                 </a>
                                 {% endfor %}
