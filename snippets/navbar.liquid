@@ -22,10 +22,19 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div style="display: flex;">
                             {% for childlink in link.links %}
-                                <a href="{{ childlink.url }}" class="dropdown-item">
+                                {% comment %} <a href="{{ childlink.url }}" class="dropdown-item"> {% endcomment %}
                                     {% comment %} <img src="{{ getCollectionImage(childlink.id) }}" alt="{{ childlink.title }}"> {% endcomment %}
-                                    <span>{{ childlink.title }}</span>
-                                </a>
+                                    {% comment %} <span>{{ childlink.title }}</span> {% endcomment %}
+                                {% comment %} </a> {% endcomment %}
+                                {%- liquid
+                                    if section.settings.menu != blank
+                                        if section.settings.menu_type_desktop == 'dropdown'
+                                        render 'header-dropdown-menu'
+                                        elsif section.settings.menu_type_desktop != 'drawer'
+                                        render 'header-mega-menu'
+                                        endif
+                                    endif
+                                    %}
                                 {% endfor %}
                         </div>
                     </div>
