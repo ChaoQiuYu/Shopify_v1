@@ -14,7 +14,10 @@
         "menu": "main-menu",
         "menu_type_desktop": "mega",
         "mega_menu_images_toggle": "featured",
-        "mega_menu_images_title": false
+        "mega_menu_images_title": false,
+        "drawer_menu_images_toggle": "featured",
+        "drawer_menu_images_border_toggle": true,
+        "drawer_menu_images_border_color": "#1773b0"
       }
     }
   },
