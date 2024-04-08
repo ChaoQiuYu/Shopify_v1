@@ -8,7 +8,7 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+{% comment %} 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 {% for link in linklists[section.settings.menu].links %}
@@ -49,7 +49,41 @@
                     
                 </li>
             </ul>
-        </div>
+        </div> {% endcomment %}
+
+        {% if section.settings.menu_type_desktop == 'mega' and section.settings.mega_menu_images_toggle != 'none' %}
+            <ul class="mega-menu__list megamenu-with-image page-width">
+              {%- for childlink in link.links -%}
+                {% assign image_url = '' %}
+          
+                {% if section.settings.mega_menu_images_toggle == 'featured' %}
+                  {% if childlink.object.featured_image %}
+                    {% assign image_url = childlink.object.featured_image | img_url: 'master' %}
+                  {% endif %}
+                {% elsif section.settings.mega_menu_images_toggle == 'metafield' %}
+                  {% assign image_url = childlink.object.metafields.custom.header_menu_image | img_url: 'master' %}
+                {% endif %}
+                
+                <li>
+                  <div class="mega-menu__column">
+                    {% if image_url != blank %}
+                      <a href="{{ childlink.url }}">
+                        <img src="{{ image_url }}" alt="{{ childlink.title | escape }}" class="mega-menu__image">
+                      </a>
+                    {% endif %}
+                    <a id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}" href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %} {% if section.settings.mega_menu_images_title %}hide-title{% endif %}" {% if childlink.current %} aria-current="page" {% endif %}>
+                      {{ childlink.title | escape }}
+                    </a>
+                  </div>
+                </li>
+              {%- endfor -%}
+            </ul>
+          
+        {% comment %} {% else if %} {% endcomment %}
+          
+          
+          
+          {% endif %}
     </div>
 
 </nav>
