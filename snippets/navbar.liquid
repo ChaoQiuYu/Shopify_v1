@@ -19,7 +19,7 @@
                         
                         {{ link.title }}
                     </a>
-                    <div aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div style="display: flex;">
                                 {% if section.settings.menu_type_desktop == 'mega' and section.settings.mega_menu_images_toggle != 'none' %}
                                     <ul class="mega-menu__list megamenu-with-image page-width">
@@ -76,6 +76,9 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Cart
                     </a>
+                    <a href="{{ childlink.url }}" class="dropdown-item">
+{%  include  'mini-cart' %}                                  
+</a>
                     
                 </li>
             </ul>
