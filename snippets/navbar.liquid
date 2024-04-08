@@ -20,7 +20,7 @@
                         {{ link.title }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <div style="display: flex;">
+                        <div>
                                 {% if section.settings.menu_type_desktop == 'mega' and section.settings.mega_menu_images_toggle != 'none' %}
                                     <ul class="mega-menu__list megamenu-with-image page-width">
                                       {%- for childlink in link.links -%}
