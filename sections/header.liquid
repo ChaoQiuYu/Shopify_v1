@@ -12,9 +12,10 @@
 {%- endcomment -%}
 <section data-section-id="{{ section.id }}" data-section-type="header">
 
-  <header>
+  {% comment %} <header>
     {% include 'navbar' %}
-  </header>
+  </header> {% endcomment %}
+  {% render 'header-mega-menu' %}
   
 
 </section>
