@@ -46,8 +46,10 @@
                     {% endif %}
                   </s>
                 {% endif %}
+
+                <span>{{current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by:  current_variant.compare_at_price }}% OFF</span>
             </div>
-            {{current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by:  current_variant.compare_at_price }}% OFF
+            
                    
           
             {% include 'product-form' %}
