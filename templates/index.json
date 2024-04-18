@@ -2,173 +2,17 @@
   "sections": {
     "image-slider": {
       "type": "image-slider",
-      "blocks": {
-        "image_WeKrtt": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-            "title": "first"
-          }
-        },
-        "image_VVMkfV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
-            "title": "second"
-          }
-        }
-      },
-      "block_order": [
-        "image_WeKrtt",
-        "image_VVMkfV"
-      ],
       "settings": {
-        "title": ""
       }
     },
-    "featured_collection_Ynkh6J": {
-      "type": "featured-collection",
+    "pricing-table": {
+      "type": "pricing-table",
       "settings": {
-        "title": "Featured collection",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "thermos",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "round",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_product_rhwX4y": {
-      "type": "featured-product",
-      "blocks": {
-        "text_kxC7yq": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_TzPhRi": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_AXPqx7": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker_YbfbDi": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector_fU3WJK": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons_at4qa9": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_TA4ynG": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_kxC7yq",
-        "title_TzPhRi",
-        "price_AXPqx7",
-        "variant_picker_YbfbDi",
-        "quantity_selector_fU3WJK",
-        "buy_buttons_at4qa9",
-        "share_TA4ynG"
-      ],
-      "settings": {
-        "product": "",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collection_list_33Uhkd": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_7iWLpD": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_andypV": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_KnpAfX": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_7iWLpD",
-        "featured_collection_andypV",
-        "featured_collection_KnpAfX"
-      ],
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
   "order": [
     "image-slider",
-    "featured_collection_Ynkh6J",
-    "featured_product_rhwX4y",
-    "collection_list_33Uhkd"
+    "pricing-table"
   ]
 }
