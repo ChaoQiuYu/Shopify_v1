@@ -2,12 +2,72 @@
   "sections": {
     "image-slider": {
       "type": "image-slider",
+      "blocks": {
+        "image_GVJPPf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
+            "title": ""
+          }
+        },
+        "image_WH4bPG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "title": ""
+          }
+        },
+        "image_8yBCXw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iced-latte-at-coffee-shop-window.jpg",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_GVJPPf",
+        "image_WH4bPG",
+        "image_8yBCXw"
+      ],
       "settings": {
+        "title": ""
       }
     },
     "pricing-table": {
       "type": "pricing-table",
+      "blocks": {
+        "plan_qbTeFm": {
+          "type": "plan",
+          "settings": {
+            "title": "",
+            "dbtfy_full_background": false,
+            "dbtfy_plan_badge": "Most popular",
+            "dbtfy_plan_image": "shopify:\/\/shop_images\/InfographicshowingthesizedifferenceoftheSwigLife32ozConfettiTumblercomparedtothe40ozConfettiMegaMug_1.jpg",
+            "dbtfy_plan_icon": "local_offer",
+            "dbtfy_plan_title": "Title",
+            "dbtfy_plan_description": "",
+            "dbtfy_plan_price": "$19.99",
+            "dbtfy_plan_price_text": "",
+            "dbtfy_plan_button_label": "Get started",
+            "dbtfy_plan_button_link": "",
+            "dbtfy_plan_button_style": "btn-outline-primary",
+            "dbtfy_plan_button_description": "",
+            "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
+            "dbtfy_plan_details_icon": "check_circle"
+          }
+        }
+      },
+      "block_order": [
+        "plan_qbTeFm"
+      ],
       "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "title": "qqqq",
+        "subtitle": "",
+        "section_style": "section-blank",
+        "dbtfy_button_position": "middle"
       }
     }
   },
