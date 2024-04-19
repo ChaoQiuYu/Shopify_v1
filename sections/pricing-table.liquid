@@ -46,8 +46,7 @@
     
                     {%- if block.settings.dbtfy_plan_image != blank -%}
                     <div class="card-image media-wrapper" style="padding-top: {{ 1 | divided_by: block.settings.dbtfy_plan_image.aspect_ratio | times: 100 }}%;">
-                      <img class="pt-plan-image media lazyload"
-                      {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
+                      <img class="pt-plan-image media lazyload" src={{block.settings.dbtfy_plan_image |  img_url: 'medium'}}
                       alt="{{ block.settings.dbtfy_plan_image.alt }}">
                     </div>
                     {%- endif -%}
