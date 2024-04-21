@@ -52,7 +52,6 @@
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-        {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
@@ -100,7 +99,7 @@
               {%- endif -%}
             </div>
           </div>
-        {%- endif -%}
+      
         <div class="card__content">
           <div class="card__information">
             <h3
@@ -133,9 +132,9 @@
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
               >
                 {% comment %}
- {{ 'products.product.on_sale' | t }} 
- {% endcomment %}
- {{card_product.compare_at_price | minus: card_product.price | times: 100 | divided_by:  card_product.compare_at_price }}% OFF
+                  {{ 'products.product.on_sale' | t }} 
+                {% endcomment %}
+                {{card_product.compare_at_price | minus: card_product.price | times: 100 | divided_by:  card_product.compare_at_price }}% OFF
               </span>
             {%- endif -%}
           </div>
