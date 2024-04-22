@@ -34,10 +34,10 @@
         "title": ""
       }
     },
-    "pricing-table": {
+    "pricing_table_tqRGhE": {
       "type": "pricing-table",
       "blocks": {
-        "plan_qbTeFm": {
+        "plan_LYfqd8": {
           "type": "plan",
           "settings": {
             "title": "",
@@ -56,52 +56,65 @@
             "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
             "dbtfy_plan_details_icon": "check_circle"
           }
+        },
+        "plan_xCEUrT": {
+          "type": "plan",
+          "settings": {
+            "title": "",
+            "dbtfy_full_background": false,
+            "dbtfy_plan_badge": "Most popular",
+            "dbtfy_plan_image": "shopify:\/\/shop_images\/2024-02-29_21.35.04.png",
+            "dbtfy_plan_icon": "local_offer",
+            "dbtfy_plan_title": "Title",
+            "dbtfy_plan_description": "",
+            "dbtfy_plan_price": "$19.99",
+            "dbtfy_plan_price_text": "",
+            "dbtfy_plan_button_label": "Get started",
+            "dbtfy_plan_button_link": "",
+            "dbtfy_plan_button_style": "btn-outline-primary",
+            "dbtfy_plan_button_description": "",
+            "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
+            "dbtfy_plan_details_icon": "check_circle"
+          }
+        },
+        "plan_yebCFb": {
+          "type": "plan",
+          "settings": {
+            "title": "",
+            "dbtfy_full_background": false,
+            "dbtfy_plan_badge": "Most popular",
+            "dbtfy_plan_image": "shopify:\/\/shop_images\/WechatIMG1030-removebg-preview.png",
+            "dbtfy_plan_icon": "local_offer",
+            "dbtfy_plan_title": "Title",
+            "dbtfy_plan_description": "",
+            "dbtfy_plan_price": "$19.99",
+            "dbtfy_plan_price_text": "",
+            "dbtfy_plan_button_label": "Get started",
+            "dbtfy_plan_button_link": "",
+            "dbtfy_plan_button_style": "btn-outline-primary",
+            "dbtfy_plan_button_description": "",
+            "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
+            "dbtfy_plan_details_icon": "check_circle"
+          }
         }
       },
       "block_order": [
-        "plan_qbTeFm"
+        "plan_LYfqd8",
+        "plan_xCEUrT",
+        "plan_yebCFb"
       ],
       "settings": {
         "show_on_desktop": true,
         "show_on_mobile": true,
-        "title": "qqqq",
+        "title": "Pricing table",
         "subtitle": "",
         "section_style": "section-blank",
         "dbtfy_button_position": "middle"
-      }
-    },
-    "featured_collection_XCxjJY": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "thermos",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
   "order": [
     "image-slider",
-    "pricing-table",
-    "featured_collection_XCxjJY"
+    "pricing_table_tqRGhE"
   ]
 }
