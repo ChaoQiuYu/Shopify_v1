@@ -1,12 +1,13 @@
-{% comment %} 
-  {%- if settings.dbtfy_pricing_table and section.blocks.size > 0 -%} 
+{% comment %}
+  {%- if settings.dbtfy_pricing_table and section.blocks.size > 0 -%}
 {% endcomment %}
 
-<div id="PricingTable"
-     class="{% unless section.settings.show_on_desktop %} medium--hide large--hide{% endunless %} {% unless section.settings.show_on_mobile %} small--hide{% endunless %} {{ section.settings.section_style }}"
-     data-section-id="{{ section.id }}"
-     data-section-type="pricing-table">
-
+<div
+  id="PricingTable"
+  class="{% unless section.settings.show_on_desktop %} medium--hide large--hide{% endunless %} {% unless section.settings.show_on_mobile %} small--hide{% endunless %} {{ section.settings.section_style }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="pricing-table"
+>
   <div class="box">
     <div class="wrapper">
       {%- unless section.settings.title == blank and section.settings.subtitle == blank -%}
@@ -20,7 +21,7 @@
                 <p class="section-header__subtitle">{{ section.settings.subtitle | escape }}</p>
               {%- endunless -%}
             </div>
-           </div>
+          </div>
         </div>
       {%- endunless -%}
 
@@ -29,34 +30,40 @@
           {%- render 'block-width' -%}
         {%- endcapture -%}
 
-        <div class="grid__item {{ column_width }} flex" style="display: flex; justify-content: space-around;"> <!-- 新增样式 -->
+        <div class="grid__item {{ column_width }} flex">
+          <!-- 新增样式 -->
           {% for block in section.blocks %}
             <div class="pt-plan-wrapper flex full">
               {%- if block.settings.dbtfy_plan_badge != blank -%}
-              <div class="pt-badge text-center">
-                <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
-              </div>
+                <div class="pt-badge text-center">
+                  <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
+                </div>
               {%- endif -%}
 
               <div class="card pt-pricing-plan{% if block.settings.dbtfy_full_background %} pt-full-background{% endif %}">
                 {%- if block.settings.dbtfy_plan_title != blank -%}
-                <div class="card-header justify-center text-center">
-                  <h3 class="pt-plan-title spacer-bottom-none">{{ block.settings.dbtfy_plan_title }}</h3>
-                </div>
+                  <div class="card-header justify-center text-center">
+                    <h3 class="pt-plan-title spacer-bottom-none">{{ block.settings.dbtfy_plan_title }}</h3>
+                  </div>
                 {%- endif -%}
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
-                <div class="card-image media-wrapper" style="padding-top: 10px;">
-                  <img class="pt-plan-image media lazyload" src={{block.settings.dbtfy_plan_image |  img_url: 'medium'}}
-                  alt="{{ block.settings.dbtfy_plan_image.alt }}">
-                </div>
+                  <div class="card-image media-wrapper" style="padding-top: 10px;">
+                    <img
+                      class="pt-plan-image media lazyload"
+                      src="{{block.settings.dbtfy_plan_image |  img_url: 'medium'}}"
+                      alt="{{ block.settings.dbtfy_plan_image.alt }}"
+                    >
+                  </div>
                 {%- endif -%}
 
                 <div class="card-body text-center pt-plan-body box">
                   {%- if block.settings.dbtfy_plan_icon != blank -%}
-                  <div class="pt-plan-icon">
-                    <span class="{{ settings.icon }} icon-image icon-xl spacer-bottom">{{ block.settings.dbtfy_plan_icon }}</span>
-                  </div>
+                    <div class="pt-plan-icon">
+                      <span class="{{ settings.icon }} icon-image icon-xl spacer-bottom">
+                        {{- block.settings.dbtfy_plan_icon -}}
+                      </span>
+                    </div>
                   {%- endif -%}
 
                   {%- if block.settings.dbtfy_plan_description != blank -%}
@@ -71,30 +78,41 @@
                     <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_price_text }}</p>
                   {%- endif -%}
 
-                  {%- if section.settings.dbtfy_button_position == "middle" -%}
+                  {%- if section.settings.dbtfy_button_position == 'middle' -%}
                     <div>
                       {%- if block.settings.dbtfy_plan_button_label != blank -%}
-                        <a href="{{ block.settings.dbtfy_plan_button_link }}"
-                          class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
+                        <a
+                          href="{{ block.settings.dbtfy_plan_button_link }}"
+                          class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}"
+                        >
                           {{ block.settings.dbtfy_plan_button_label }}
                         </a>
                       {%- endif -%}
 
                       {% if block.settings.dbtfy_plan_button_description != blank %}
-                        <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_button_description }}</p>
+                        <p class="pt-sub-text text-small spacer-top-xs">
+                          {{ block.settings.dbtfy_plan_button_description }}
+                        </p>
                       {%- endif -%}
                     </div>
                   {%- endif -%}
 
                   {%- if block.settings.dbtfy_plan_details != blank -%}
-                    {% assign plan_details = block.settings.dbtfy_plan_details | remove: "<p>" | remove: "</p>" | strip | split: "," %}
+                    {% assign plan_details = block.settings.dbtfy_plan_details
+                      | remove: '<p>'
+                      | remove: '</p>'
+                      | strip
+                      | split: ','
+                    %}
 
                     <div class="pt-plan-details rte spacer-bottom-none">
                       {% for detail in plan_details %}
                         {%- if detail != blank -%}
                           <p class="pt-plan-detail spacer-bottom-sm">
                             {%- if block.settings.dbtfy_plan_details_icon != blank -%}
-                              <span class="{{ settings.icon }} pt-icon-detail text-secondary spacer-right-sm">{{ block.settings.dbtfy_plan_details_icon }}</span>
+                              <span class="{{ settings.icon }} pt-icon-detail text-secondary spacer-right-sm">
+                                {{- block.settings.dbtfy_plan_details_icon -}}
+                              </span>
                             {%- endif -%}
 
                             {{ detail | strip }}
@@ -104,17 +122,21 @@
                     </div>
                   {%- endif -%}
 
-                  {%- if section.settings.dbtfy_button_position == "bottom" -%}
+                  {%- if section.settings.dbtfy_button_position == 'bottom' -%}
                     <div class="pt-button-bottom">
                       {%- if block.settings.dbtfy_plan_button_label != blank -%}
-                        <a href="{{ block.settings.dbtfy_plan_button_link }}"
-                          class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
+                        <a
+                          href="{{ block.settings.dbtfy_plan_button_link }}"
+                          class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}"
+                        >
                           {{ block.settings.dbtfy_plan_button_label }}
                         </a>
                       {%- endif -%}
 
                       {%- if block.settings.dbtfy_plan_button_description != blank -%}
-                        <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_button_description }}</p>
+                        <p class="pt-sub-text text-small spacer-top-xs">
+                          {{ block.settings.dbtfy_plan_button_description }}
+                        </p>
                       {%- endif -%}
                     </div>
                   {%- endif -%}
@@ -128,8 +150,8 @@
   </div>
 </div>
 
-{% comment %} 
-  {%- endif -%} 
+{% comment %}
+  {%- endif -%}
 {% endcomment %}
 
 {% schema %}
@@ -339,5 +361,3 @@
   ]
 }
 {% endschema %}
-
-    
