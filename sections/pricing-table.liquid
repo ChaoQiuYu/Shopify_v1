@@ -1,4 +1,3 @@
-{{ 'price-table.css' | asset_url | stylesheet_tag }}
 {% comment %} {%- if settings.dbtfy_pricing_table and section.blocks.size > 0 -%} {% endcomment %}
     <div id="PricingTable"
          class="{% unless section.settings.show_on_desktop %} medium--hide large--hide{% endunless %} {% unless section.settings.show_on_mobile %} small--hide{% endunless %} {{ section.settings.section_style }}"
