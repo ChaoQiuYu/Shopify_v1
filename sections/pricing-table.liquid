@@ -64,10 +64,16 @@
                       {%- endif -%}
     
                       {%- if block.settings.dbtfy_plan_price != blank -%}
-                        <span class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</span>
-                        <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
+                        <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</h3>
                       {%- endif -%}
-    
+
+                      {%- if block.settings.dbtfy_plan_discount_price != blank -%}
+                        {%- if block.settings.dbtfy_plan_price != blank-%}
+                          <span class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</span>
+                          <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
+                        {%- endif -%}
+                      {%- endif -%}
+
                       {%- if block.settings.dbtfy_plan_price_text != blank -%}
                         <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_price_text }}</p>
                       {%- endif -%}
