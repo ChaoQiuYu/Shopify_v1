@@ -71,7 +71,7 @@
                           {% assign original_price = block.settings.dbtfy_plan_price %}
                           {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
                           {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
-                          <span>{{ discount_rate | ceil}} % OFF</span>
+                          <span style="color: crimson;">{{ discount_rate | ceil}}% OFF</span>
                       {% else %}
                           <h3>error</h3>
                       {%- endif -%}
