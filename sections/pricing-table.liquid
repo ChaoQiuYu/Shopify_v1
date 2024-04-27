@@ -29,9 +29,9 @@
             {%- endcapture -%}
     
             {% for block in section.blocks %}
-              <div style="display: inline;" class="grid__item {{ column_width }} flex" 
+              <div  class="grid__item {{ column_width }} flex" 
                 {{ block.shopify_attributes }}>
-                <div class="pt-plan-wrapper flex full">
+                <div class="pt-plan-wrapper flex full" style="display: inline;">
                   {%- if block.settings.dbtfy_plan_badge != blank -%}
                   <div class="pt-badge text-center">
                     <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
