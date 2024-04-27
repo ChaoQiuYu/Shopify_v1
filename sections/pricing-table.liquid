@@ -29,7 +29,7 @@
             {%- endcapture -%}
     
             {% for block in section.blocks %}
-              <div  class="grid__item {{ column_width }} flex" style="border: transparent;"
+              <div  class="grid__item {{ column_width }} flex" style="border: 0px;background-color:transparent"
                 {{ block.shopify_attributes }}>
                 <div class="pt-plan-wrapper flex full" >
                   {%- if block.settings.dbtfy_plan_badge != blank -%}
