@@ -68,7 +68,7 @@
                       {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
                           <span class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</span>
                           <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
-                          <span> OFF</span>
+                          {% comment %} <span>{{block.settings.dbtfy_plan_discount_price | block.settings.dbtfy_plan_price | times: 100 | divided_by:  block.settings.dbtfy_plan_discount_price }}% OFF</span> {% endcomment %}
                       {% else %}
                           <h3>error</h3>
                       {%- endif -%}
@@ -265,10 +265,9 @@
                 "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.price.label",
                 "default": "$19.99"
               },{
-                "type": "text",
+                "type": "number",
                 "id": "dbtfy_plan_discount_price",
-                "label": "Discount Price",
-                "default": "$19.99"
+                "label": "Discount Price"
               },
               {
                 "type": "text",
