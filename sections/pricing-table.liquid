@@ -68,7 +68,7 @@
                       {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
                           <span class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</span>
                           <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
-                          {% assign discount_rate = 100 | minus: block.settings.dbtfy_plan_discount_price | times: 100.0 | divided_by: block.settings.dbtfy_plan_price %}
+                          {% assign discount_rate = 100 | minus: block.settings.dbtfy_plan_price | times: 100.0 | divided_by: block.settings.dbtfy_plan_discount_price %}
                           <span>{{ discount_rate }} % OFF</span>
                       {% else %}
                           <h3>error</h3>
