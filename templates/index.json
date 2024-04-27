@@ -68,6 +68,7 @@
             "dbtfy_plan_icon": "local_offer",
             "dbtfy_plan_title": "Title",
             "dbtfy_plan_description": "",
+            "dbtfy_plan_price": 4000,
             "dbtfy_plan_price_text": "",
             "dbtfy_plan_button_label": "Get started",
             "dbtfy_plan_button_link": "",
