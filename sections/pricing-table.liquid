@@ -43,8 +43,11 @@
                 {%- endif -%}
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
-                  <div class="card-image media-wrapper" style="padding-top: 10px;">
+                  <div class="card-image media-wrapper" style="position: relative; padding-top: 10px;">
                     <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '300x300', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}" width="300" height="300">
+                    <div class="discount-tag-container">
+                      <span class="discount-tag">50% OFF</span>
+                    </div>
                   </div>
                 {%- endif -%}
 
@@ -136,7 +139,7 @@
 {% schema %}
 {
   "name": "t:sections.dbtfy_pricing_table.name",
-    "class": "dbtfy dbtfy-pricing_table",
+  "class": "dbtfy dbtfy-pricing_table",
   "settings": [
     {
       "type": "header",
@@ -183,7 +186,7 @@
           "value": "section-blank",
           "label": "t:sections.dbtfy_pricing_table.settings.section_style.options__1.label"
         },
-            {
+        {
           "value": "section-default",
           "label": "t:sections.dbtfy_pricing_table.settings.section_style.options__2.label"
         },
@@ -214,7 +217,7 @@
     {
       "type": "plan",
       "name": "t:sections.dbtfy_pricing_table.blocks.plan.name",
-            "limit": 4,
+      "limit": 4,
       "settings": [
         {
           "type": "text",
@@ -239,14 +242,14 @@
           "id": "dbtfy_plan_image",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.image.label"
         },
-                {
+        {
           "type": "text",
           "id": "dbtfy_plan_icon",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.icon.label",
           "default": "local_offer",
           "info": "t:sections.dbtfy_pricing_table.blocks.plan.settings.icon.info"
         },
-                {
+        {
           "type": "text",
           "id": "dbtfy_plan_title",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.title.label",
@@ -257,11 +260,12 @@
           "id": "dbtfy_plan_description",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.description.label"
         },
-          {
+        {
           "type": "number",
           "id": "dbtfy_plan_price",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.price.label"
-        },{
+        },
+        {
           "type": "number",
           "id": "dbtfy_plan_discount_price",
           "label": "Discount Price"
@@ -302,12 +306,12 @@
             }
           ]
         },
-                {
+        {
           "type": "text",
           "id": "dbtfy_plan_button_description",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.button_description.label"
         },
-                {
+        {
           "type": "richtext",
           "id": "dbtfy_plan_details",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.details.label",
@@ -321,9 +325,9 @@
           "default": "check_circle",
           "info": "t:sections.dbtfy_pricing_table.blocks.plan.settings.details_icon.info"
         }
-            ]
-        }
-    ],
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "t:sections.dbtfy_pricing_table.presets.name",
