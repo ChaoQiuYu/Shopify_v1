@@ -1,4 +1,6 @@
-{% comment %} {%- if settings.dbtfy_pricing_table and section.blocks.size > 0 -%} {% endcomment %}
+{% comment %}
+  This section is a pricing table section.
+{% endcomment %}
 <div id="PricingTable"
      class="{% unless section.settings.show_on_desktop %} medium--hide large--hide{% endunless %} {% unless section.settings.show_on_mobile %} small--hide{% endunless %} {{ section.settings.section_style }}"
      data-section-id="{{ section.id }}"
@@ -17,45 +19,46 @@
                 <p class="section-header__subtitle">{{ section.settings.subtitle | escape }}</p>
               {%- endunless -%}
             </div>
-           </div>
+          </div>
         </div>
       {%- endunless -%}
 
-      <div class="grid grid-spacer pt-pricing-plans pt-button-position-{{ section.settings.dbtfy_button_position }} text-center" style="width: 100%;">
+      <div class="grid grid-spacer pt-pricing-plans pt-button-position-{{ section.settings.dbtfy_button_position }} text-center" style="width: 100%; display: flex; flex-wrap: wrap;">
 
         {%- capture column_width -%}
           {%- render 'block-width' -%}
         {%- endcapture -%}
 
         {% for block in section.blocks %}
-          <div class="grid__item {{ column_width }} flex" style="display:flex">
-            <div class="pt-plan-wrapper flex full" style="padding:100px">
+          <div class="grid__item {{ column_width }} flex" style="flex: 1;">
+            <div class="pt-plan-wrapper" style="padding: 0 15px;">
               {%- if block.settings.dbtfy_plan_badge != blank -%}
-              <div class="pt-badge text-center">
-                <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
-              </div>
+                <div class="pt-badge text-center">
+                  <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
+                </div>
               {%- endif -%}
 
               <div class="card pt-pricing-plan{% if block.settings.dbtfy_full_background %} pt-full-background{% endif %}">
                 {%- if block.settings.dbtfy_plan_title != blank -%}
-                <div class="card-header justify-center text-center" style="border: 0px;background-color:transparent">
-                  <h3 class="pt-plan-title spacer-bottom-none">{{ block.settings.dbtfy_plan_title }}</h3>
-                </div>
+                  <div class="card-header justify-center text-center" style="border: 0px;background-color:transparent">
+                    <h3 class="pt-plan-title spacer-bottom-none">{{ block.settings.dbtfy_plan_title }}</h3>
+                  </div>
                 {%- endif -%}
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
-                <div class="card-image media-wrapper" style="padding-top: 10px;">
-                  <img class="pt-plan-image media lazyload"
-                    src="{{ block.settings.dbtfy_plan_image | img_url: '200x' }}"
-                    alt="{{ block.settings.dbtfy_plan_image.alt }}">
-                </div>
+                  <div class="card-image media-wrapper" style="padding-top: 10px;">
+                    <img class="pt-plan-image media lazyload"
+                         {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
+                         alt="{{ block.settings.dbtfy_plan_image.alt }}">
+                  </div>
+                  {% comment %} <img src="{{block.settings.dbtfy_plan_image |  img_url: '200x'}}"> {% endcomment %}
                 {%- endif -%}
 
                 <div class="card-body text-center pt-plan-body box">
                   {%- if block.settings.dbtfy_plan_icon != blank -%}
-                  <div class="pt-plan-icon">
-                    <span class="{{ settings.icon }} icon-image icon-xl spacer-bottom">{{ block.settings.dbtfy_plan_icon }}</span>
-                  </div>
+                    <div class="pt-plan-icon">
+                      <span class="{{ settings.icon }} icon-image icon-xl spacer-bottom">{{ block.settings.dbtfy_plan_icon }}</span>
+                    </div>
                   {%- endif -%}
 
                   {%- if block.settings.dbtfy_plan_description != blank -%}
@@ -135,12 +138,11 @@
     </div>
   </div>
 </div>
-{% comment %} {%- endif -%} {% endcomment %}
 
 {% schema %}
 {
   "name": "t:sections.dbtfy_pricing_table.name",
-  "class": "dbtfy dbtfy-pricing_table",
+    "class": "dbtfy dbtfy-pricing_table",
   "settings": [
     {
       "type": "header",
@@ -187,7 +189,7 @@
           "value": "section-blank",
           "label": "t:sections.dbtfy_pricing_table.settings.section_style.options__1.label"
         },
-        {
+            {
           "value": "section-default",
           "label": "t:sections.dbtfy_pricing_table.settings.section_style.options__2.label"
         },
@@ -218,7 +220,7 @@
     {
       "type": "plan",
       "name": "t:sections.dbtfy_pricing_table.blocks.plan.name",
-      "limit": 4,
+            "limit": 4,
       "settings": [
         {
           "type": "text",
@@ -243,14 +245,14 @@
           "id": "dbtfy_plan_image",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.image.label"
         },
-        {
+                {
           "type": "text",
           "id": "dbtfy_plan_icon",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.icon.label",
           "default": "local_offer",
           "info": "t:sections.dbtfy_pricing_table.blocks.plan.settings.icon.info"
         },
-        {
+                {
           "type": "text",
           "id": "dbtfy_plan_title",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.title.label",
@@ -261,12 +263,11 @@
           "id": "dbtfy_plan_description",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.description.label"
         },
-        {
+          {
           "type": "number",
           "id": "dbtfy_plan_price",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.price.label"
-        },
-        {
+        },{
           "type": "number",
           "id": "dbtfy_plan_discount_price",
           "label": "Discount Price"
@@ -307,12 +308,12 @@
             }
           ]
         },
-        {
+                {
           "type": "text",
           "id": "dbtfy_plan_button_description",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.button_description.label"
         },
-        {
+                {
           "type": "richtext",
           "id": "dbtfy_plan_details",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.details.label",
@@ -326,9 +327,9 @@
           "default": "check_circle",
           "info": "t:sections.dbtfy_pricing_table.blocks.plan.settings.details_icon.info"
         }
-      ]
-    }
-  ],
+            ]
+        }
+    ],
   "presets": [
     {
       "name": "t:sections.dbtfy_pricing_table.presets.name",
