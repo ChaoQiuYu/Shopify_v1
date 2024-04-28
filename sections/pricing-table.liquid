@@ -21,38 +21,40 @@
         </div>
       {%- endunless -%}
 
-      <!-- Flexbox container to display plans in a row -->
-      <div class="pricing-plans-wrapper" style="display: flex; flex-wrap: wrap; justify-content: center;">
-        <!-- Loop through each pricing plan block -->
+      <div class="grid grid-spacer pt-pricing-plans pt-button-position-{{ section.settings.dbtfy_button_position }} text-center" style="width: 100%;">
+
+        {%- capture column_width -%}
+          {%- render 'block-width' -%}
+        {%- endcapture -%}
+
         {% for block in section.blocks %}
-          <div class="pricing-plan">
-            <div class="pt-plan-wrapper">
+          <div class="grid__item {{ column_width }} flex" style="display:flex">
+            <div class="pt-plan-wrapper flex full" style="padding:100px">
               {%- if block.settings.dbtfy_plan_badge != blank -%}
-                <div class="pt-badge text-center">
-                  <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
-                </div>
+              <div class="pt-badge text-center">
+                <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
+              </div>
               {%- endif -%}
 
               <div class="card pt-pricing-plan{% if block.settings.dbtfy_full_background %} pt-full-background{% endif %}">
                 {%- if block.settings.dbtfy_plan_title != blank -%}
-                  <div class="card-header justify-center text-center" style="border: 0px;background-color:transparent">
-                    <h3 class="pt-plan-title spacer-bottom-none">{{ block.settings.dbtfy_plan_title }}</h3>
-                  </div>
+                <div class="card-header justify-center text-center" style="border: 0px;background-color:transparent">
+                  <h3 class="pt-plan-title spacer-bottom-none">{{ block.settings.dbtfy_plan_title }}</h3>
+                </div>
                 {%- endif -%}
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
-                  <div class="card-image media-wrapper" style="padding-top: 10px;">
-                    <img class="pt-plan-image media lazyload"
-                         {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
-                         alt="{{ block.settings.dbtfy_plan_image.alt }}">
-                  </div>
+                <div class="card-image media-wrapper" style="padding-top: 10px;">
+                 <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '200x200', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}">
+                </div> 
+                {% comment %} <img src="{{block.settings.dbtfy_plan_image |  img_url: '200x'}}"> {% endcomment %}
                 {%- endif -%}
 
                 <div class="card-body text-center pt-plan-body box">
                   {%- if block.settings.dbtfy_plan_icon != blank -%}
-                    <div class="pt-plan-icon">
-                      <span class="{{ settings.icon }} icon-image icon-xl spacer-bottom">{{ block.settings.dbtfy_plan_icon }}</span>
-                    </div>
+                  <div class="pt-plan-icon">
+                    <span class="{{ settings.icon }} icon-image icon-xl spacer-bottom">{{ block.settings.dbtfy_plan_icon }}</span>
+                  </div>
                   {%- endif -%}
 
                   {%- if block.settings.dbtfy_plan_description != blank -%}
@@ -60,16 +62,16 @@
                   {%- endif -%}
 
                   {%- if block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price == blank-%}
-                    <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</h3>
+                    <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money }}</h3>
                   {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
-                    <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money}}</del>
-                    <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
-                    {% assign original_price = block.settings.dbtfy_plan_price %}
-                    {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
-                    {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
-                    <span style="color: crimson;">{{ discount_rate | ceil}}% OFF</span>
+                      <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money }}</del>
+                      <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money }}</h3>
+                      {% assign original_price = block.settings.dbtfy_plan_price %}
+                      {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
+                      {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
+                      <span style="color: crimson;">{{ discount_rate | ceil }}% OFF</span>
                   {% else %}
-                    <h3>error</h3>
+                      <h3>error</h3>
                   {%- endif -%}
 
                   {%- if block.settings.dbtfy_plan_price_text != blank -%}
@@ -80,7 +82,7 @@
                     <div>
                       {%- if block.settings.dbtfy_plan_button_label != blank -%}
                         <a href="{{ block.settings.dbtfy_plan_button_link }}"
-                           class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
+                          class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
                           {{ block.settings.dbtfy_plan_button_label }}
                         </a>
                       {%- endif -%}
@@ -113,7 +115,7 @@
                     <div class="pt-button-bottom">
                       {%- if block.settings.dbtfy_plan_button_label != blank -%}
                         <a href="{{ block.settings.dbtfy_plan_button_link }}"
-                           class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
+                          class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
                           {{ block.settings.dbtfy_plan_button_label }}
                         </a>
                       {%- endif -%}
@@ -262,7 +264,8 @@
           "type": "number",
           "id": "dbtfy_plan_price",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.price.label"
-        },{
+        },
+        {
           "type": "number",
           "id": "dbtfy_plan_discount_price",
           "label": "Discount Price"
@@ -344,5 +347,3 @@
   ]
 }
 {% endschema %}
-
-    
