@@ -1,129 +1,140 @@
 {% comment %} {%- if settings.dbtfy_pricing_table and section.blocks.size > 0 -%} {% endcomment %}
 <div id="PricingTable"
-    class="{% unless section.settings.show_on_desktop %} medium--hide large--hide{% endunless %} {% unless section.settings.show_on_mobile %} small--hide{% endunless %} {{ section.settings.section_style }}"
-    data-section-id="{{ section.id }}"
-    data-section-type="pricing-table">
-    <div class="box">
-        <div class="wrapper">
-            {%- unless section.settings.title == blank and section.settings.subtitle == blank -%}
-            <div class="grid">
-                <div class="grid__item large--eight-twelfths push--large--two-twelfths">
-                    <div class="section-header">
-                        {%- unless section.settings.title == blank -%}
-                        <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
-                        {%- endunless -%}
-                        {%- unless section.settings.subtitle == blank -%}
-                        <p class="section-header__subtitle">{{ section.settings.subtitle | escape }}</p>
-                        {%- endunless -%}
-                    </div>
-                </div>
-            </div>
+     class="{% unless section.settings.show_on_desktop %} medium--hide large--hide{% endunless %} {% unless section.settings.show_on_mobile %} small--hide{% endunless %} {{ section.settings.section_style }}"
+     data-section-id="{{ section.id }}"
+     data-section-type="pricing-table">
+
+  <div class="box">
+    <div class="wrapper">
+      {%- unless section.settings.title == blank and section.settings.subtitle == blank -%}
+      <div class="grid">
+        <div class="grid__item large--eight-twelfths push--large--two-twelfths">
+          <div class="section-header">
+            {%- unless section.settings.title == blank -%}
+            <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
             {%- endunless -%}
-            <div class="grid grid-spacer pt-pricing-plans pt-button-position-{{ section.settings.dbtfy_button_position }} text-center" style="width: 100%;">
-                {%- capture column_width -%}
-                {%- render 'block-width' -%}
-                {%- endcapture -%}
-                {% for block in section.blocks %}
-                <div class="grid__item {{ column_width }} flex" style="display:flex">
-                    <div class="pt-plan-wrapper flex full" style="padding:100px">
-                        {%- if block.settings.dbtfy_plan_badge != blank -%}
-                        <div class="pt-badge text-center">
-                            <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
-                        </div>
-                        {%- endif -%}
-                        <div class="card pt-pricing-plan{% if block.settings.dbtfy_full_background %} pt-full-background{% endif %}">
-                            {%- if block.settings.dbtfy_plan_title != blank -%}
-                            <div class="card-header justify-center text-center" style="border: 0px;background-color:transparent">
-                                <h3 class="pt-plan-title spacer-bottom-none">{{ block.settings.dbtfy_plan_title }}</h3>
-                            </div>
-                            {%- endif -%}
-                            <div class="card-body text-center pt-plan-body box">
-                                {%- if block.settings.dbtfy_plan_image != blank -%}
-                                <div class="pt-plan-image-wrapper" style="display: flex; justify-content: center;">
-                                    <div class="pt-plan-image">
-                                        <img class="media lazyload"
-                                            {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
-                                            alt="{{ block.settings.dbtfy_plan_image.alt }}">
-                                    </div>
-                                    {%- if block.settings.dbtfy_plan_discount_price != blank-%}
-                                    {% assign original_price = block.settings.dbtfy_plan_price %}
-                                    {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
-                                    {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
-                                    <div class="pt-discount-badge" style="margin-left: 10px;">
-                                        <span>{{ discount_rate | ceil}}% OFF</span>
-                                    </div>
-                                    {%- endif -%}
-                                </div>
-                                {%- endif -%}
-                                {%- if block.settings.dbtfy_plan_icon != blank -%}
-                                <div class="pt-plan-icon">
-                                    <span class="{{ settings.icon }} icon-image icon-xl spacer-bottom">{{ block.settings.dbtfy_plan_icon }}</span>
-                                </div>
-                                {%- endif -%}
-                                {%- if block.settings.dbtfy_plan_description != blank -%}
-                                <p>{{ block.settings.dbtfy_plan_description }}</p>
-                                {%- endif -%}
-                                {%- if block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price == blank-%}
-                                <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</h3>
-                                {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
-                                <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money}}</del>
-                                <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
-                                {%- else -%}
-                                <h3>error</h3>
-                                {%- endif -%}
-                                {%- if block.settings.dbtfy_plan_price_text != blank -%}
-                                <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_price_text }}</p>
-                                {%- endif -%}
-                                {%- if section.settings.dbtfy_button_position == "middle" -%}
-                                <div>
-                                    {%- if block.settings.dbtfy_plan_button_label != blank -%}
-                                    <a href="{{ block.settings.dbtfy_plan_button_link }}"
-                                        class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
-                                        {{ block.settings.dbtfy_plan_button_label }}
-                                    </a>
-                                    {%- endif -%}
-                                    {% if block.settings.dbtfy_plan_button_description != blank %}
-                                    <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_button_description }}</p>
-                                    {%- endif -%}
-                                </div>
-                                {%- endif -%}
-                                {%- if block.settings.dbtfy_plan_details != blank -%}
-                                {% assign plan_details = block.settings.dbtfy_plan_details | remove: "<p>" | remove: "</p>" | strip | split: "," %}
-                                <div class="pt-plan-details rte spacer-bottom-none">
-                                    {% for detail in plan_details %}
-                                    {%- if detail != blank -%}
-                                    <p class="pt-plan-detail spacer-bottom-sm">
-                                        {%- if block.settings.dbtfy_plan_details_icon != blank -%}
-                                        <span class="{{ settings.icon }} pt-icon-detail text-secondary spacer-right-sm">{{ block.settings.dbtfy_plan_details_icon }}</span>
-                                        {%- endif -%}
-                                        {{ detail | strip }}
-                                    </p>
-                                    {%- endif -%}
-                                    {% endfor %}
-                                </div>
-                                {%- endif -%}
-                                {%- if section.settings.dbtfy_button_position == "bottom" -%}
-                                <div class="pt-button-bottom">
-                                    {%- if block.settings.dbtfy_plan_button_label != blank -%}
-                                    <a href="{{ block.settings.dbtfy_plan_button_link }}"
-                                        class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
-                                        {{ block.settings.dbtfy_plan_button_label }}
-                                    </a>
-                                    {%- endif -%}
-                                    {%- if block.settings.dbtfy_plan_button_description != blank -%}
-                                    <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_button_description }}</p>
-                                    {%- endif -%}
-                                </div>
-                                {%- endif -%}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+            {%- unless section.settings.subtitle == blank -%}
+            <p class="section-header__subtitle">{{ section.settings.subtitle | escape }}</p>
+            {%- endunless -%}
+          </div>
         </div>
+      </div>
+      {%- endunless -%}
+
+      <div class="grid grid-spacer pt-pricing-plans pt-button-position-{{ section.settings.dbtfy_button_position }} text-center" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center;">
+
+        {%- capture column_width -%}
+        {%- render 'block-width' -%}
+        {%- endcapture -%}
+
+        {% for block in section.blocks %}
+        <div class="grid__item {{ column_width }} flex" style="flex: 0 0 auto; padding: 20px;">
+          <div class="pt-plan-wrapper flex full">
+            {%- if block.settings.dbtfy_plan_badge != blank -%}
+            <div class="pt-badge text-center">
+              <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
+            </div>
+            {%- endif -%}
+
+            <div class="card pt-pricing-plan{% if block.settings.dbtfy_full_background %} pt-full-background{% endif %}">
+              {%- if block.settings.dbtfy_plan_title != blank -%}
+              <div class="card-header justify-center text-center" style="border: 0px;background-color:transparent">
+                <h3 class="pt-plan-title spacer-bottom-none">{{ block.settings.dbtfy_plan_title }}</h3>
+              </div>
+              {%- endif -%}
+
+              {%- if block.settings.dbtfy_plan_image != blank -%}
+              <div class="card-image media-wrapper" style="padding-top: 10px;">
+                <img class="pt-plan-image media lazyload"
+                     {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
+                     alt="{{ block.settings.dbtfy_plan_image.alt }}">
+              </div>
+              {% comment %} <img src="{{block.settings.dbtfy_plan_image |  img_url: '200x'}}"> {% endcomment %}
+              {%- endif -%}
+
+              <div class="card-body text-center pt-plan-body box">
+                {%- if block.settings.dbtfy_plan_icon != blank -%}
+                <div class="pt-plan-icon">
+                  <span class="{{ settings.icon }} icon-image icon-xl spacer-bottom">{{ block.settings.dbtfy_plan_icon }}</span>
+                </div>
+                {%- endif -%}
+
+                {%- if block.settings.dbtfy_plan_description != blank -%}
+                <p>{{ block.settings.dbtfy_plan_description }}</p>
+                {%- endif -%}
+
+                {%- if block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price == blank-%}
+                <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</h3>
+                {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
+                <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money}}</del>
+                <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
+                {% assign original_price = block.settings.dbtfy_plan_price %}
+                {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
+                {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
+                <span style="color: crimson;">{{ discount_rate | ceil}}% OFF</span>
+                {% else %}
+                <h3>error</h3>
+                {%- endif -%}
+
+                {%- if block.settings.dbtfy_plan_price_text != blank -%}
+                <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_price_text }}</p>
+                {%- endif -%}
+
+                {%- if section.settings.dbtfy_button_position == "middle" -%}
+                <div>
+                  {%- if block.settings.dbtfy_plan_button_label != blank -%}
+                  <a href="{{ block.settings.dbtfy_plan_button_link }}"
+                     class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
+                    {{ block.settings.dbtfy_plan_button_label }}
+                  </a>
+                  {%- endif -%}
+
+                  {% if block.settings.dbtfy_plan_button_description != blank %}
+                  <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_button_description }}</p>
+                  {%- endif -%}
+                </div>
+                {%- endif -%}
+
+                {%- if block.settings.dbtfy_plan_details != blank -%}
+                {% assign plan_details = block.settings.dbtfy_plan_details | remove: "<p>" | remove: "</p>" | strip | split: "," %}
+
+                <div class="pt-plan-details rte spacer-bottom-none">
+                  {% for detail in plan_details %}
+                  {%- if detail != blank -%}
+                  <p class="pt-plan-detail spacer-bottom-sm">
+                    {%- if block.settings.dbtfy_plan_details_icon != blank -%}
+                    <span class="{{ settings.icon }} pt-icon-detail text-secondary spacer-right-sm">{{ block.settings.dbtfy_plan_details_icon }}</span>
+                    {%- endif -%}
+
+                    {{ detail | strip }}
+                  </p>
+                  {%- endif -%}
+                  {% endfor %}
+                </div>
+                {%- endif -%}
+
+                {%- if section.settings.dbtfy_button_position == "bottom" -%}
+                <div class="pt-button-bottom">
+                  {%- if block.settings.dbtfy_plan_button_label != blank -%}
+                  <a href="{{ block.settings.dbtfy_plan_button_link }}"
+                     class="btn{% if block.settings.dbtfy_plan_button_description == blank %} spacer-bottom{% endif %} {{ block.settings.dbtfy_plan_button_style }}">
+                    {{ block.settings.dbtfy_plan_button_label }}
+                  </a>
+                  {%- endif -%}
+
+                  {%- if block.settings.dbtfy_plan_button_description != blank -%}
+                  <p class="pt-sub-text text-small spacer-top-xs">{{ block.settings.dbtfy_plan_button_description }}</p>
+                  {%- endif -%}
+                </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
+  </div>
 </div>
 {% comment %} {%- endif -%} {% endcomment %}
-
     
