@@ -45,6 +45,11 @@
                 {%- if block.settings.dbtfy_plan_image != blank -%}
                   <div class="card-image media-wrapper" style="padding-top: 10px;">
                     <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '200x200', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}">
+                    {%- if block.settings.dbtfy_plan_discount_badge_image != blank -%}
+                      <div class="discount-badge">
+                        <img src="{{ block.settings.dbtfy_plan_discount_badge_image | img_url: '50x50' }}" alt="Discount Badge">
+                      </div>
+                    {%- endif -%}
                   </div>
                 {%- endif -%}
 
@@ -240,6 +245,11 @@
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.image.label"
         },
                 {
+          "type": "image_picker",
+          "id": "dbtfy_plan_discount_badge_image",
+          "label": "Discount Badge Image"
+        },
+                {
           "type": "text",
           "id": "dbtfy_plan_icon",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.icon.label",
@@ -343,4 +353,5 @@
   ]
 }
 {% endschema %}
+
 
