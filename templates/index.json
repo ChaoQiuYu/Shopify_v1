@@ -51,7 +51,7 @@
             "dbtfy_plan_discount_price": 150,
             "dbtfy_plan_price_text": "",
             "dbtfy_plan_button_label": "Get started",
-            "dbtfy_plan_button_link": "",
+            "dbtfy_plan_button_link": "shopify:\/\/products\/lets-go-girls-magic-bear-mug-30oz",
             "dbtfy_plan_button_style": "btn-outline-primary",
             "dbtfy_plan_button_description": "",
             "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
@@ -64,11 +64,12 @@
             "title": "",
             "dbtfy_full_background": false,
             "dbtfy_plan_badge": "Most popular",
-            "dbtfy_plan_image": "shopify:\/\/shop_images\/2024-02-29_21.35.04.png",
+            "dbtfy_plan_image": "shopify:\/\/shop_images\/CUP.jpg",
             "dbtfy_plan_icon": "local_offer",
             "dbtfy_plan_title": "Title",
             "dbtfy_plan_description": "",
             "dbtfy_plan_price": 4000,
+            "dbtfy_plan_discount_price": -2,
             "dbtfy_plan_price_text": "",
             "dbtfy_plan_button_label": "Get started",
             "dbtfy_plan_button_link": "",
@@ -96,12 +97,31 @@
             "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
             "dbtfy_plan_details_icon": "check_circle"
           }
+        },
+        "plan_BHqqfM": {
+          "type": "plan",
+          "settings": {
+            "title": "",
+            "dbtfy_full_background": false,
+            "dbtfy_plan_badge": "Most popular",
+            "dbtfy_plan_icon": "local_offer",
+            "dbtfy_plan_title": "Title",
+            "dbtfy_plan_description": "",
+            "dbtfy_plan_price_text": "",
+            "dbtfy_plan_button_label": "Get started",
+            "dbtfy_plan_button_link": "",
+            "dbtfy_plan_button_style": "btn-outline-primary",
+            "dbtfy_plan_button_description": "",
+            "dbtfy_plan_details": "<p>point 1, point 2, point 3<\/p>",
+            "dbtfy_plan_details_icon": "check_circle"
+          }
         }
       },
       "block_order": [
         "plan_LYfqd8",
         "plan_xCEUrT",
-        "plan_yebCFb"
+        "plan_yebCFb",
+        "plan_BHqqfM"
       ],
       "settings": {
         "show_on_desktop": true,
