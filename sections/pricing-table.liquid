@@ -1,6 +1,3 @@
-{% comment %}
-  This section is a pricing table section.
-{% endcomment %}
 <div id="PricingTable"
      class="{% unless section.settings.show_on_desktop %} medium--hide large--hide{% endunless %} {% unless section.settings.show_on_mobile %} small--hide{% endunless %} {{ section.settings.section_style }}"
      data-section-id="{{ section.id }}"
@@ -47,11 +44,8 @@
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
                   <div class="card-image media-wrapper" style="padding-top: 10px;">
-                    <img class="pt-plan-image media lazyload"
-                         {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
-                         alt="{{ block.settings.dbtfy_plan_image.alt }}">
+                    <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '200x200', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}">
                   </div>
-                  {% comment %} <img src="{{block.settings.dbtfy_plan_image |  img_url: '200x'}}"> {% endcomment %}
                 {%- endif -%}
 
                 <div class="card-body text-center pt-plan-body box">
@@ -349,3 +343,4 @@
   ]
 }
 {% endschema %}
+
