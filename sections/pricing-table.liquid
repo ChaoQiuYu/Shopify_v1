@@ -17,7 +17,7 @@
                 <p class="section-header__subtitle">{{ section.settings.subtitle | escape }}</p>
               {%- endunless -%}
             </div>
-          </div>
+           </div>
         </div>
       {%- endunless -%}
 
@@ -45,9 +45,10 @@
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
                 <div class="card-image media-wrapper" style="padding-top: 10px;">
-                 <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '200x200', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}">
-                </div> 
-                {% comment %} <img src="{{block.settings.dbtfy_plan_image |  img_url: '200x'}}"> {% endcomment %}
+                  <img class="pt-plan-image media lazyload"
+                    src="{{ block.settings.dbtfy_plan_image | img_url: '200x' }}"
+                    alt="{{ block.settings.dbtfy_plan_image.alt }}">
+                </div>
                 {%- endif -%}
 
                 <div class="card-body text-center pt-plan-body box">
@@ -62,14 +63,14 @@
                   {%- endif -%}
 
                   {%- if block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price == blank-%}
-                    <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money }}</h3>
+                    <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</h3>
                   {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
-                      <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money }}</del>
-                      <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money }}</h3>
+                      <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money}}</del>
+                      <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
                       {% assign original_price = block.settings.dbtfy_plan_price %}
                       {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
                       {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
-                      <span style="color: crimson;">{{ discount_rate | ceil }}% OFF</span>
+                      <span style="color: crimson;">{{ discount_rate | ceil}}% OFF</span>
                   {% else %}
                       <h3>error</h3>
                   {%- endif -%}
