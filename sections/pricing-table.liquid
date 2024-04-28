@@ -20,14 +20,14 @@
         </div>
       {%- endunless -%}
 
-      <div class="grid grid-spacer pt-pricing-plans pt-button-position-{{ section.settings.dbtfy_button_position }} text-center" style="width: 100%; display: flex; flex-wrap: wrap;">
+      <div class="grid grid-spacer pt-pricing-plans pt-button-position-{{ section.settings.dbtfy_button_position }} text-center" style="width: 100%; display: flex; flex-wrap: nowrap; overflow-x: auto;">
 
         {%- capture column_width -%}
           {%- render 'block-width' -%}
         {%- endcapture -%}
 
         {% for block in section.blocks %}
-          <div class="grid__item {{ column_width }} flex" style="flex: 1;">
+          <div class="grid__item {{ column_width }} flex" style="flex: 1; min-width: 300px;">
             <div class="pt-plan-wrapper" style="padding: 0 15px;">
               {%- if block.settings.dbtfy_plan_badge != blank -%}
                 <div class="pt-badge text-center">
@@ -44,12 +44,7 @@
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
                   <div class="card-image media-wrapper" style="padding-top: 10px;">
-                    <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '200x200', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}">
-                    {%- if block.settings.dbtfy_plan_discount_badge_image != blank -%}
-                      <div class="discount-badge">
-                        <img src="{{ block.settings.dbtfy_plan_discount_badge_image | img_url: '50x50' }}" alt="Discount Badge">
-                      </div>
-                    {%- endif -%}
+                    <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '300x300', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}" width="300" height="300">
                   </div>
                 {%- endif -%}
 
@@ -245,11 +240,6 @@
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.image.label"
         },
                 {
-          "type": "image_picker",
-          "id": "dbtfy_plan_discount_badge_image",
-          "label": "Discount Badge Image"
-        },
-                {
           "type": "text",
           "id": "dbtfy_plan_icon",
           "label": "t:sections.dbtfy_pricing_table.blocks.plan.settings.icon.label",
@@ -353,5 +343,3 @@
   ]
 }
 {% endschema %}
-
-
