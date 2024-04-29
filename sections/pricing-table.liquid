@@ -43,13 +43,13 @@
                 {%- endif -%}
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
-                  <div class="card-image media-wrapper" style="position: relative; max-width: 300px;">
+                  <div class="card-image media-wrapper" style="padding-top: 10px; position: relative;">
                     <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '300x300', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}" width="300" height="300">
                     {%- if block.settings.dbtfy_plan_discount_price != blank and block.settings.dbtfy_plan_price != blank -%}
                       {% assign original_price = block.settings.dbtfy_plan_price %}
                       {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
                       {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
-                      <span class="pt-discount-badge">{{ discount_rate | ceil}}% OFF</span>
+                      <span class="pt-discount-badge" style="transform: translate(50%, 50%); position: absolute; bottom: 10px; right: 10px; background-color: rgba(255, 255, 255, 0.8); padding: 5px;">{{ discount_rate | ceil}}% OFF</span>
                     {%- endif -%}
                   </div>
                 {%- endif -%}
@@ -68,7 +68,7 @@
                   {%- if block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price == blank-%}
                     <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</h3>
                   {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
-                      <del class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</del>
+                      <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money}}</del>
                       <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
                   {% else %}
                       <h3>error</h3>
@@ -346,6 +346,3 @@
   ]
 }
 {% endschema %}
-
-
-
