@@ -43,15 +43,15 @@
                 {%- endif -%}
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
-                    <div class="card-image media-wrapper" style="padding-top: 10px; position: relative; overflow: hidden;">
-                        <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '300x300', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}" width="300" height="300">
-                        {%- if block.settings.dbtfy_plan_discount_price != blank and block.settings.dbtfy_plan_price != blank -%}
-                            {% assign original_price = block.settings.dbtfy_plan_price %}
-                            {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
-                            {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
-                            <span class="pt-discount-badge" style="position: absolute; bottom: 0; right: 0; background-color: rgba(255, 255, 255, 0.8); padding: 5px;">{{ discount_rate | ceil}}% OFF</span>
-                        {%- endif -%}
-                    </div>
+                  <div class="card-image media-wrapper" style="padding-top: 10px; position: relative; overflow: hidden;">
+                    <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '300x300', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}">
+                    {%- if block.settings.dbtfy_plan_discount_price != blank and block.settings.dbtfy_plan_price != blank -%}
+                      {% assign original_price = block.settings.dbtfy_plan_price %}
+                      {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
+                      {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
+                      <span class="pt-discount-badge" style="transform: translate(50%, 50%); position: absolute; bottom: 10px; right: 10px; background-color: rgba(255, 255, 255, 0.8); padding: 5px;">{{ discount_rate | ceil}}% OFF</span>
+                    {%- endif -%}
+                  </div>
                 {%- endif -%}
 
                 <div class="card-body text-center pt-plan-body box">
@@ -346,4 +346,5 @@
   ]
 }
 {% endschema %}
+
 
