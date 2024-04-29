@@ -49,7 +49,7 @@
                       {% assign original_price = block.settings.dbtfy_plan_price %}
                       {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
                       {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
-                      <span class="pt-discount-badge">{{ discount_rate | ceil}}% OFF</span>
+                      <span class="pt-discount-badge" style="transform: translate(50%, 50%); position: absolute; bottom: 10px; right: 10px; background-color: rgba(255, 255, 255, 0.8); padding: 5px;">{{ discount_rate | ceil}}% OFF</span>
                     {%- endif -%}
                   </div>
                 {%- endif -%}
@@ -347,17 +347,3 @@
 }
 {% endschema %}
 
-<style>
-  .pt-discount-badge {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 5px;
-      max-width: 50px; /* 根据需要调整 */
-      max-height: 30px; /* 根据需要调整 */
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-  }
-</style>
