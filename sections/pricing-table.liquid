@@ -43,8 +43,8 @@
                 {%- endif -%}
 
                 {%- if block.settings.dbtfy_plan_image != blank -%}
-                  <div class="card-image media-wrapper" style="padding-top: 10px; position: relative; overflow: hidden;">
-                    <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: '300x300', scale: 2 }}" alt="{{ block.settings.dbtfy_plan_image.alt }}">
+                  <div class="card-image media-wrapper" style="padding-top: 10px; position: relative;">
+                    <img class="pt-plan-image media lazyload" src="{{ block.settings.dbtfy_plan_image | img_url: 'original' }}" alt="{{ block.settings.dbtfy_plan_image.alt }}" width="300" height="300">
                     {%- if block.settings.dbtfy_plan_discount_price != blank and block.settings.dbtfy_plan_price != blank -%}
                       {% assign original_price = block.settings.dbtfy_plan_price %}
                       {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
@@ -346,5 +346,3 @@
   ]
 }
 {% endschema %}
-
-
