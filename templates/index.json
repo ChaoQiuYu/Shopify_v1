@@ -100,16 +100,18 @@
             "dbtfy_plan_details_icon": "check_circle"
           }
         },
-        "plan_xDikAj": {
+        "plan_TWJVeg": {
           "type": "plan",
           "settings": {
             "title": "",
             "dbtfy_full_background": false,
             "dbtfy_plan_badge": "Most popular",
-            "dbtfy_plan_image": "shopify:\/\/shop_images\/O1CN01bCj3r71W1vlg3PApc__2217001552729-0-cib.jpg",
+            "dbtfy_plan_image": "shopify:\/\/shop_images\/O1CN01H3vK7T1W1vlkDkOjl__2217001552729-0-cib.jpg",
             "dbtfy_plan_icon": "local_offer",
             "dbtfy_plan_title": "Title",
             "dbtfy_plan_description": "",
+            "dbtfy_plan_price": 211,
+            "dbtfy_plan_discount_price": 21,
             "dbtfy_plan_price_text": "",
             "dbtfy_plan_button_label": "Get started",
             "dbtfy_plan_button_link": "",
@@ -124,7 +126,7 @@
         "plan_LYfqd8",
         "plan_xCEUrT",
         "plan_yebCFb",
-        "plan_xDikAj"
+        "plan_TWJVeg"
       ],
       "settings": {
         "show_on_desktop": true,
