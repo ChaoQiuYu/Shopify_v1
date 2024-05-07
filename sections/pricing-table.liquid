@@ -21,13 +21,12 @@
             </div>
           {%- endunless -%}
     
-          <div class="grid grid-spacer pt-pricing-plans pt-button-position-{{ section.settings.dbtfy_button_position }} text-center">
+          <div class="grid grid-spacer pt-pricing-plans pt-button-position-{{ section.settings.dbtfy_button_position }} text-center" style="display: flex;justify-content: center; align-items: center; height: 100vh; ">
     
             {%- capture column_width -%}
               {%- render 'block-width' -%}
             {%- endcapture -%}
     
-            <div style="display: flex;justify-content: center; align-items: center; height: 100vh; ">
               {% for block in section.blocks %}
                 <div class="grid__item {{ column_width }} flex" style="width:100%">
                   <div class="pt-plan-wrapper flex full" style="align-self: center">
@@ -133,7 +132,6 @@
                   </div>
                 </div>
               {% endfor %}
-            </div>
            
           </div>
         </div>
