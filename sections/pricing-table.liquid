@@ -69,7 +69,7 @@
                           <p>{{ block.settings.dbtfy_plan_description }}</p>
                         {%- endif -%}
       
-                        {%- if block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_price >=0 and block.settings.dbtfy_plan_discount_price == blank-%}
+                        {%- if block.settings.dbtfy_plan_price != blank  and block.settings.dbtfy_plan_discount_price == blank-%}
                           <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_price | money}}</h3>
                         {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
                             <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money}}</del>
