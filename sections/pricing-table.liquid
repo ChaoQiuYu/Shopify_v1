@@ -44,7 +44,7 @@
                       {%- endif -%}
       
                       {%- if block.settings.dbtfy_plan_image != blank -%}
-                      <div class="card-image media-wrapper" style="padding-top: 10px;position:relative;display: inline-block">
+                      <div class="card-image media-wrapper" style="position:relative;display: inline-block">
                        {% comment %} <img class="pt-plan-image media lazyload"
                           {%- render 'lazysizes', img: block.settings.dbtfy_plan_image, img_type: 'responsive' -%}
                           alt="{{ block.settings.dbtfy_plan_image.alt }}">{% endcomment %}
@@ -80,10 +80,6 @@
                         {% elsif block.settings.dbtfy_plan_price != blank and block.settings.dbtfy_plan_discount_price != blank%}
                             <del class="pt-plan-price" style="text">{{ block.settings.dbtfy_plan_price | money}}</del>
                             <h3 class="pt-plan-price">{{ block.settings.dbtfy_plan_discount_price | money}}</h3>
-                            {% assign original_price = block.settings.dbtfy_plan_price %}
-                            {% assign discount_price = block.settings.dbtfy_plan_discount_price %}
-                            {% assign discount_rate = original_price | minus: discount_price | times: 100.0 | divided_by: original_price %}
-                            <span style="color: crimson;">{{ discount_rate | ceil}}% OFF</span>
                         {% else %}
                             <h3>error</h3>
                         {%- endif -%}
