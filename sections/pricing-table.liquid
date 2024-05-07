@@ -28,8 +28,8 @@
             {%- endcapture -%}
     
               {% for block in section.blocks %}
-                <div class="grid__item {{ column_width }} flex" style="width:100%;display: flex">
-                  <div class="pt-plan-wrapper flex full" style="align-self: center">
+                <div class="grid__item {{ column_width }} flex" style="width:100%;display: flex;margin: 200px;">
+                  <div class="pt-plan-wrapper flex full" style="align-self: center;padding:100px">
                     {%- if block.settings.dbtfy_plan_badge != blank -%}
                     <div class="pt-badge text-center">
                       <span class="badge">{{ block.settings.dbtfy_plan_badge }}</span>
