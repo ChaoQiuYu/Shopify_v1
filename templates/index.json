@@ -1,5 +1,29 @@
 {
   "sections": {
+    "background_vedio_3VMqg8": {
+      "type": "Background-vedio",
+      "blocks": {
+        "video_hcDq3x": {
+          "type": "video",
+          "settings": {
+            "video_link": "",
+            "video_image": "shopify:\/\/shop_images\/retail-shopping-package.jpg",
+            "title": "Video slide",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "color_text": "#ffffff",
+            "button_label": "",
+            "button_link": "",
+            "color_btn_bg": "#ffffff",
+            "color_btn_text": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "video_hcDq3x"
+      ],
+      "settings": {
+      }
+    },
     "image-slider": {
       "type": "image-slider",
       "blocks": {
@@ -139,6 +163,7 @@
     }
   },
   "order": [
+    "background_vedio_3VMqg8",
     "image-slider",
     "pricing_table_tqRGhE"
   ]
