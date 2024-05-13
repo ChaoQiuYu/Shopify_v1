@@ -9,9 +9,9 @@
             "video_link": "",
             "video_image": "shopify:\/\/shop_images\/retail-shopping-package.jpg",
             "title": "Video slide",
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or <strong>welcome customers to your store.<\/strong><\/p>",
             "color_text": "#ffffff",
-            "button_label": "All Products",
+            "button_label": "Buy Now",
             "button_link": "shopify:\/\/collections\/all",
             "color_btn_bg": "#090707",
             "color_btn_text": "#ffffff"
