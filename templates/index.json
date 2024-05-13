@@ -11,7 +11,7 @@
             "title": "Video slide",
             "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
-            "button_label": "",
+            "button_label": "Button",
             "button_link": "",
             "color_btn_bg": "#ffffff",
             "color_btn_text": "#ffffff"
