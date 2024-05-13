@@ -11,9 +11,9 @@
             "title": "Video slide",
             "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "color_text": "#ffffff",
-            "button_label": "Button",
-            "button_link": "",
-            "color_btn_bg": "#ffffff",
+            "button_label": "All Products",
+            "button_link": "shopify:\/\/collections\/all",
+            "color_btn_bg": "#090707",
             "color_btn_text": "#ffffff"
           }
         }
