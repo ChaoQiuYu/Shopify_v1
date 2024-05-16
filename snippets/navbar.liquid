@@ -1,7 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="
-background-color: {{ settings[settings.navbar_color_scheme | append: '-background'] }};
-color: {{ settings[settings.navbar_color_scheme | append: '-text'] }};
-">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" 
+style="background-color: {{ section.settings[section.settings.navbar_color_scheme | append: '-background'] }};color: {{ sections.ettings[section.settings.navbar_color_scheme | append: '-text'] }};">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="{{section.settings.logo | img_url:'master' }}" alt=""
