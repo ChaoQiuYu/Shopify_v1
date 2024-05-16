@@ -195,4 +195,16 @@ color: {{ settings[settings.navbar_color_scheme | append: '-text'] }};
     padding: 0px 0px;
   }
 
+  .navbar {
+  background-color: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+}
+
+/* Define CSS variables for each color scheme */
+:root {
+  --navbar-bg-color: {{ settings[settings.navbar_color_scheme | append: '-background'] }};
+  --navbar-text-color: {{ settings[settings.navbar_color_scheme | append: '-text'] }};
+}
+
+
 </style>
