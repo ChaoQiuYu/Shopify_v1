@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: {{ section.settings.navbar_background_color }} !important;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="
+background-color: {{ settings[settings.navbar_color_scheme | append: '-background'] }};
+color: {{ settings[settings.navbar_color_scheme | append: '-text'] }};
+">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="{{section.settings.logo | img_url:'master' }}" alt=""
