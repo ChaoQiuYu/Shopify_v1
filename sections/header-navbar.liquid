@@ -11,6 +11,26 @@
   <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 修改1：将link标签的media属性设置为print，并添加onload属性 -->
+  <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+
+  <!-- 修改3：在多个link标签之后添加对应的noscript标签 -->
+  <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
   <!-- 修改2：将style标签中的内容移到style标签外，并将其封装在{% style %}和{% endstyle %}标签中 -->
   {%- style -%}
@@ -118,13 +138,6 @@
     <!-- header 内容 -->
   </header>
   <!-- 其他内容 -->
-
-  <!-- 修改3：在多个link标签之后添加对应的noscript标签 -->
-  <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
-  <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
-  <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
-  <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
-  <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 </body>
 </html>
 
