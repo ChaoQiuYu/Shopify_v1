@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" 
-style="background-color: {{ section.settings[section.settings.navbar_color_scheme | append: '-background'] }};color: {{ sections.ettings[section.settings.navbar_color_scheme | append: '-text'] }};">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="{{section.settings.logo | img_url:'master' }}" alt=""
@@ -192,17 +191,5 @@ style="background-color: {{ section.settings[section.settings.navbar_color_schem
   .menu-drawer__menu-item.menu-drawer__menu-item-w-image {
     padding: 0px 0px;
   }
-
-  .navbar {
-  background-color: var(--navbar-bg-color);
-  color: var(--navbar-text-color);
-}
-
-/* Define CSS variables for each color scheme */
-:root {
-  --navbar-bg-color: {{ settings[settings.navbar_color_scheme | append: '-background'] }};
-  --navbar-text-color: {{ settings[settings.navbar_color_scheme | append: '-text'] }};
-}
-
 
 </style>
