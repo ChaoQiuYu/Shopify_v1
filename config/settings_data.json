@@ -130,6 +130,13 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_linklist": "footer",
+          "show_payment_icons": false
+        }
       }
     },
     "content_for_index": [
@@ -196,12 +203,12 @@
       },
       "accent-2": {
         "settings": {
-          "background": "#334fb4",
+          "background": "#000000",
           "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#ffffff",
+          "text": "#334fb4",
+          "button": "#dd1d1d",
           "button_label": "#334fb4",
-          "secondary_button_label": "#ffffff",
+          "secondary_button_label": "#1773b0",
           "shadow": "#121212"
         }
       },
