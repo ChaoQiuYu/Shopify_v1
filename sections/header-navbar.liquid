@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,6 +21,23 @@
 
   <!-- 修改2：将style标签中的内容移到style标签外，并将其封装在{% style %}和{% endstyle %}标签中 -->
   {%- style -%}
+    /* 新增：为整个页面定义通用文本颜色 */
+    body, body * {
+      color: #333 !important; /* 强制应用颜色 */
+    }
+
+    a {
+      color: #1a73e8 !important; /* 强制应用链接颜色 */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #111 !important; /* 强制应用标题颜色 */
+    }
+
+    p {
+      color: #444 !important; /* 强制应用段落颜色 */
+    }
+
     .header {
       padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
     }
@@ -43,21 +60,63 @@
       }
     }
 
-    /* 修改4：在样式之后添加通用文本颜色样式 */
-    body, body * {
-      color: #333 !important; /* 强制应用颜色 */
+    /* 修改4：修改header-drawer元素的样式 */
+    header-drawer {
+      justify-self: start;
+      margin-left: -1.2rem;
     }
 
-    a {
-      color: #1a73e8 !important; /* 强制应用链接颜色 */
+    {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
+      .scrolled-past-header .header__heading-logo-wrapper {
+        width: 75%;
+      }
+    {%- endif -%}
+
+    {%- if section.settings.menu_type_desktop != "drawer" -%}
+      @media screen and (min-width: 990px) {
+        header-drawer {
+          display: none;
+        }
+      }
+    {%- endif -%}
+
+    .menu-drawer-container {
+      display: flex;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      color: #111 !important; /* 强制应用标题颜色 */
+    .list-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    p {
-      color: #444 !important; /* 强制应用段落颜色 */
+    .list-menu--inline {
+      display: inline-flex;
+      flex-wrap: wrap;
+    }
+
+    summary.list-menu__item {
+      padding-right: 2.7rem;
+    }
+
+    .list-menu__item {
+      display: flex;
+      align-items: center;
+      line-height: calc(1 + 0.3 / var(--font-body-scale));
+    }
+
+    .list-menu__item--link {
+      text-decoration: none;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      line-height: calc(1 + 0.8 / var(--font-body-scale));
+    }
+
+    @media screen and (min-width: 750px) {
+      .list-menu__item--link {
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+      }
     }
   {%- endstyle -%}
 </head>
