@@ -5,23 +5,21 @@
     "header": {
       "type": "header",
       "settings": {
-        "announcement_bar_enabled": false,
-        "announcement_bar_home_page_only": true,
-        "announcement_bar_text": "Announce something here",
-        "announcement_bar_link": "",
         "logo": "shopify:\/\/shop_images\/WechatIMG1030-removebg-preview.png",
-        "logo_max_width": 100,
         "menu": "main-menu",
-        "menu_type_desktop": "mega",
-        "mega_menu_images_toggle": "featured",
-        "mega_menu_images_title": false,
-        "drawer_menu_images_toggle": "featured",
-        "drawer_menu_images_border_toggle": true,
-        "drawer_menu_images_border_color": "#1773b0"
+        "menu_type_desktop": "drawer"
+      }
+    },
+    "navbar": {
+      "type": "header-navbar",
+      "settings": {
+        "menu": "main-menu",
+        "menu_type_desktop": "drawer"
       }
     }
   },
   "order": [
-    "header"
+    "header",
+    "navbar"
   ]
 }
