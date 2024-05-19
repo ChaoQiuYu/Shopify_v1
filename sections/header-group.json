@@ -9,17 +9,9 @@
         "menu": "main-menu",
         "menu_type_desktop": "drawer"
       }
-    },
-    "navbar": {
-      "type": "header-navbar",
-      "settings": {
-        "menu": "main-menu",
-        "menu_type_desktop": "drawer"
-      }
     }
   },
   "order": [
-    "header",
-    "navbar"
+    "header"
   ]
 }
