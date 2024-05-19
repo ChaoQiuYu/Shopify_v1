@@ -12,13 +12,6 @@
   <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
-  <!-- 修改3：在多个link标签之后添加对应的noscript标签 -->
-  <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
-  <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
-  <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
-  <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
-  <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
-
   <!-- 修改2：将style标签中的内容移到style标签外，并将其封装在{% style %}和{% endstyle %}标签中 -->
   {%- style -%}
     /* 新增：为整个页面定义通用文本颜色 */
@@ -125,7 +118,15 @@
     <!-- header 内容 -->
   </header>
   <!-- 其他内容 -->
+
+  <!-- 修改3：在多个link标签之后添加对应的noscript标签 -->
+  <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 </body>
 </html>
+
 
 
