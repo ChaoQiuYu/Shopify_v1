@@ -8954,6 +8954,12 @@ textarea.form-control-lg {
   background-image: var(--bs-gradient) !important;
 }
 
+.gradient {
+  background: rgb(var(--color-background));
+  background: var(--gradient-background);
+  background-attachment: fixed;
+}
+
 .user-select-all {
   -webkit-user-select: all !important;
      -moz-user-select: all !important;
