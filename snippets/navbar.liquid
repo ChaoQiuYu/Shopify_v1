@@ -85,7 +85,7 @@
 
 <style>
   .mega-menu__image {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
     border-radius: 10px; 
   }
@@ -98,49 +98,48 @@
     text-align: center;
   }
 
-.mega-menu__list.megamenu-with-image {
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(calc((100% - (5 * 4rem)) / 6), calc((100% - (5 * 4rem)) / 6)));
-}
+  .mega-menu__list.megamenu-with-image {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(calc((100% - (5 * 4rem)) / 6), calc((100% - (5 * 4rem)) / 6)));
+  }
 
-.mega-menu__link.hide-title {
-  display: none; 
-}
+  .mega-menu__link.hide-title {
+    display: none; 
+  }
 
-{% if section.settings.drawer_menu_images_toggle and section.settings.drawer_menu_images_border_toggle %}
-  
+  {% if section.settings.drawer_menu_images_toggle and section.settings.drawer_menu_images_border_toggle %}
   .menu-drawer__menu {
     list-style: none;
     padding-left: 0;
   }
-  
+
   .menu-drawer__menu li .menu-drawer__menu-item-container {
     border-top: 1px solid {{ section.settings.drawer_menu_images_border_color }};
   }
-  
+
   .menu-drawer__menu li:last-child .menu-drawer__menu-item-container {
     border-bottom: 1px solid {{ section.settings.drawer_menu_images_border_color }};
   }  
   {% endif %}
-    
+
   .menu-drawer__menu-item-container {
     display: flex;
     align-items: center;
     justify-content: space-between; 
     padding: 1.1rem 3rem;
   }
-    
+
   .menu-drawer__menu-item-link {
     margin-left: auto; 
   }
-  
+
   .menu-drawer__image {
     max-width: 50px; 
     height: 50px; 
     object-fit: cover; 
     border-radius: 5px; 
   }
-  
+
   .menu-drawer__menu-item.menu-drawer__menu-item-w-image {
     padding: 0px 0px;
   }
@@ -161,9 +160,19 @@
     justify-content: flex-start;
   }
 
+  .logo-position-middle-right .navbar-brand {
+    align-items: center;
+    justify-content: flex-end;
+  }
+
   .logo-position-middle-center .navbar-brand {
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+
+  .navbar-brand img {
+    display: block;
+    margin: auto;
   }
 </style>
