@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg color-{{ section.settings.navbar_background_color }} gradient logo-position-{{ section.settings.logo_position }}">
-    <div class="container">
+<nav class="navbar navbar-expand-lg color-{{ section.settings.navbar_background_color }} gradient">
+    <div class="container logo-{{ section.settings.logo_position }}">
         <a class="navbar-brand" href="#">
             <img src="{{ section.settings.logo | img_url: 'master' }}" alt="" width="{{ section.settings.logo_max_width }}px">
         </a>
@@ -7,7 +7,6 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 {% for link in linklists[section.settings.menu].links %}
@@ -20,36 +19,57 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div>
                             {% if section.settings.menu_type_desktop == 'mega' and section.settings.mega_menu_images_toggle != 'none' %}
-                                <ul class="mega-menu__list megamenu-with-image page-width">
-                                    {%- for childlink in link.links -%}
-                                    {% assign image_url = '' %}
-                                    {% if section.settings.mega_menu_images_toggle == 'featured' %}
-                                    {% if childlink.object.featured_image %}
-                                    {% assign image_url = childlink.object.featured_image | img_url: 'master' %}
-                                    {% endif %}
-                                    {% elsif section.settings.mega_menu_images_toggle == 'metafield' %}
-                                    {% assign image_url = childlink.object.metafields.custom.header_menu_image | img_url: 'master' %}
-                                    {% endif %}
-                                    <li>
-                                        <div class="mega-menu__column">
-                                            {% if image_url != blank %}
-                                            <a href="{{ childlink.url }}">
-                                                <img src="{{ image_url }}" alt="{{ childlink.title | escape }}" class="mega-menu__image">
-                                            </a>
-                                            {% endif %}
-                                            <a id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}" href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %} {% if section.settings.mega_menu_images_title %}hide-title{% endif %}" {% if childlink.current %} aria-current="page" {% endif %}>
-                                                {{ childlink.title | escape }}
-                                            </a>
-                                        </div>
-                                    </li>
-                                    {%- endfor -%}
-                                </ul>
-                            {% else %}
-                                {% for childlink in link.links %}
-                                <a href="{{ childlink.url }}" class="dropdown-item">
-                                    <span>{{ childlink.title }}</span>
+                            <ul class="mega-menu__list megamenu-with-image page-width">
+                                {%- for childlink in link.links -%}
+                                {% assign image_url = '' %}
+                                {% if section.settings.mega_menu_images_toggle == 'featured' %}
+                                {% if childlink.object.featured_image %}
+                                {% assign image_url = childlink.object.featured_image | img_url: 'master' %}
+                                {% endif %}
+                                {% elsif section.settings.mega_menu_images_toggle == 'metafield' %}
+                                {% assign image_url = childlink.object.metafields.custom.header_menu_image | img_url: 'master' %}
+                                {% endif %}
+                                <li>
+                                    <div class="mega-menu__column">
+                                        {% if image_url != blank %}
+                                        <a href="{{ childlink.url }}">
+                                            <img src="{{ image_url }}" alt="{{ childlink.title | escape }}" class="mega-menu__image">
+                                        </a>
+                                        {% endif %}
+                                        <a id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}" href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %} {% if section.settings.mega_menu_images_title %}hide-title{% endif %}" {% if childlink.current %} aria-current="page" {% endif %}>
+                                            {{ childlink.title | escape }}
+                                        </a>
+                                    </div>
+                                </li>
+                                {%- endfor -%}
+                            </ul>
+                            {% else if section.settings.drawer_menu_images_toggle != 'none' %}
+                            {% assign image_url = '' %}
+                            {% if section.settings.drawer_menu_images_toggle == 'featured' %}
+                            {% if link.object.featured_image %}
+                            {% assign image_url = link.object.featured_image | img_url: 'master' %}
+                            {% endif %}
+                            {% elsif section.settings.drawer_menu_images_toggle == 'metafield' %}
+                            {% if link.object.metafields.custom.header_menu_image %}
+                            {% assign image_url = link.object.metafields.custom.header_menu_image | img_url: 'master' %}
+                            {% endif %}
+                            {% endif %}
+                            <div class="menu-drawer__menu-item-container{% if link.current %} menu-drawer__menu-item--active{% endif %}">
+                                <a id="HeaderDrawer-{{ link.handle }}" href="{{ link.url }}" class="menu-drawer__menu-item menu-drawer__menu-item-w-image link link--text focus-inset" {% if link.current %} aria-current="page" {% endif %}>
+                                    {{ link.title | escape }}
                                 </a>
-                                {% endfor %}
+                                {% if image_url != blank %}
+                                <a href="{{ link.url }}" class="menu-drawer__menu-item-link">
+                                    <img src="{{ image_url }}" alt="{{ link.title | escape }}" class="menu-drawer__image">
+                                </a>
+                                {% endif %}
+                            </div>
+                            {% else %}
+                            {% for childlink in link.links %}
+                            <a href="{{ childlink.url }}" class="dropdown-item">
+                                <span>{{ childlink.title }}</span>
+                            </a>
+                            {% endfor %}
                             {% endif %}
                         </div>
                     </div>
@@ -63,11 +83,9 @@
                 {% endif %}
                 {% endfor %}
             </ul>
-
             <ul class="navbar-nav">
                 <li class="nav-item dropdown mini-cart">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         Cart
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -84,95 +102,92 @@
 </nav>
 
 <style>
-  .mega-menu__image {
+/* CSS for different logo positions */
+.container.logo-left .navbar-brand {
+    position: absolute;
+    left: 0;
+}
+
+.container.logo-center-top .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.container.logo-center-middle-left .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container.logo-center-middle-right .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 0;
+}
+
+/* Additional styles for dropdowns, mega menus, etc. */
+.mega-menu__image {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; 
-  }
+    border-radius: 10px;
+}
 
-  .mega-menu__column {
+.mega-menu__column {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     text-align: center;
-  }
+}
 
-  .mega-menu__list.megamenu-with-image {
+.mega-menu__list.megamenu-with-image {
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(calc((100% - (5 * 4rem)) / 6), calc((100% - (5 * 4rem)) / 6)));
-  }
+}
 
-  .mega-menu__link.hide-title {
-    display: none; 
-  }
+.mega-menu__link.hide-title {
+    display: none;
+}
 
-  {% if section.settings.drawer_menu_images_toggle and section.settings.drawer_menu_images_border_toggle %}
-  .menu-drawer__menu {
+.menu-drawer__menu {
     list-style: none;
     padding-left: 0;
-  }
+}
 
-  .menu-drawer__menu li .menu-drawer__menu-item-container {
+.menu-drawer__menu li .menu-drawer__menu-item-container {
     border-top: 1px solid {{ section.settings.drawer_menu_images_border_color }};
-  }
+}
 
-  .menu-drawer__menu li:last-child .menu-drawer__menu-item-container {
+.menu-drawer__menu li:last-child .menu-drawer__menu-item-container {
     border-bottom: 1px solid {{ section.settings.drawer_menu_images_border_color }};
-  }  
-  {% endif %}
+}
 
-  .menu-drawer__menu-item-container {
+.menu-drawer__menu-item-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 1.1rem 3rem;
-  }
+}
 
-  .menu-drawer__menu-item-link {
-    margin-left: auto; 
-  }
+.menu-drawer__menu-item-link {
+    margin-left: auto;
+}
 
-  .menu-drawer__image {
-    max-width: 50px; 
-    height: 50px; 
-    object-fit: cover; 
-    border-radius: 5px; 
-  }
+.menu-drawer__image {
+    max-width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
 
-  .menu-drawer__menu-item.menu-drawer__menu-item-w-image {
+.menu-drawer__menu-item.menu-drawer__menu-item-w-image {
     padding: 0px 0px;
-  }
-
-  /* Logo Positioning Styles */
-  .logo-position-top-left .navbar-brand {
-    align-items: flex-start;
-  }
-
-  .logo-position-top-center .navbar-brand {
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .logo-position-middle-left .navbar-brand {
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .logo-position-middle-right .navbar-brand {
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  .logo-position-middle-center .navbar-brand {
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .navbar-brand img {
-    display: block;
-    margin: auto;
-  }
+}
 </style>
