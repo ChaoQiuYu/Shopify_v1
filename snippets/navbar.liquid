@@ -324,10 +324,12 @@
   align-items: center;
 }
 
-.header-position-middle-left{
+.header-position-middle-left {
   display: flex;
-  justify-content: flex-start; 
+  align-items: center; /* 垂直居中 */
+  justify-content: flex-start; /* 水平居左 */
 }
+
 
 /* .header-position-middle-left{
   display: flex;
@@ -350,21 +352,7 @@
   align-items: center; /* 垂直居中 */
 }
 
-.header-position-top-left,
-.header-position-middle-left {
-  width: calc(50% - 100px); /* 设置左边距，这里假设logo宽度不超过50%导航栏宽度，减去的100px是根据需要调整的值 */
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
 
-.header-position-top-center,
-.header-position-middle-center {
-  width: 100%; /* 设置logo居中时的宽度 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
 </style>
