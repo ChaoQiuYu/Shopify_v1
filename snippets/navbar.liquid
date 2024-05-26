@@ -333,9 +333,25 @@
 }
 
 .header-position-middle-left{
-  width: 100%;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  justify-content: center; /* Center the image div horizontally */
+  align-items: center;    /* Center the image div vertically */
+  height: 100vh;          /* Full viewport height */
+  position: relative;
 }
+
+.left-div {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: lightgrey; /* For visibility */
+  padding: 10px;
+}
+
+.center-div {
+  background-color: lightblue; /* For visibility */
+  padding: 10px;
+}
+
 </style>
