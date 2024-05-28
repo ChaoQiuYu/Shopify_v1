@@ -115,7 +115,7 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
-      </div> 
+    </div> 
   {%  else  %}
   <div class="header-position-{{ section.settings.logo_position }}">
     <a class="navbar-brand" href="#">
@@ -331,12 +331,9 @@
   justify-content: flex-start; 
 }
 
-/* .header-position-middle-left{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-} */
+.header-position-middle-left{
+  display: inline-grid;
+}
 
 .left-content {
   display: inline-flex;
