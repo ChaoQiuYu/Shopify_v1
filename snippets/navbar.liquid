@@ -336,16 +336,10 @@
   display: inline-grid;
   grid-template-columns: 1fr auto 1fr;
   column-gap: 2rem;
+  flex-wrap: wrap; 
 }
-.navbar-nav {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 1 auto;
-  justify-content: flex-start; /* 确保菜单项左对齐 */
-}
-
 .navbar-nav li {
-  flex: 0 1 auto; /* 确保菜单项可以换行 */
+  flex: 1 1 auto; /* 确保菜单项可以换行 */
 }
 
 .collapse {
@@ -355,14 +349,9 @@
 }
 
 .navbar-brand {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-self: center;
 }
 
-/* 确保菜单在小屏幕时居中对齐 */
 @media (max-width: 768px) {
   .navbar-nav {
     justify-content: center;
