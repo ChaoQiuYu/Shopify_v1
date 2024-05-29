@@ -338,5 +338,23 @@
   column-gap: 2rem;
   flex-wrap: wrap; 
 }
+.navbar-nav li {
+  flex: 1 1 auto; /* 确保菜单项可以换行 */
+}
 
+.collapse {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-brand {
+  justify-self: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    justify-content: center;
+  }
+}
 </style>
