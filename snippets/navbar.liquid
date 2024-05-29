@@ -339,13 +339,13 @@
 }
 .navbar-nav {
   display: flex;
-  flex-wrap: wrap;
-  flex: 1 1 auto;
-  justify-content: flex-start; /* 确保菜单项左对齐 */
+  flex-wrap: wrap; /* 允许子项换行 */
+  flex: 1;
 }
 
 .navbar-nav li {
-  flex: 0 1 auto; /* 确保菜单项可以换行 */
+  flex: 0 1 auto; /* 允许菜单项换行 */
+  min-width: fit-content; /* 确保菜单项最小宽度自适应内容 */
 }
 
 .collapse {
@@ -355,17 +355,12 @@
 }
 
 .navbar-brand {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-self: center;
 }
 
-/* 确保菜单在小屏幕时居中对齐 */
 @media (max-width: 768px) {
   .navbar-nav {
-    justify-content: center;
+    justify-content: flex-start; /* 左对齐菜单项 */
   }
 }
 </style>
