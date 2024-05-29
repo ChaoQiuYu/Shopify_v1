@@ -12343,3 +12343,16 @@ textarea.form-control-lg {
   border-bottom: 1px solid #A0B55C;
   color: #fff;
 }
+
+@media screen and (max-width: 767px) {
+  .videoBackground .videoBox {
+      padding: 100px 20px 80px !important;
+  }
+  .videoBackground .fullscreen-video-wrap {
+      position: absolute !important;
+      z-index: 1 !important;
+  }
+  .videoBackground .videoBoxInfo {
+      padding: 10px !important;
+  }
+}
