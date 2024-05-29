@@ -336,10 +336,16 @@
   display: inline-grid;
   grid-template-columns: 1fr auto 1fr;
   column-gap: 2rem;
-  flex-wrap: wrap; 
 }
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap; /* 允许子项换行 */
+  flex: 1;
+}
+
 .navbar-nav li {
-  flex: 1 1 auto; /* 确保菜单项可以换行 */
+  flex: 0 1 auto; /* 允许菜单项换行 */
+  min-width: fit-content; /* 确保菜单项最小宽度自适应内容 */
 }
 
 .collapse {
@@ -354,7 +360,7 @@
 
 @media (max-width: 768px) {
   .navbar-nav {
-    justify-content: center;
+    justify-content: flex-start; /* 左对齐菜单项 */
   }
 }
 </style>
