@@ -1,94 +1,30 @@
 <nav class="navbar navbar-expand-lg color-{{ section.settings.navbar_background_color }} gradient " style="justify-content: center;">
   {% if section.settings.logo_position == 'middle-center' %}
-    {% comment %} <div class="header-position-{{ section.settings.logo_position }}">
+    <div class="header-position-{{ section.settings.logo_position }}">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto" style="display: inline-flex;flex-wrap: wrap;">
                   {% for link in linklists[section.settings.menu].links %}
-                  {% if link.links != blank %}
-                  <li class="nav-item dropdown">
-                      <a href="{{ link.url }}" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          {{ link.title }}
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <div>
-                                  {% if section.settings.menu_type_desktop == 'mega' and section.settings.mega_menu_images_toggle != 'none' %}
-                                      <ul class="mega-menu__list megamenu-with-image page-width">
-                                        {%- for childlink in link.links -%}
-                                          {% assign image_url = '' %}
-                                    
-                                          {% if section.settings.mega_menu_images_toggle == 'featured' %}
-                                            {% if childlink.object.featured_image %}
-                                              {% assign image_url = childlink.object.featured_image | img_url: 'master' %}
-                                            {% endif %}
-                                          {% elsif section.settings.mega_menu_images_toggle == 'metafield' %}
-                                            {% assign image_url = childlink.object.metafields.custom.header_menu_image | img_url: 'master' %}
-                                          {% endif %}
-                                          
-                                          <li>
-                                            <div class="mega-menu__column">
-                                              {% if image_url != blank %}
-                                                <a href="{{ childlink.url }}">
-                                                  <img src="{{ image_url }}" alt="{{ childlink.title | escape }}" class="mega-menu__image">
-                                                </a>
-                                              {% endif %}
-                                              <a id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}" href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %} {% if section.settings.mega_menu_images_title %}hide-title{% endif %}" {% if childlink.current %} aria-current="page" {% endif %}>
-                                                {{ childlink.title | escape }}
-                                              </a>
-                                            </div>
-                                          </li>
-                                        {%- endfor -%}
-                                      </ul>
-
-                                      {% else if section.settings.drawer_menu_images_toggle != 'none' %}
-                                          {% assign image_url = '' %}
-                                      
-                                          {% if section.settings.drawer_menu_images_toggle == 'featured' %}
-                                          {% if link.object.featured_image %}
-                                              {% assign image_url = link.object.featured_image | img_url: 'master' %}
-                                          {% endif %}
-                                          {% elsif section.settings.drawer_menu_images_toggle == 'metafield' %}
-                                          {% if link.object.metafields.custom.header_menu_image %}
-                                              {% assign image_url = link.object.metafields.custom.header_menu_image | img_url: 'master' %}
-                                          {% endif %}
-                                          {% endif %}
-                                      
-                                          <div class="menu-drawer__menu-item-container{% if link.current %} menu-drawer__menu-item--active{% endif %}">
-                                          <a
-                                              id="HeaderDrawer-{{ link.handle }}"
-                                              href="{{ link.url }}"
-                                              class="menu-drawer__menu-item menu-drawer__menu-item-w-image link link--text focus-inset"
-                                              {% if link.current %}
-                                              aria-current="page"
-                                              {% endif %}
-                                          >
-                                              {{ link.title | escape }}
-                                          </a>
-                                      
-                                          {% if image_url != blank %}
-                                              <a href="{{ link.url }}" class="menu-drawer__menu-item-link">
-                                              <img src="{{ image_url }}" alt="{{ link.title | escape }}" class="menu-drawer__image">
-                                              </a>
-                                          {% endif %}
-                                          </div>
-                                    
-                                    {% else %}
-                                      {% for childlink in link.links %}
-                                          <a href="{{ childlink.url }}" class="dropdown-item">
-                                              <span>{{ childlink.title }}</span>
-                                          </a>
-                                      {% endfor %}                               
-                                  {% endif %}
-                          </div>
-                      </div>
-                  </li>
-                  {% else %}
-                  <li class="nav-item">
-                      <a href="{{ link.url }}" class="nav-link">
-                          {{ link.title }}
-                      </a>
-                  </li>
-                  {% endif %}
+                    <a href="{{ link.url }}" class="header__heading-link link link--text focus-inset">
+                      {%- if settings.logo != blank -%}
+                        <div class="header__heading-logo-wrapper">
+                          {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                          {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                          {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
+                          {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                          {{ settings.logo | image_url: width: 600 | image_tag:
+                            class: 'header__heading-logo',
+                            widths: widths,
+                            height: logo_height,
+                            width: settings.logo_width,
+                            alt: logo_alt,
+                            sizes: sizes,
+                            preload: true
+                          }}
+                        </div>
+                      {%- else -%}
+                        <span class="h2">{{ shop.name }}</span>
+                      {%- endif -%}
+                    </a>
                   {% endfor %}
 
                   <li class="nav-item dropdown mini-cart">
@@ -114,28 +50,7 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
-    </div>  {% endcomment %}
-    <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-            {%- if settings.logo != blank -%}
-              <div class="header__heading-logo-wrapper">
-                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
-                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                {{ settings.logo | image_url: width: 600 | image_tag:
-                  class: 'header__heading-logo',
-                  widths: widths,
-                  height: logo_height,
-                  width: settings.logo_width,
-                  alt: logo_alt,
-                  sizes: sizes,
-                  preload: true
-                }}
-              </div>
-            {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
-            {%- endif -%}
-          </a>
+    </div> 
   {%  else  %}
   <div class="header-position-{{ section.settings.logo_position }}">
     <a class="navbar-brand" href="#">
