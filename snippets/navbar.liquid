@@ -1,5 +1,5 @@
   {% if section.settings.logo_position == 'middle-center' %}
-    <nav class="navbar navbar-expand-lg color-{{ section.settings.navbar_background_color }} gradient ">
+    <nav class="navbar navbar-expand-lg color-{{ section.settings.navbar_background_color }} gradient " >
       <div class="header-position-{{ section.settings.logo_position }}">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -118,9 +118,11 @@
         <div class="header__heading-logo-wrapper">
           {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
           {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+          {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+          {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
           {{ section.settings.logo | image_url: width: 600 | image_tag:
             class: 'header__heading-logo motion-reduce',
-            widths: {{ section.settings.logo_max_width }}px,
+            widths: widths,
             height: logo_height,
             width: settings.logo_width,
             alt: logo_alt,
