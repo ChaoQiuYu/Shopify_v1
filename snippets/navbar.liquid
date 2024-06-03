@@ -122,7 +122,7 @@
           {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
           {{ section.settings.logo | image_url: width: 600 | image_tag:
             class: 'header__heading-logo motion-reduce',
-            widths: widths,
+            widths: {{section.settings.logo_max_width}}px,
             height: logo_height,
             width: settings.logo_width,
             alt: logo_alt,
