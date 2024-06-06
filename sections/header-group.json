@@ -21,9 +21,16 @@
         "drawer_menu_images_border_color": "#eaeaea",
         "navbar_background_color": "accent-2"
       }
+    },
+    "image_slider_Peec4K": {
+      "type": "image-slider",
+      "settings": {
+        "title": "Slider title"
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "image_slider_Peec4K"
   ]
 }
