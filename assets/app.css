@@ -12827,3 +12827,7 @@ body {
   background-position: center;
   background-size: cover;
   }
+
+.media--transparent {
+  background-color: transparent;
+}
