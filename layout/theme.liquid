@@ -261,7 +261,7 @@
   {{ content_for_header }}
 
   {{ "app.css" | asset_url | stylesheet_tag }}
-  {{ "base.css" | asset_url | stylesheet_tag }}
+  {% comment %} {{ "base.css" | asset_url | stylesheet_tag }} {% endcomment %}
 
 
 </head>
@@ -290,20 +290,20 @@
   {% if template == 'index' %}
  
     <style>
-    .shopify-section-group-header-group.announcement-bar-section{
-    height: 5px;
-    }
-    .header-wrapper{
-    position: absolute;
-    width: 100%;
-    background: transparent;
-    }
-    .header-wrapper .header{
-    margin-top: 20px;
-    }
+      .shopify-section-group-header-group.announcement-bar-section{
+        height: 5px;
+      }
+      .header-wrapper{
+        position: absolute;
+        width: 100%;
+        background: transparent;
+      }
+      .header-wrapper .header{
+        margin-top: 20px;
+      }
     </style>
      
-    {% endif %}
+  {% endif %}
 
 </body>
 
