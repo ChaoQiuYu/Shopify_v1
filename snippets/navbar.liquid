@@ -5,7 +5,7 @@
               <ul class="navbar-nav mr-auto" style="display: inline-flex;flex-wrap: wrap;margin:30px">
                   {% for link in linklists[section.settings.menu].links %}
                   {% if link.links != blank %}
-                  <li class="nav-item dropdown">
+                  <li class="nav-item dropdown" style="margin-right: 20px;">
                       <a href="{{ link.url }}" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="false">
                           {{ link.title }}
@@ -83,7 +83,7 @@
                       </div>
                   </li>
                   {% else %}
-                  <li class="nav-item">
+                  <li class="nav-item" style="margin-right: 20px;">
                       <a href="{{ link.url }}" class="nav-link">
                           {{ link.title }}
                       </a>
