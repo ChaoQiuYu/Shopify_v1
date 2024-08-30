@@ -1,0 +1,1206 @@
+{{ 'product-bleame.css' | asset_url | stylesheet_tag }}
+<section data-section-id="{{ section.id }}" data-section-type="product">
+  <div class="container mt-4" style="padding: 0px 61px 0px 61px;">
+    <div class="row" style="gap: 60px;">
+      <div class="col-md-6" style="height: 600px;">
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+
+        <div class="product-slider">
+          {% if product.images.size >= 1 %}
+            {% for image in product.images %}
+              <div>
+                <a
+                  href="{{ image.src | img_url: '480x4800' }}"
+                  data-thumbnail-id="{{ image.id }}"
+                  data-product-single-thumbnail
+                  {% if featured_image == image %}
+                    aria-current="true"
+                  {% endif %}
+                >
+                  <img
+                    class="img-fluid"
+                    src="{{ image.src | img_url: '800x550', crop:'center' }}"
+                    alt="{{ image.alt | escape }}"
+                  >
+                </a>
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        <div class="product-slider-nav mt-4">
+          {% if product.images.size > 1 %}
+            {% for image in product.images %}
+              <img
+                class="img-fluid px-3"
+                width="50"
+                src="{{ image.src | img_url: '200x150', crop:'center' }}"
+                alt="{{ image.alt | escape }}"
+              >
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+      <!-- / col -->
+
+      <div class="col-md-5 product-info-all">
+        <!-- 产品信息 -->
+        <div class="product-info">
+          <!-- 产品评分 -->
+          <div class="product-rating">
+            <!-- 星级 -->
+            {%- for i in (1..5) -%}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-star-fill"
+                viewBox="0 0 16 16"
+                style="color:#7069bc"
+              >
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            {% endfor %}
+
+            <!-- 评分 -->
+            <span style="font-size: 16px;">Excellent 4.8 | 1319 reviews</span>
+          </div>
+
+          <!-- 标题 -->
+          <h1 class="product-title">{{ product.title }}</h1>
+
+          <!-- 标语 -->
+          <p class="product-slogan">NEW: 🏆 2024 Rated Hair Removal Innovation</p>
+
+          <!-- 价格列表 -->
+          <div data-price-wrapper class="my-2 price-list">
+            <!-- 折扣价 -->
+            {% if product.compare_at_price_max > product.price %}
+              <s data-compare-price class="compare-price">
+                {% if current_variant.compare_at_price > current_variant.price %}
+                  {{ current_variant.compare_at_price | money }}
+                {% endif %}
+              </s>
+            {% endif %}
+
+            <!-- 原价 -->
+            <span data-product-price class="original-price">
+              {{ current_variant.price | money }}
+            </span>
+
+            <!-- 折扣率 -->
+            <span class="discount-rate">
+              SAVE&nbsp;{{-
+                current_variant.compare_at_price
+                | minus: current_variant.price
+                | times: 100
+                | divided_by: current_variant.compare_at_price
+              -}}
+              %</span
+            >
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- 产品描述 -->
+        <div class="product-description">
+          {{ product.description }}
+        </div>
+
+        <!-- 产品属性 -->
+        <div class="radio-container">
+          {% for item in product.variants %}
+            {% if forloop.last %}
+              <label class="custom-radio" style="border-radius: 10px 10px 0px 0px">
+                <div>
+                  <input
+                    type="radio"
+                    name="option"
+                    {% if forloop.last %}
+                      checked
+                    {% endif %}
+                  >
+                  <span class="checkmark"></span>
+                  <img
+                    src="{{ item.image.src | img_url: '50x50'}}"
+                    alt="{{ item.image.alt | escape }}"
+                  >
+                  <a>{{ item.title }}</a>
+                  <span class="discount-rate">
+                    SAVE $
+                    {{- item.compare_at_price | minus: item.price -}}
+                  </span>
+                </div>
+
+                <div class="bundle-price">
+                  <div class="bundle-original-price">{{ item.price | money }}</div>
+                  <s data-compare-price class="bundle-compare-price compare-price">
+                    {{- item.compare_at_price | money -}}
+                  </s>
+                </div>
+              </label>
+              <div class="bundle-short-description">
+                <img src="{{ 'image/10018.png' |  asset_url}}" width="50px" height="50px">
+                <span class="bundle-short-description-text">+ FREE Body scrub for silky & shiny skin</span>
+              </div>
+            {% else %}
+              <label class="custom-radio" style="margin-bottom: 10px">
+                <div>
+                  <input
+                    type="radio"
+                    name="option"
+                    {% if forloop.last %}
+                      checked
+                    {% endif %}
+                  >
+                  <span class="checkmark"></span>
+                  <img
+                    src="{{ item.image.src | img_url: '50x50'}}"
+                    alt="{{ item.image.alt | escape }}"
+                  >
+                  <a>{{ item.title }}</a>
+                  <span class="discount-rate">
+                    SAVE $
+                    {{- item.compare_at_price | minus: item.price -}}
+                  </span>
+                </div>
+
+                <div class="bundle-price">
+                  <div class="bundle-original-price">{{ item.price | money }}</div>
+                  <s data-compare-price class="bundle-compare-price compare-price">
+                    {{- item.compare_at_price | money -}}
+                  </s>
+                </div>
+              </label>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <!-- 库存日期 -->
+        <div style="display: flex;align-items:center;">
+          <span
+            class="circle-plus"
+            style="width:10px;height: 10px;background-color:#fd8935;border:#fd8935 1px solid;border-radius:50%;margin-right:10px"
+          ></span>
+          <div style="color: #fd8935;font-size:18px;">Body Scrub included for the next 1 orders!</div>
+        </div>
+
+        <!-- 添加到购物车 -->
+        {% include 'product-form' %}
+
+        <!-- 订单截止 -->
+        <div style="display:grid;justify-content: center;justify-items: center;">
+          <p style="font-size: 16px;">Want it by Wednesday, 21 Aug ?</p>
+          <p>
+            <span style="font-size: 16px;">ORDER WITHIN</span>
+            <span style="font-size: 16px;color:#7069bc">0 HOURS 38 MINUTES</span>
+          </p>
+        </div>
+
+        <!-- 物流 -->
+        <div style="display: flex;gap: 20px;font-weight:300">
+          <span>
+            <img src="{{ 'image/10020.png' | asset_url }}" alt="My Image" width="50px" height="50px">
+            <span style="font-size: 15px;">Free Shipping from US</span>
+          </span>
+
+          <span>
+            <img src="{{ 'image/10021.png' | rel }}" width="50px" height="50px">
+            <span style="font-size: 15px;">30-Day-Guarantee</span>
+          </span>
+        </div>
+
+        <!-- 折叠行 -->
+        <div class="accordion accordion-flush" id="accordionFlushExample" style="font-size: 18px;">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+                style="font-size: 17px;font-weight:700"
+              >
+                Where can I use Bleame?
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" style="font-size:14px; color: #696771;">
+                You can use your Bleame on just about any part of your body below the cheeks, including the bikini area
+                and face! Its completely safe to use!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+                style="font-size: 17px;font-weight:700"
+              >
+                How does it work?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" style="font-size:14px; color: #696771;">
+                Using Nano-Crystalline technology, Bleame™ Crystal Hair Eraser allows the hair to clump and break from
+                the surface when rubbed gently on the skin. This process also helps exfoliate, revealing baby smooth
+                skin after use 💜
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+                style="font-size: 17px;font-weight:700"
+              >
+                Does the friction cause darkness?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" style="font-size:14px; color: #696771;">
+                No, friction does not cause darkness. In fact, it helps improve your complexion by exfoliating dead skin
+                cells, which can brighten and even out your skin tone.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+                style="font-size: 17px;font-weight:700"
+              >
+                Does it help against strawberry skin & bumps?
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" style="font-size:14px; color: #696771;">
+                Absolutely! Bleame effectively improves the appearance of strawberry skin and razor bumps, which are
+                commonly caused by waxing and shaving.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFive"
+                aria-expanded="false"
+                aria-controls="flush-collapseFive"
+                style="font-size: 17px;font-weight:700"
+              >
+                Shipping & Delivery
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" style="font-size:14px; color: #696771;">
+                Shipping Information: We process orders within 1-2 business days from our US warehouse. After dispatch,
+                the estimated delivery time varies based on the shipping method you choose, generally taking up to 2
+                days.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSix"
+                aria-expanded="false"
+                aria-controls="flush-collapseSix"
+                style="font-size: 17px;font-weight:700"
+              >
+                Return & Refund Policy
+              </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" style="font-size:14px; color: #696771;">
+                Our commitment to your satisfaction is evident in our products, backed by a 30-Day 100% Money Back
+                Guarantee.
+
+                We are pleased to inform you that we even include a refund for shipping charges.
+
+                If, after this initial period, you find yourself not fully satisfied, we will initiate a refund for the
+                entire amount you paid.
+
+                For returns, please email us at <a>hello@bleame.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% if section.settings.show_share_buttons %}
+          {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+        {% endif %}
+      </div>
+      <!-- / col -->
+    </div>
+    <!-- / row -->
+
+    <!-- Look At How Others Are Loving Their Bleame -->
+    <div style="display: grid;grid-template-columns: 1fr 1fr;gap: 20px;margin-top:80px">
+      <div style="display:flex;flex-direction: column;align-items: center;justify-content: center;gap:10px">
+        <h1 style="text-align: center;font-weight:700">Look At How Others Are Loving Their Bleame</h1>
+        <p style="font-size: 16px;">Real Reviews From Real People</p>
+        <label style="background-color: #7069bc;border-radius:10px;padding:10px 35px 10px 35px;color:white;font-weight:700;font-size: 18px;"
+          >CLAIM OFFER</label
+        >
+        <div>
+          {%- for i in (1..5) -%}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-star-fill"
+              viewBox="0 0 16 16"
+              style="color:#7069bc"
+            >
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+          {% endfor %}
+          <span style="font-size:16px">Rated 4.8/5 by 1,319+ Happy Customers</span>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider-track" style="height: 500px;">
+          {% for image in product.images %}
+            <img src="{{ image.src | img_url: '503x283', crop:'center' }}" alt="Image 1">
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- See it in action. -->
+    <div class="tab-container" style="margin-top:80px">
+      <div class="tab-header">
+        <div class="header-text">
+          <span style="font-weight: 700;">See it in action.</span>
+          <span style="font-style: italic;">No matter the terrain, the eraser hugs your curves.</span>
+        </div>
+        <div class="tab-controls">
+          <input type="radio" id="tab1" name="tabs" class="tab-radio" checked>
+          <label for="tab1" class="tab-label">Bikini</label>
+
+          <input type="radio" id="tab2" name="tabs" class="tab-radio">
+          <label for="tab2" class="tab-label">Legs</label>
+
+          <input type="radio" id="tab3" name="tabs" class="tab-radio">
+          <label for="tab3" class="tab-label">Arms</label>
+
+          <input type="radio" id="tab4" name="tabs" class="tab-radio">
+          <label for="tab4" class="tab-label">Back</label>
+        </div>
+      </div>
+
+      <div class="tab-content-wrapper" style="height:500px;background-color:azure">
+        <div class="tab-content" id="content1">
+          <p>Tab 1 内容</p>
+        </div>
+        <div class="tab-content" id="content2">
+          <p>Tab 2 内容</p>
+        </div>
+        <div class="tab-content" id="content3">
+          <p>Tab 3 内容</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hair removal just got waaaaay easier -->
+    <div style="display: grid;gap: 30px;justify-items: center;margin-top:80px">
+      <h1 style="font-size: 36px;font-weight:800">Hair removal just got waaaaay easier</h1>
+      <p style="font-size: 21px;color:grey">
+        Meet Bleame Crystal Hair Eraser – the easiest, painless hair removal for a smooth skin instantly!
+      </p>
+      <div style="display: flex;gap: 30px;width:100%">
+        <div style="flex: 0.5">
+          <div style="display: grid;gap: 10px;justify-items: center;margin-bottom:30px">
+            <img src="../assets/image/10018.png" width="60" height="60">
+            <h2 style="font-weight: 700;">Easy to Use</h2>
+            <p style="text-align: center;color:grey;font-size:18px">
+              Simply rub it to your skin in circular motion for a hair-free body!
+            </p>
+          </div>
+          <div style="display: grid;gap: 10px;justify-items: center;">
+            <img src="../assets/image/10018.png" width="60" height="60">
+            <h2 style="font-weight: 700;">Long Lasting</h2>
+            <p style="text-align: center;color:grey;font-size:18px">
+              No refills or recharges required and it is reusable up to 1 year.
+            </p>
+          </div>
+        </div>
+        <div style="flex: 1;">
+          <img src="../assets/image/10018.png" width="60" height="60">
+        </div>
+        <div style="flex: 0.5;">
+          <div style="display: grid;gap: 10px;justify-items: center;margin-bottom:30px">
+            <img src="../assets/image/10018.png" width="60" height="60">
+            <h2 style="font-weight: 700;">Travel Safe</h2>
+            <p style="text-align: center;color:grey;font-size:18px">
+              Unlike shavers, you can take Bleame with you wherever you go.
+            </p>
+          </div>
+          <div style="display: grid;gap: 10px;justify-items: center;">
+            <img src="../assets/image/10018.png" width="60" height="60">
+            <h2 style="font-weight: 700;">Slows Hair Growth</h2>
+            <p style="text-align: center;color:grey;font-size:18px">
+              Designed to slow down hair regrowth in just a couple of sessions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Future Is Hair-Free -->
+    <div style="display: flex;margin-top:80px">
+      <div class="video-scroll-container" style="flex: 0.5;">
+        <video controls>
+          <source src="{{ 'video1.mp4' | asset_url }}" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <video controls>
+          <source src="{{ 'video2.mp4' | asset_url }}" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <video controls>
+          <source src="{{ 'video3.mp4' | asset_url }}" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+        <!-- 添加更多的视频 -->
+      </div>
+      <div style="flex: 0.5;display:flex;gap: 10px;padding-left:40px;flex-direction: column;">
+        <h1>The Future Is Hair-Free! 💜</h1>
+        <div>
+          <ul>
+            <li>
+              <div class="progress-container">
+                <div class="progress-ring process-ring-95">
+                  <div class="progress-ring__circle">
+                    <span class="progress-ring__text">95%</span>
+                  </div>
+                </div>
+                <div class="progress-description">
+                  <p>Said the appearance of their strawberry legs improved</p>
+                </div>
+              </div>
+            </li>
+            <hr>
+            <li>
+              <div class="progress-container">
+                <div class="progress-ring process-ring-94">
+                  <div class="progress-ring__circle">
+                    <span class="progress-ring__text">94%</span>
+                  </div>
+                </div>
+                <div class="progress-description">
+                  <p>Noticed a reduction in the appearance of ingrown hairs</p>
+                </div>
+              </div>
+            </li>
+            <hr>
+            <li>
+              <div class="progress-container">
+                <div class="progress-ring process-ring-90">
+                  <div class="progress-ring__circle">
+                    <span class="progress-ring__text">90%</span>
+                  </div>
+                </div>
+                <div class="progress-description">
+                  <p>Saw an improvement in the look of skin firmness</p>
+                </div>
+              </div>
+            </li>
+            <hr>
+          </ul>
+        </div>
+        <p style="font-size: 14px;">
+          * Results according to clinical/consumer studies. For more information refer to each product page.
+        </p>
+        <div>
+          <label style="background-color: #7069bc;border-radius:10px;padding:10px 35px 10px 35px;color:white;font-weight:700;font-size: 18px;"
+            >CLAIM OFFER</label
+          >
+        </div>
+        <div>
+          {%- for i in (1..5) -%}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-star-fill"
+              viewBox="0 0 16 16"
+              style="color:#7069bc"
+            >
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+          {% endfor %}
+          <span style="font-size:16px">Excellent 4.8 | 1,319 trusted reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- What Babes Like You Are Saying -->
+    <div style="display: flex;flex-direction: column;align-items: center;gap:10px;margin-top:80px">
+      <div>
+        {%- for i in (1..5) -%}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-star-fill"
+            viewBox="0 0 16 16"
+            style="color:#7069bc"
+          >
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>
+        {% endfor %}
+        <span style="font-size:16px">4.8/5</span>
+      </div>
+      <h1>What Babes Like You Are Saying</h1>
+      <div style="display: flex;gap:20px">
+        <div style="display: flex;flex-direction: column;align-items: center;gap:10px">
+          <img src="" height="377" width="377">
+          <p style="font-size: 16px;color:grey">
+            I'm totally blown away. Ingrown hair and the skin irritation was the bane of my life for many years. Bleame
+            has changed the way my skin looks forever!
+          </p>
+          <img src="" height="40" width="40" style="border-radius: 50%;">
+          <div style="font-size: 16px;font-weight:700">Sarah F.</div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-check-circle-fill"
+              viewBox="0 0 16 16"
+              style="color: #7069bc;"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>
+            <span style="font-size: 16px;color:grey">Verified Buyer</span>
+          </div>
+        </div>
+
+        <div style="display: flex;flex-direction: column;align-items: center;gap:10px">
+          <img src="" height="377" width="377">
+          <p style="font-size: 16px;color:grey">
+            I have struggled with strawberry leg for years and waxing just wasn't cutting it, Bleame has really made a
+            huge difference in my life and has given me so much confidence!
+          </p>
+          <img src="" height="40" width="40" style="border-radius: 50%;">
+          <div style="font-size: 16px;font-weight:700">Mariah B.</div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-check-circle-fill"
+              viewBox="0 0 16 16"
+              style="color: #7069bc;"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>
+            <span style="font-size: 16px;color:grey">Verified Buyer</span>
+          </div>
+        </div>
+
+        <div style="display: flex;flex-direction: column;align-items: center;gap:10px">
+          <img src="" height="377" width="377">
+          <p style="font-size: 16px;color:grey">
+            It works great. I've used on my husband's body hair and surprisingly it cleans them up lol. Thank you for
+            inventing this. Super exciting.
+          </p>
+          <img src="" height="40" width="40" style="border-radius: 50%;">
+          <div style="font-size: 16px;font-weight:700">Susan T.</div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-check-circle-fill"
+              viewBox="0 0 16 16"
+              style="color: #7069bc;"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>
+            <span style="font-size: 16px;color:grey">Verified Buyer</span>
+          </div>
+        </div>
+      </div>
+      <label style="border: black 1px solid;font-size:18px;padding:10px 20px 10px 20px;border-radius:10px;width: 300px;text-align: center;margin-top:30px"
+        >Read all reviews
+      </label>
+    </div>
+
+    <!-- What Makes Bleame So Special? -->
+    <div style="display: flex;flex-wrap: wrap;align-items: center;margin-top:30px;gap:20px">
+      <div style="flex:0.5;display: grid;justify-items: center;">
+        <h1 style="font-size: 26px;font-weight:700">What Makes Bleame So Special?</h1>
+        <p style="font-size: 19px;font-weight:500;color:grey">Bleame vs Waxing vs Laser:</p>
+        <p style="font-size: 19px;color:grey;text-align:center">
+          Get smooth, hair-free skin - no pain or high costs like with waxing or laser treatments.
+        </p>
+      </div>
+      <div style="flex:0.5">
+        <img src="{{ 'image/What Makes Bleame.png' |  asset_img_url }}" width="500" height="500">
+      </div>
+    </div>
+
+    <!-- Hair-Free Guarantee -->
+    <div style="display:flex;margin-top:30px">
+      <div style="flex:0.5"><img src="" width="300px" height=""></div>
+
+      <div style="background-color: rgba(46, 42, 57, 1);flex:0.5;padding: 77px;border-radius:0px 10px 10px 0px">
+        <h2 style="font-size:50px;font-weight:700;color:#f4f1ff;margin-bottom:32px">Hair-Free Guarantee</h2>
+        <p style="font-size: 18px;color:#f4f1ff">
+          We love our Bleame™ Crystal Hair Eraser and are confident you will too! That’s why we’re offering a 30-Day,
+          Risk-Free Guarantee. If you’re not satisfied, we’ll gladly issue a full refund in accordance with our Return &
+          Refund Policy
+        </p>
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div style="display: flex;flex-direction:column;margin-top:80px;gap:20px">
+      <div style="display: flex;gap:20px;justify-content: center">
+        <h1 style="font-size: 37px;">4.8</h1>
+        <div class="product-rating" style="font-size: 25px;">
+          <!-- 星级 -->
+          {%- for i in (1..5) -%}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-star-fill"
+              viewBox="0 0 16 16"
+              style="color:#7069bc"
+            >
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+          {% endfor %}
+
+          <!-- 评分 -->
+          <span style="font-size: 16px;margin-left:10px">Based on 1,319 Reviews</span>
+        </div>
+      </div>
+      <div>
+        <ul style="list-style:none;padding:0px">
+          <li style="display: inline-block;margin-right:20px">
+            <p style="font-size: 12px;font-weight:bold;">Hair removal effectiveness</p>
+            <div style="background-color: gainsboro;width:300px;height:9px;border: 1px solid #7c7c7c;display:flex;justify-content: space-between;position:relative">
+              <i></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i></i>
+            </div>
+            <span style="width: 15px;height:15px;background-color:#696771;border-radius: 2px;position:absolute;margin-top: -12px;left: 500px;"></span>
+          </li>
+          <li style="display: inline-block;margin-right:20px">
+            <p style="font-size: 12px;font-weight:bold;">How would you rate the effectiveness?</p>
+            <div style="background-color:#e5e5e5;width:300px;height:9px;border: 1px solid #7c7c7c;display:flex;justify-content: space-between;position:relative">
+              <i></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i></i>
+            </div>
+            <span style="width: 15px;height:15px;background-color:#696771;border-radius: 2px;position:absolute;margin-top: -12px;left: 800px;"></span>
+          </li>
+          <li style="display: inline-block;margin-right:20px">
+            <p style="font-size: 12px;font-weight:bold;">How would you rate the speed of results?</p>
+            <div style="background-color:#e5e5e5;width:300px;height:9px;border: 1px solid #7c7c7c;display:flex;justify-content: space-between;position:relative">
+              <i></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i></i>
+            </div>
+            <span style="width: 15px;height:15px;background-color:#696771;border-radius: 2px;position:absolute;margin-top: -12px;left: 1100px;"></span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <label style="border: gray 1px solid;float: right;margin-right:10px;padding: 10px;box-shadow: 2px 3px 5px 0 #8888886b;">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-pencil-square"
+            viewBox="0 0 16 16"
+            style="color: #7069bc;margin-right:10px"
+          >
+            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+          </svg>
+          <span>Write a Review</span>
+        </label>
+      </div>
+      <div style="margin-bottom: 20px;display:grid;gap:20px">
+        <label style="color:#7069bc;border-bottom:3px #7069bc solid;padding:15px;font-size:14px;font-weight:bold;width: 150px">Reviews 1319</label>
+        <strong style="color:grey;font-size:13px">Filter Reviews:</strong>
+        <div style="position: relative">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+            style="position: absolute;top: 8px;left: 10px;"
+          >
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg>
+          <input
+            type="text"
+            placeholder="Search Reviews"
+            style="padding-left: 30px;width:300px;height:35px;border: 1px solid #ccd6e0;font-size:14px"
+          >
+        </div>
+        <div style="display:flex;gap: 10px;">
+          <select name="options" id="options">
+            <option>Hair removal effectiveness</option>
+            <option value="option1">Poor</option>
+            <option value="option2">Fair</option>
+            <option value="option3">Good</option>
+            <option value="option3">Very Good</option>
+            <option value="option3">Excellent</option>
+          </select>
+
+          <select name="options" id="options">
+            <option>How would you rate the speed of results?</option>
+            <option value="option1">Poor</option>
+            <option value="option2">Fair</option>
+            <option value="option3">Good</option>
+            <option value="option3">Very Good</option>
+            <option value="option3">Excellent</option>
+          </select>
+
+          <select name="options" id="options">
+            <option>Age</option>
+            <option value="option1">Under 18</option>
+            <option value="option2">18 - 24</option>
+            <option value="option3">25 - 34</option>
+            <option value="option4">35 - 44</option>
+            <option value="option5">45 - 54</option>
+            <option value="option6">55 - 64</option>
+            <option value="option7">65+</option>
+          </select>
+
+          <select name="options" id="options">
+            <option>What's your concern?</option>
+            <option value="option1">Strawberry legs</option>
+            <option value="option2">Ingrown hair</option>
+            <option value="option3">Skin Irritations</option>
+            <option value="option4">Nicks and bumps</option>
+            <option value="option5">Eco-Friendly alternatives</option>
+            <option value="option6">Expensive razors</option>
+            <option value="option7">PCOS</option>
+            <option value="option7">Extreme</option>
+          </select>
+
+          <select name="options" id="options">
+            <option>With Photos</option>
+            <option value="option1">Most Recent</option>
+            <option value="option2">Highest Rating</option>
+            <option value="option3">Lowest Rating</option>
+            <option value="option4">Most Helpful</option>
+          </select>
+        </div>
+      </div>
+      <hr>
+
+      <div style="display:grid;gap:30px">
+        <div>
+          <span style="font-size:14px;font-weight:700">Joanne G.</span>
+          <span style="font-size:14px;color: #1cc286;">Verified Buyer</span>
+          <div class="product-rating" style="font-size: 25px;">
+            <!-- 星级 -->
+            {%- for i in (1..5) -%}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-star-fill"
+                viewBox="0 0 16 16"
+                style="color:#7069bc"
+              >
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            {% endfor %}
+          </div>
+        </div>
+        <div>
+          <ul style="list-style:none;padding:0px">
+            <li style="display: inline-block;margin-right:20px">
+              <p style="font-size:11px;font-weight:700">Hair removal effectiveness</p>
+              <div style="background-color: #e5e5e5;width:500px;height:9px;border: 1px solid #7c7c7c;display:flex;justify-content: space-between;position:relative">
+              <i></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i></i>
+            </div>
+            <span style="width: 15px;height:15px;background-color:#696771;border-radius: 2px;position:absolute;margin-top: -12px;left: 600px;"></span>
+
+            </li>
+            <li style="display: inline-block;margin-right:20px">
+              <p style="font-size:11px;font-weight:700">How would you rate the speed of results?</p>
+              <div style="background-color:#e5e5e5;width:500px;height:9px;border: 1px solid #7c7c7c;display:flex;justify-content: space-between;position:relative">
+              <i></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i></i>
+            </div>
+            <span style="width: 15px;height:15px;background-color:#696771;border-radius: 2px;position:absolute;margin-top: -12px;left: 1200px;"></span>
+
+            </li>
+          </ul>
+          <div style="display:grid">
+            <strong style="font-size:11px;color:#2E2A39">Age</strong>
+            <a style="font-size:13px;color:#2E2A39;border-bottom: 1px dotted #ccc;width: 40px;">45-54</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 style="font-size:15px;font-weight:700">Razor Free!</h2>
+          <p style="font-size:14px">
+            This little device is incredible! I thought I'd give it a go and that it was probably a gimmick. It's not!
+            It's awesome! So good, that my 18 and 20 yo daughters have 'borrowed' it, and I have to find it whenever I
+            need it! It actually works and I have sent the link to my sisters and girlfriends! Love it. No mess and it
+            exfoliates as well. Love it! 10 stars! Great Christmas presses too 🥰
+          </p>
+          <img src="" width="100" height="150">
+        </div>
+        <hr>
+      </div>
+
+      <div style="display:grid;gap:30px">
+        <div>
+          <span style="font-size:14px;font-weight:700">Joanne J.</span>
+          <span style="font-size:14px;color: #1cc286;">Verified Buyer</span>
+          <div class="product-rating" style="font-size: 25px;">
+            <!-- 星级 -->
+            {%- for i in (1..5) -%}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-star-fill"
+                viewBox="0 0 16 16"
+                style="color:#7069bc"
+              >
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            {% endfor %}
+          </div>
+        </div>
+        <div>
+          <ul style="list-style:none;padding:0px">
+            <li style="display: inline-block;margin-right:20px">
+              <p style="font-size:11px;font-weight:700">Hair removal effectiveness</p>
+              <div style="background-color: #e5e5e5;width:500px;height:9px;border: 1px solid #7c7c7c;display:flex;justify-content: space-between;position:relative">
+              <i></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i></i>
+            </div>
+            <span style="width: 15px;height:15px;background-color:#696771;border-radius: 2px;position:absolute;margin-top: -12px;left: 600px;"></span>
+
+            </li>
+            <li style="display: inline-block;margin-right:20px">
+              <p style="font-size:11px;font-weight:700">How would you rate the speed of results?</p>
+              <div style="background-color:#e5e5e5;width:500px;height:9px;border: 1px solid #7c7c7c;display:flex;justify-content: space-between;position:relative">
+              <i></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i style="width:1px;height:8px;display: inline-block;border: 1px solid #7c7c7c"></i>
+              <i></i>
+            </div>
+            <span style="width: 15px;height:15px;background-color:#696771;border-radius: 2px;position:absolute;margin-top: -12px;left: 1200px;"></span>
+
+            </li>
+          </ul>
+          <div style="display:grid">
+            <strong style="font-size:11px;color:#2E2A39">Age</strong>
+            <a style="font-size:13px;color:#2E2A39;border-bottom: 1px dotted #ccc;width: 40px;">45-54</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 style="font-size:15px;font-weight:700">Razor Free!</h2>
+          <p style="font-size:14px">
+            This little device is incredible! I thought I'd give it a go and that it was probably a gimmick. It's not!
+            It's awesome! So good, that my 18 and 20 yo daughters have 'borrowed' it, and I have to find it whenever I
+            need it! It actually works and I have sent the link to my sisters and girlfriends! Love it. No mess and it
+            exfoliates as well. Love it! 10 stars! Great Christmas presses too 🥰
+          </p>
+          <img src="" width="100" height="150">
+        </div>
+        <hr>
+      </div>
+      <div>
+        <ul class="pagination">
+          <li><a href=" ">&laquo;</a></li>
+          <!-- Previous button -->
+          <li><a href="#" class="active">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href=" ">&raquo;</a></li>
+          <!-- Next button -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Questions? We’ve Got You Covered -->
+    <div style="display:grid;justify-items: center;gap:30px;margin-top:80px">
+      <h1 style="font-size:36px;font-weight:700">Questions? We’ve Got You Covered</h1>
+      <div class="accordion accordion-flush" id="accordionFlushExample" style="font-size: 18px;width:800px">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+              style="font-size: 17px;font-weight:700"
+            >
+              Where can I use it?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body" style="font-size:14px; color: #696771;">
+              <p>
+                Bleame™ Crystal Hair Eraser is safe to use on knuckles, arms, legs, chest, back and bikini area.
+                However, we suggest not to overuse or rub too hard.
+              </p>
+              <p>
+                NOTE: If you have sensitive skin, try it on your arms/legs first before you use it on other delicate
+                parts.
+              </p>
+              <p>
+                *We don’t recommend using the Crystal Hair Remover on your underarms and due to the skin being uneven
+                and wrinkly. These areas are very prone to product overuse and overpressure.
+              </p>
+              <p>
+                *We don’t recommend using the Crystal Hair Remover on your underarms or face as your skin on those areas
+                are thin and delicate.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+              style="font-size: 17px;font-weight:700"
+            >
+              Does the friction cause darkness?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body" style="font-size:14px; color: #696771;">
+              No, it actually improves your complexion by removing dead skin.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+              style="font-size: 17px;font-weight:700"
+            >
+              When is the best time to use the eraser?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body" style="font-size:14px; color: #696771;">It is best to use after bath.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour"
+              aria-expanded="false"
+              aria-controls="flush-collapseFour"
+              style="font-size: 17px;font-weight:700"
+            >
+              How often can I use it?
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body" style="font-size:14px; color: #696771;">
+              This varies for everyone. Some are comfortable using it 1-2 times a week. Others prefer once every 2
+              weeks. Adjust accordingly based on the tolerance of your skin.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFive"
+              aria-expanded="false"
+              aria-controls="flush-collapseFive"
+              style="font-size: 17px;font-weight:700"
+            >
+              I have strawberry skin, will this work for me?
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body" style="font-size:14px; color: #696771;">
+              It will! It actually improves the appearance of strawberry skin or razor bumps that you usually get from
+              waxing and shaving.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSix"
+              aria-expanded="false"
+              aria-controls="flush-collapseSix"
+              style="font-size: 17px;font-weight:700"
+            >
+              How do I clean my Bleame™ Crystal Hair Eraser?
+            </button>
+          </h2>
+          <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body" style="font-size:14px; color: #696771;">
+              Every after use, clean your Bleame under running water and brushing off any debris: hair, dead skin, etc.
+              Store in a dry place.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Try Us Risk Free -->
+    <div style="display:grid;gap:30px;justify-items: center;margin-top:80px">
+      <h1 style="font-size:36px;font-weight:700">Try Us Risk Free</h1>
+      <div style="display:flex;gap:40px">
+        <div>
+          <img src="" width="130" height="130">
+          <p>Free Shipping</p>
+        </div>
+        <div>
+          <img src="" width="130" height="130">
+          <p>Free Shipping</p>
+        </div>
+        <div>
+          <img src="" width="130" height="130">
+          <p>Free Shipping</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- You may also like -->
+  <div style="display:grid;gap: 20px;justify-content: center;margin-top:80px">
+    <h1 style="font-size:36px;font-weight:700">You may also like</h1>
+    <div style="position:relative">
+      <img src="{{ product.featured_image | img_url}}" width="270" height="370">
+      <label style="background-color:rgba(0, 0, 0, 0.498);color:white;font-weight:700;font-size:12px;position: absolute;top: 20px;left: 20px;padding:10px;border-radius:10px"
+        >SAVE
+        {{
+          current_variant.compare_at_price
+          | minus: current_variant.price
+          | times: 100
+          | divided_by: current_variant.compare_at_price
+        -}}
+        %</label
+      >
+    </div>
+    <div>
+      <!-- 标题 -->
+      <a style="font-weight:700;font-size:17px">{{ product.title }}</a>
+
+      <!-- 价格列表 -->
+      <div data-price-wrapper>
+        <!-- 折扣价 -->
+        {% if product.compare_at_price_max > product.price %}
+          <s data-compare-price class="compare-price">
+            {% if current_variant.compare_at_price > current_variant.price %}
+              {{ current_variant.compare_at_price | money }}
+            {% endif %}
+          </s>
+        {% endif %}
+
+        <!-- 原价 -->
+        <span data-product-price class="original-price">
+          {{ current_variant.price | money }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product pages",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_share_buttons",
+      "label": "Show social sharing buttons",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
