@@ -426,7 +426,7 @@ font-family: "Harmonia Sans", sans-serif;
   
 
   .hair-free-container {
-    width: 100vw; /* Full viewport width */
+    width: 100%; /* Full viewport width */
     overflow: hidden; /* Hide overflow */
     position: relative; /* Position relative for slider */
 }
