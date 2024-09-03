@@ -464,26 +464,26 @@ font-family: "Harmonia Sans", sans-serif;
     transition: transform 0.3s ease; /* Smooth sliding effect */
 }
 
-.image {
+.hair-remove-image {
     width: 50vw; /* Each image takes up half of the viewport width */
     height: 100%;
     object-fit: cover; /* Ensure images cover the container */
 }
 
-.image1 {
+.hair-remove-image1 {
     position: absolute; /* Overlay images */
     top: 0;
     left: 0;
 }
 
-.image2 {
+.hair-remove-image2 {
     position: absolute; /* Overlay images */
     top: 0;
     left: 50vw; /* Shift the second image to the right */
 }
 
 /* Optional: Adding some interactivity for sliding effect */
-.hair-remove-container:hover .slider {
+.hair-remove-container:hover .hair-remove-slider {
     transform: translateX(-50vw); /* Move slider to reveal second image */
 }
 
