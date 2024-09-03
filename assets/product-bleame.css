@@ -433,6 +433,10 @@ font-family: "Harmonia Sans", sans-serif;
     flex: 0.5;
 }
 
+.hair-free-container::-webkit-scrollbar {
+    display: none;
+}
+
 .hair-free-slider {
     display: inline-flex; /* Ensure images are in a horizontal line */
 }
