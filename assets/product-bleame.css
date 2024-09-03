@@ -431,6 +431,7 @@ font-family: "Harmonia Sans", sans-serif;
     white-space: nowrap; /* Prevent wrapping of images */
     padding: 10px; /* Optional: space around the images */
     flex: 0.5;
+    overflow-y: hidden;
 }
 
 .hair-free-container::-webkit-scrollbar {
@@ -438,7 +439,7 @@ font-family: "Harmonia Sans", sans-serif;
 }
 
 .hair-free-slider {
-    display: inline-flex; /* Ensure images are in a horizontal line */
+    display: flex; /* Ensure images are in a horizontal line */
 }
 
 .hair-free-slider img {
