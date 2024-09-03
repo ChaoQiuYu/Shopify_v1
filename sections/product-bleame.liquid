@@ -476,21 +476,14 @@
 
     <!-- The Future Is Hair-Free -->
     <div style="display: flex;margin-top:80px">
-      <div class="video-scroll-container" style="flex: 0.5;">
-        <video controls>
-          <source src="{{ 'video1.mp4' | asset_url }}" type="video/mp4">
-          您的浏览器不支持 video 标签。
-        </video>
-        <video controls>
-          <source src="{{ 'video2.mp4' | asset_url }}" type="video/mp4">
-          您的浏览器不支持 video 标签。
-        </video>
-        <video controls>
-          <source src="{{ 'video3.mp4' | asset_url }}" type="video/mp4">
-          您的浏览器不支持 video 标签。
-        </video>
-        <!-- 添加更多的视频 -->
-      </div>
+      <div class="container">
+        <div class="slider">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
       <div style="flex: 0.5;display:flex;gap: 10px;padding-left:40px;flex-direction: column;">
         <h1>The Future Is Hair-Free! 💜</h1>
         <div>
