@@ -426,30 +426,21 @@ font-family: "Harmonia Sans", sans-serif;
   
 
   .hair-free-container {
-    width: 100%; /* Full viewport width */
-    overflow: hidden; /* Hide overflow */
-    position: relative; /* Position relative for slider */
-    flex: 0.5
+    width: 100vw; /* Full viewport width */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of images */
+    padding: 10px; /* Optional: space around the images */
 }
 
 .hair-free-slider {
-    display: flex;
-    flex-wrap: nowrap; /* Ensure images stay in a single row */
-    gap: 10px; /* Space between images, adjust as needed */
-    animation: scroll 10s linear infinite; /* Continuous scrolling animation */
+    display: inline-flex; /* Ensure images are in a horizontal line */
 }
 
 .hair-free-slider img {
     height: 200px; /* Adjust height as needed */
     width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between images, adjust as needed */
 }
 
-/* Keyframes for continuous scrolling */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
+
+
