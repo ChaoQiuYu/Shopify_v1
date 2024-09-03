@@ -429,6 +429,7 @@ font-family: "Harmonia Sans", sans-serif;
     width: 100%; /* Full viewport width */
     overflow: hidden; /* Hide overflow */
     position: relative; /* Position relative for slider */
+    flex: 0.5
 }
 
 .hair-free-slider {
