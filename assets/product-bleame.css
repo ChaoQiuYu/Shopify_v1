@@ -1,0 +1,454 @@
+body{
+font-family: "Harmonia Sans", sans-serif;
+}
+
+/* 产品评分 */
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 产品名 */
+.product-title {
+    font-weight: 700
+}
+
+/* 标语 */
+.product-slogan {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* 价格列表 */
+.price-list {
+    flex-wrap: wrap;
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+}
+
+/* 原价 */
+.original-price {
+    color: #7069bc;
+    font-size: 20px;
+    font-weight: 700
+}
+
+/* 折扣价 */
+.compare-price {
+    color: #9c9ba3;
+    font-size: 20px;
+    font-weight: 700
+}
+
+/* 折扣率 */
+.discount-rate {
+    background: #d6d2ff;
+    color: #2e2a3a;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 6px 15px;
+    font-size: 16px;
+}
+
+/* 产品描述 */
+.product-description {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/* 产品信息
+.product-info {
+} */
+
+/* 单选标签 */
+.custom-radio {
+    position: relative;
+    padding: 12px 20px 12px 60px;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border: gainsboro 1px solid;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 隐藏原生的单选按钮 */
+.custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* 自定义单选按钮的圆圈 */
+.custom-radio .checkmark {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    border: #7069bc 1px solid;
+    border-radius: 50%;
+}
+
+
+/* 选中时显示内部标识 */
+.custom-radio input:checked+.checkmark {
+    border: #7069bc 2px solid;
+    background-color: #d6d2ff;
+}
+
+/* 选中时的样式 */
+.custom-radio input:checked~.checkmark {
+    background-color: white;
+    border: #7069bc 1px solid;
+}
+
+/* 选中时的圆圈内部标识 */
+.custom-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* 选中时显示内部标识 */
+.custom-radio input:checked~.checkmark:after {
+    display: block;
+}
+
+/* 定义内部标识的样式 */
+.custom-radio .checkmark:after {
+    top: 1.5px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #7069bc;
+}
+
+/* 属性价格 */
+.bundle-price {
+    margin-right: 10px;
+}
+
+/* 属性的原价 */
+.bundle-original-price {
+    font-size: 18px;
+    color: #7069bc;
+}
+
+/* 属性折扣价 */
+.bundle-compare-price {
+    font-size: 16px;
+    color: grey
+}
+
+/* 简短描述 */
+.bundle-short-description {
+    background-color: #7069bc;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* 描述的字体 */
+.bundle-short-description-text{
+    font-size: 16px;color:white
+}
+
+/* 中心对齐整个单选按钮容器 */
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 容器设置 */
+.slider {
+    width: 100%;
+    /* 设置容器宽度 */
+    overflow: hidden;
+    /* 隐藏溢出的内容 */
+    /* 添加边框，可选 */
+    position: relative;
+    height: 500px;
+    border-radius: 10px;
+}
+
+/* 图片滚动的轨道 */
+.slider-track {
+    display: flex;
+    width: 400%;
+    /* 根据图片数量设置轨道的宽度，这里有4张图，所以是400% */
+    animation: scroll 15s linear infinite;
+    /* 使用动画进行滚动 */
+    gap: 20px;
+    border-radius: 10px;
+}
+
+/* 图片样式 */
+.slider-track img {
+    width: 25%;
+    /* 让每张图片占据轨道的25%宽度 */
+    flex-shrink: 0;
+    /* 防止图片缩小 */
+}
+
+/* 关键帧动画 */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+        /* 从起始位置开始 */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* 滚动到轨道的末尾 */
+    }
+}
+
+
+.tab-container {
+    width: 100%;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header-text {
+    flex: 0.7;
+    font-size: 40px;
+}
+
+.tab-controls {
+    display: flex;
+    gap: 10px;
+    border: #ddd 1px solid;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.tab-radio {
+    display: none;
+    /* 隐藏实际的 radio 按钮 */
+}
+
+.tab-label {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.3s;
+    color: #7069bc;
+    font-size: 17px;
+}
+
+.tab-radio:checked+.tab-label {
+    background-color: #7069bc;
+    color: white;
+    border-radius: 10px;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab-header .tab-controls #tab1:checked~.tab-content-wrapper .tab-content#content1,
+#tab2:checked~.tab-content-wrapper .tab-content#content2,
+#tab3:checked~.tab-content-wrapper .tab-content#content3 {
+    display: block;
+}
+
+
+
+
+
+.product-info-all {
+    display: grid;
+    gap: 16px;
+    max-height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.product-info-all::-webkit-scrollbar {
+    display: none;
+}
+
+
+.video-scroll-container {
+    display: flex; /* 使用 flexbox 布局 */
+    overflow-x: auto; /* 允许水平滚动 */
+    gap: 20px; /* 视频之间的间距 */
+    padding: 10px; /* 容器内边距 */
+    scroll-behavior: smooth; /* 平滑滚动效果 */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .video-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .video-scroll-container video {
+    width: 300px; /* 每个视频的宽度 */
+    height: auto; /* 保持视频比例 */
+    flex-shrink: 0; /* 阻止视频缩小 */
+    border: 2px solid #ccc; /* 添加视频边框 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+  }
+
+  .progress-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .progress-ring {
+    width: 70px;
+    height: 70px;
+    background: conic-gradient(
+        #7069bc 0%,
+        #7069bc 95%,
+        #d6d2ff 95%,
+        #d6d2ff 100%
+      );
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px; /* 与描述文本之间的间距 */
+  }
+  
+  .progress-ring__circle {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress-ring__text {
+    font-size: 23px;
+    color: #7069bc;
+  }
+  
+  .progress-description {
+    max-width: 295px;
+  }
+  
+  .progress-description p {
+    margin: 0;
+    font-size:17px;
+    color: grey;
+  }
+
+  .progress-ring-95 {
+    background: conic-gradient(
+        #7069bc 0%,
+        #7069bc 95%,
+        #d6d2ff 95%,
+        #d6d2ff 100%
+      );
+  }
+
+  .progress-ring-94 {
+    background: conic-gradient(
+        #7069bc 0%,
+        #7069bc 94%,
+        #d6d2ff 94%,
+        #d6d2ff 100%
+      );
+  }
+
+  .progress-ring-90 {
+    background: conic-gradient(
+        #7069bc 0%,
+        #7069bc 90%,
+        #d6d2ff 90%,
+        #d6d2ff 100%
+      );
+  }
+
+
+  select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    color: grey;
+  }
+  
+  select:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  .pagination {
+    display: flex; /* 将子元素排列成横排 */
+    justify-content: center; /* 居中分页控件 */
+    list-style-type: none; /* 移除列表项的默认样式 */
+    padding: 0;
+    
+  }
+  
+  .pagination li {
+    margin: 0 5px; /* 为每个分页按钮添加间距 */
+    font-size: 15px;
+  }
+  
+  .pagination a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination a.active {
+    font-weight: 700;
+  }
+  
+
+  .hair-free-container {
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative for slider */
+}
+
+.hair-free-slider {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure images stay in a single row */
+    gap: 10px; /* Space between images, adjust as needed */
+    animation: scroll 10s linear infinite; /* Continuous scrolling animation */
+}
+
+.hair-free-slider img {
+    height: 200px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
