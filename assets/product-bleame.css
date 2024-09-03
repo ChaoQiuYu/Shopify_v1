@@ -440,7 +440,8 @@ font-family: "Harmonia Sans", sans-serif;
 .hair-free-slider img {
     height: 459px; /* Adjust height as needed */
     width: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between images, adjust as needed */
+    margin-right: 20px; /* Space between images, adjust as needed */
+    border-radius: 10px;
 }
 
 
