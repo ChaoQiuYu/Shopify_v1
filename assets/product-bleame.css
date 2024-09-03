@@ -449,5 +449,42 @@ font-family: "Harmonia Sans", sans-serif;
     border-radius: 10px;
 }
 
+.hair-remove-container {
+    width: 100vw; /* Full viewport width */
+    height: 300px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow content */
+    position: relative; /* Position context for absolutely positioned children */
+}
+
+.hair-remove-slider {
+    display: flex;
+    width: 200%; /* Make sure slider is wide enough for both images */
+    height: 100%;
+    position: absolute;
+    transition: transform 0.3s ease; /* Smooth sliding effect */
+}
+
+.image {
+    width: 50vw; /* Each image takes up half of the viewport width */
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the container */
+}
+
+.image1 {
+    position: absolute; /* Overlay images */
+    top: 0;
+    left: 0;
+}
+
+.image2 {
+    position: absolute; /* Overlay images */
+    top: 0;
+    left: 50vw; /* Shift the second image to the right */
+}
+
+/* Optional: Adding some interactivity for sliding effect */
+.hair-remove-container:hover .slider {
+    transform: translateX(-50vw); /* Move slider to reveal second image */
+}
 
 
