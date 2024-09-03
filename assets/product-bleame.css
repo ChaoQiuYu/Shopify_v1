@@ -426,7 +426,7 @@ font-family: "Harmonia Sans", sans-serif;
   
 
   .hair-free-container {
-    width: 100% /* Full viewport width */
+    width: 100%; /* Full viewport width */
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping of images */
     padding: 10px; /* Optional: space around the images */
