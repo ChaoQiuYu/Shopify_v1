@@ -58,10 +58,7 @@ font-family: "Harmonia Sans", sans-serif;
     line-height: 30px;
 }
 
-/* 产品信息
-.product-info {
-} */
-
+/* 产品属性开始 */
 /* 单选标签 */
 .custom-radio {
     position: relative;
@@ -166,6 +163,14 @@ font-family: "Harmonia Sans", sans-serif;
     flex-direction: column;
     align-items: center;
 }
+/* 产品属性结束 */
+
+/* 产品库存日期 */
+.inventory-date-all{
+    display: flex;
+    align-items:center;
+}
+
 
 /* 容器设置 */
 .slider {
