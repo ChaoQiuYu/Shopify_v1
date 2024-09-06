@@ -200,8 +200,15 @@ body {
     font-weight: 600;
 }
 
-.order-deadline-text{
-    font-size: 16px;font-weight: 600;
+.order-deadline-text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.order-deadline-time {
+    font-size: 16px;
+    color: #7069bc;
+    font-weight: 600;
 }
 
 /* 容器设置 */
