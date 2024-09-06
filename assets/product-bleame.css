@@ -245,7 +245,7 @@ body {
 /* 产品信息折叠行结束 */
 
 /* 容器设置 */
-.slider {
+.loving-bleame-slider {
     width: 100%;
     /* 设置容器宽度 */
     overflow: hidden;
@@ -257,7 +257,7 @@ body {
 }
 
 /* 图片滚动的轨道 */
-.slider-track {
+.loving-bleame-slider-track {
     display: flex;
     width: 400%;
     /* 根据图片数量设置轨道的宽度，这里有4张图，所以是400% */
