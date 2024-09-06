@@ -214,6 +214,7 @@ body {
 
 /* 订单截止结束 */
 
+/* 物流 */
 .shipping-all {
     display: flex;
     gap: 20px;
@@ -224,6 +225,7 @@ body {
     font-size: 15px;
     font-weight: 600;
 }
+/* 物流结束 */
 
 /* 容器设置 */
 .slider {
