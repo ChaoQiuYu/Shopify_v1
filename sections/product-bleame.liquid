@@ -182,17 +182,16 @@
         <!-- 库存日期 -->
         <div class="inventory-date-all">
           <span
-            class="circle-plus"
-            style="width:10px;height: 10px;background-color:#fd8935;border:#fd8935 1px solid;border-radius:50%;margin-right:10px"
+            class="inventory-date-circle-plus"
           ></span>
-          <div style="color: #fd8935;font-size:18px;">Body Scrub included for the next 1 orders!</div>
+          <div class="inventory-date-text">Body Scrub included for the next 1 orders!</div>
         </div>
 
         <!-- 添加到购物车 -->
         {% include 'product-form' %}
 
         <!-- 订单截止 -->
-        <div style="display:grid;justify-content: center;justify-items: center;">
+        <div class="order-deadline-all">
           <p style="font-size: 16px;font-weight: 600;">Want it by Wednesday, 21 Aug ?</p>
           <p>
             <span style="font-size: 16px;font-weight: 600;">ORDER WITHIN</span>
