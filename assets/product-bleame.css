@@ -227,6 +227,10 @@ body {
 }
 /* 物流结束 */
 
+.accordion-text{
+    font-size: 18px;
+}
+
 /* 容器设置 */
 .slider {
     width: 100%;
