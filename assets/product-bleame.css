@@ -189,6 +189,7 @@ body {
 
 /* 产品库存日期结束 */
 
+/* 订单截止 */
 .order-deadline-all {
     display: grid;
     justify-content: center;
@@ -209,6 +210,14 @@ body {
     font-size: 16px;
     color: #7069bc;
     font-weight: 600;
+}
+
+/* 订单截止结束 */
+
+.shipping-all {
+    display: flex;
+    gap: 20px;
+    font-weight: 300
 }
 
 /* 容器设置 */
