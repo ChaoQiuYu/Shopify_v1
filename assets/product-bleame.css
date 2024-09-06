@@ -231,6 +231,9 @@ body {
     font-size: 18px;
 }
 
+.accordion-button-text{
+    font-size: 17px;font-weight:700
+}
 /* 容器设置 */
 .slider {
     width: 100%;
