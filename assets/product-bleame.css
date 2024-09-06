@@ -220,6 +220,11 @@ body {
     font-weight: 300
 }
 
+.shipping-text {
+    font-size: 15px;
+    font-weight: 600;
+}
+
 /* 容器设置 */
 .slider {
     width: 100%;
