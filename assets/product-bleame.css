@@ -200,6 +200,10 @@ body {
     font-weight: 600;
 }
 
+.order-deadline-text{
+    font-size: 16px;font-weight: 600;
+}
+
 /* 容器设置 */
 .slider {
     width: 100%;
