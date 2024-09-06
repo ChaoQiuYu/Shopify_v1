@@ -225,15 +225,23 @@ body {
     font-size: 15px;
     font-weight: 600;
 }
+
 /* 物流结束 */
 
-.accordion-text{
+.accordion-text {
     font-size: 18px;
 }
 
-.accordion-button-text{
-    font-size: 17px;font-weight:700
+.accordion-button-text {
+    font-size: 17px;
+    font-weight: 700
 }
+
+.accordion-body-text {
+    font-size: 14px;
+    color: #696771;
+}
+
 /* 容器设置 */
 .slider {
     width: 100%;
