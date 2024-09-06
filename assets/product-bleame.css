@@ -261,6 +261,11 @@ body {
     gap: 10px
 }
 
+.loving-bleame-info-title {
+    text-align: center;
+    font-weight: 700
+}
+
 /* 容器设置 */
 .loving-bleame-slider {
     width: 100%;
