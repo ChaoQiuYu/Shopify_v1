@@ -245,7 +245,6 @@ body {
 
 /* 产品信息折叠行结束 */
 
-/* 容器设置 */
 .loving-bleame-all {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -253,6 +252,7 @@ body {
     margin-top: 80px
 }
 
+/* 容器设置 */
 .loving-bleame-slider {
     width: 100%;
     /* 设置容器宽度 */
