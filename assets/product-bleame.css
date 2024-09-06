@@ -182,6 +182,11 @@ body {
     margin-right: 10px
 }
 
+.inventory-date-text{
+    color: #fd8935;
+    font-size:18px;
+}
+
 
 /* 容器设置 */
 .slider {
