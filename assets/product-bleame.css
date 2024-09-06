@@ -182,11 +182,18 @@ body {
     margin-right: 10px
 }
 
-.inventory-date-text{
+.inventory-date-text {
     color: #fd8935;
-    font-size:18px;
+    font-size: 18px;
 }
 
+/* 产品库存日期结束 */
+
+.order-deadline-all {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
 
 /* 容器设置 */
 .slider {
