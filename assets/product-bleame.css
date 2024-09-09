@@ -372,13 +372,13 @@ input#tab3:checked ~ .tab-content#content3,
 input#tab4:checked ~ .tab-content#content4  {
     display: block;
 }
-/* label[for="tab1"]:checked ~ .tabs #tab1,
+label[for="tab1"]:checked ~ .tabs #tab1,
 label[for="tab2"]:checked ~ .tabs #tab2,
 label[for="tab3"]:checked ~ .tabs #tab3,
 label[for="tab4"]:checked ~ .tabs #tab4 {
     background-color: #fff;
     border-bottom: 1px solid #fff;
-} */
+}
 
 
 
