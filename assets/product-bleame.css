@@ -387,12 +387,6 @@ input#tab4:checked~.tab-content#content4 {
     display: block;
 }
 
-input#tab1:checked ~ .tabs label[for="tab1"],
-input#tab2:checked ~ .tabs label[for="tab2"],
-input#tab3:checked ~ .tabs label[for="tab3"] {
-    background-color: #7069bc;
-    color: #fff;
-}
 /* See it in action.结束 */
 
 
