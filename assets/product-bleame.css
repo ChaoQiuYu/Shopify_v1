@@ -269,6 +269,10 @@ body {
     font-size: 16px;
 }
 
+.loving-bleame-claim-offer{
+    background-color: #7069bc;border-radius:10px;padding:10px 35px 10px 35px;color:white;font-weight:700;font-size: 18px;
+}
+
 /* 容器设置 */
 .loving-bleame-slider {
     width: 100%;
