@@ -388,13 +388,6 @@ input#tab4:checked~.tab-content#content4 {
     display: block;
 }
 
-input#tab1:checked~ .tab1,
-input#tab2:checked~ .tab2,
-input#tab3:checked~ .tab3 {
-    background-color: purple;
-    color: #fff;
-}
-
 /* See it in action.结束 */
 
 
