@@ -359,8 +359,6 @@ body {
 .tab-content {
     margin-top: 30px;
     display: none;
-    padding: 10px;
-    border: 1px solid #ddd;
 }
 .tab-content.active {
     display: block;
