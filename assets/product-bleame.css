@@ -311,7 +311,7 @@ body {
 }
 
 /* 图片样式 */
-.slider-track img {
+.loving-bleame-slider-track img {
     width: 25%;
     /* 让每张图片占据轨道的25%宽度 */
     flex-shrink: 0;
@@ -330,19 +330,11 @@ body {
         /* 滚动到轨道的末尾 */
     }
 }
-
 /* Look At How Others Are Loving Their Bleame结束 */
 
 
 .tab-container {
     width: 100%;
-}
-
-.tab-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
 }
 
 .header-text {
@@ -386,9 +378,9 @@ body {
     border-top: none;
 }
 
-.tab-header .tab-controls #tab1:checked~.tab-content-wrapper .tab-content#content1,
-#tab2:checked~.tab-content-wrapper .tab-content#content2,
-#tab3:checked~.tab-content-wrapper .tab-content#content3 {
+#tab1:checked~#content1,
+#tab2:checked~#content2,
+#tab3:checked~#content3 {
     display: block;
 }
 
