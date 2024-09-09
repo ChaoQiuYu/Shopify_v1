@@ -279,12 +279,12 @@ body {
     font-size: 18px;
 }
 
-.loving-bleame-star{
-    color:#7069bc
+.loving-bleame-star {
+    color: #7069bc
 }
 
-.loving-bleame-star-description{
-    font-size:16px
+.loving-bleame-star-description {
+    font-size: 16px
 }
 
 /* 容器设置 */
@@ -330,11 +330,13 @@ body {
         /* 滚动到轨道的末尾 */
     }
 }
+
 /* Look At How Others Are Loving Their Bleame结束 */
-.header-text{
+.header-text {
     font-size: 40px;
     max-width: 550px;
 }
+
 .tabs {
     display: flex;
     gap: 10px;
@@ -343,6 +345,7 @@ body {
     border-radius: 10px;
     height: 60px;
 }
+
 .tab {
     padding: 10px 20px;
     cursor: pointer;
@@ -351,32 +354,43 @@ body {
     color: #7069bc;
     font-size: 17px;
 }
+
 .tab:hover {
     background-color: #7069bc;
     color: white;
     border-radius: 10px;
 }
+
 .tab-content {
     margin-top: 30px;
     display: none;
 }
+
+.tab-content video {
+    width: 100%;
+    border-radius: 25px;
+}
+
 .tab-content.active {
     display: block;
 }
+
 input[type="radio"] {
     display: none;
 }
-input#tab1:checked ~ .tab-content#content1,
-input#tab2:checked ~ .tab-content#content2,
-input#tab3:checked ~ .tab-content#content3,
-input#tab4:checked ~ .tab-content#content4  {
+
+input#tab1:checked~.tab-content#content1,
+input#tab2:checked~.tab-content#content2,
+input#tab3:checked~.tab-content#content3,
+input#tab4:checked~.tab-content#content4 {
     display: block;
 }
-label[for="tab1"]:checked ~ .tabs #tab1,
-label[for="tab2"]:checked ~ .tabs #tab2,
-label[for="tab3"]:checked ~ .tabs #tab3,
-label[for="tab4"]:checked ~ .tabs #tab4 {
-    background-color:  #7069bc;
+
+label[for="tab1"]:checked~.tabs #tab1,
+label[for="tab2"]:checked~.tabs #tab2,
+label[for="tab3"]:checked~.tabs #tab3,
+label[for="tab4"]:checked~.tabs #tab4 {
+    background-color: #7069bc;
     border-bottom: 1px solid #fff;
 }
 
