@@ -402,7 +402,9 @@ body {
     font-size: 17px;
 }
 .tab:hover {
-    background-color: #ccc;
+    background-color: #7069bc;
+    color: white;
+    border-radius: 10px;
 }
 .tab-content {
     display: none;
