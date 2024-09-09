@@ -394,13 +394,12 @@ body {
     border-radius: 10px;
 }
 .tab {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    background-color: #ddd;
-    border: 1px solid #ddd;
-    border-bottom: none;
-    user-select: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.3s;
+    color: #7069bc;
+    font-size: 17px;
 }
 .tab:hover {
     background-color: #ccc;
