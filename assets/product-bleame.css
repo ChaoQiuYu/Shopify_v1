@@ -330,6 +330,7 @@ body {
         /* 滚动到轨道的末尾 */
     }
 }
+
 /* Look At How Others Are Loving Their Bleame结束 */
 
 /* See it in action. */
@@ -385,6 +386,13 @@ input#tab2:checked~.tab-content#content2,
 input#tab3:checked~.tab-content#content3,
 input#tab4:checked~.tab-content#content4 {
     display: block;
+}
+
+input#tab1:checked~.tab-container .tab1,
+input#tab2:checked~.tab-container .tab2,
+input#tab3:checked~.tab-container .tab3 {
+    background-color: purple;
+    color: #fff;
 }
 
 /* See it in action.结束 */
