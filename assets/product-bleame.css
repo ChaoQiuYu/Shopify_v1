@@ -242,6 +242,7 @@ body {
     font-size: 14px;
     color: #696771;
 }
+
 /* 产品信息折叠行结束 */
 
 /* Look At How Others Are Loving Their Bleame */
@@ -265,12 +266,21 @@ body {
     font-weight: 700
 }
 
-.loving-bleame-info-description{
+.loving-bleame-info-description {
     font-size: 16px;
 }
 
-.loving-bleame-claim-offer{
-    background-color: #7069bc;border-radius:10px;padding:10px 35px 10px 35px;color:white;font-weight:700;font-size: 18px;
+.loving-bleame-claim-offer {
+    background-color: #7069bc;
+    border-radius: 10px;
+    padding: 10px 35px 10px 35px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.loving-bleame-star{
+    color:#7069bc
 }
 
 /* 容器设置 */
