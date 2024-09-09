@@ -385,7 +385,7 @@
     </div>
 
     <!-- See it in action. -->
-    <div class="tab-container" style="margin-top:80px">
+    {% comment %} <div class="tab-container" style="margin-top:80px">
         <div class="header-text">
           <span style="font-weight: 700;">See it in action.</span>
           <span style="font-style: italic;">No matter the terrain, the eraser hugs your curves.</span>
@@ -406,7 +406,7 @@
 
         <div class="tab-content" id="content1">
 
-csssssssssssssssssssssssssss
+         csssssssssssssssssssssssssss
         </div>
         <div class="tab-content" id="content2">
           <p>Tab 2 内容</p>
@@ -414,10 +414,30 @@ csssssssssssssssssssssssssss
         <div class="tab-content" id="content3">
           <p>Tab 3 内容</p>
         </div>
-        <div class="tab-content" id="content4">
-          <p>Tab 3 内容</p>
-        </div>
-      </div>
+        
+      </div> {% endcomment %}
+      <div class="tabs">
+        <label for="tab1" class="tab">Tab 1</label>
+        <label for="tab2" class="tab">Tab 2</label>
+        <label for="tab3" class="tab">Tab 3</label>
+    </div>
+
+    <input type="radio" id="tab1" name="tabs" checked>
+    <input type="radio" id="tab2" name="tabs">
+    <input type="radio" id="tab3" name="tabs">
+
+    <div class="tab-content" id="content1">
+        <h2>Content for Tab 1</h2>
+        <p>This is the content of tab 1.</p>
+    </div>
+    <div class="tab-content" id="content2">
+        <h2>Content for Tab 2</h2>
+        <p>This is the content of tab 2.</p>
+    </div>
+    <div class="tab-content" id="content3">
+        <h2>Content for Tab 3</h2>
+        <p>This is the content of tab 3.</p>
+    </div>
 
     <!-- Hair removal just got waaaaay easier -->
     <div style="display: grid;gap: 30px;justify-items: center;margin-top:80px">
