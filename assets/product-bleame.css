@@ -331,61 +331,10 @@ body {
     }
 }
 /* Look At How Others Are Loving Their Bleame结束 */
-
-
-/* .tab-container {
-    width: 100%;
-}
-
-.header-text {
-    flex: 0.7;
+.header-text{
     font-size: 40px;
+    max-width: 475px;
 }
-
-.tab-controls {
-    display: flex;
-    gap: 10px;
-    border: #ddd 1px solid;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-.tab-radio {
-    display: none;
-    /* 隐藏实际的 radio 按钮 */
-}
-
-.tab-label {
-    padding: 10px 20px;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    transition: background-color 0.3s;
-    color: #7069bc;
-    font-size: 17px;
-}
-
-.tab-radio:checked+.tab-label {
-    background-color: #7069bc;
-    color: white;
-    border-radius: 10px;
-}
-
-.tab-content {
-    display: none;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-#tab1:checked~#content1,
-#tab2:checked~#content2,
-#tab3:checked~#content3,
-#tab4:checked~#content4  {
-    display: block;
-} 
-
-
 .tabs {
     display: flex;
     gap: 10px;
