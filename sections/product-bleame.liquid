@@ -399,68 +399,40 @@
     </div>
 
     <!-- See it in action. -->
-    {% comment %} <div class="tab-container" style="margin-top:80px">
-              <div class="header-text">
-                <span style="font-weight: 700;">See it in action.</span>
-                <span style="font-style: italic;">No matter the terrain, the eraser hugs your curves.</span>
-              </div>
-              <div class="tab-controls">
-                <input type="radio" id="tab1" name="tabs" class="tab-radio" checked>
-                <label for="tab1" class="tab-label">Bikini</label>
-  
-                <input type="radio" id="tab2" name="tabs" class="tab-radio">
-                <label for="tab2" class="tab-label">Legs</label>
-  
-                <input type="radio" id="tab3" name="tabs" class="tab-radio">
-                <label for="tab3" class="tab-label">Arms</label>
-  
-                <input type="radio" id="tab4" name="tabs" class="tab-radio">
-                <label for="tab4" class="tab-label">Back</label>
-              </div>
-  
-              <div class="tab-content" id="content1">
-  
-               csssssssssssssssssssssssssss
-              </div>
-              <div class="tab-content" id="content2">
-                <p>Tab 2 内容</p>
-              </div>
-              <div class="tab-content" id="content3">
-                <p>Tab 3 内容</p>
-              </div>
-          
-          </div> {% endcomment %}
-    <div style="display:flex;justify-content: space-between;align-items: center">
-      <div class="header-text">
-        <span style="font-weight: 700;">See it in action.</span>
-        <span style="font-style: italic;">No matter the terrain, the eraser hugs your curves.</span>
+    <div>
+      <div style="display:flex;justify-content: space-between;align-items: center">
+        <div class="header-text">
+          <span style="font-weight: 700;">See it in action.</span>
+          <span style="font-style: italic;">No matter the terrain, the eraser hugs your curves.</span>
+        </div>
+        <div class="tabs">
+          <label for="tab1" class="tab">Bikini</label>
+          <label for="tab2" class="tab">Legs</label>
+          <label for="tab3" class="tab">Arms</label>
+          <label for="tab4" class="tab">Back</label>
+        </div>
       </div>
-      <div class="tabs">
-        <label for="tab1" class="tab">Bikini</label>
-        <label for="tab2" class="tab">Legs</label>
-        <label for="tab3" class="tab">Arms</label>
-        <label for="tab4" class="tab">Back</label>
+  
+        <input type="radio" id="tab1" name="tabs" checked>
+        <input type="radio" id="tab2" name="tabs">
+        <input type="radio" id="tab3" name="tabs">
+        <input type="radio" id="tab4" name="tabs">
+   
+  
+      <div class="tab-content" id="content1">
+        <h2>Content for Tab 1</h2>
+        <p>This is the content of tab 1.</p>
+      </div>
+      <div class="tab-content" id="content2">
+        <h2>Content for Tab 2</h2>
+        <p>This is the content of tab 2.</p>
+      </div>
+      <div class="tab-content" id="content3">
+        <h2>Content for Tab 3</h2>
+        <p>This is the content of tab 3.</p>
       </div>
     </div>
-
-      <input type="radio" id="tab1" name="tabs" checked>
-      <input type="radio" id="tab2" name="tabs">
-      <input type="radio" id="tab3" name="tabs">
-      <input type="radio" id="tab4" name="tabs">
- 
-
-    <div class="tab-content" id="content1">
-      <h2>Content for Tab 1</h2>
-      <p>This is the content of tab 1.</p>
-    </div>
-    <div class="tab-content" id="content2">
-      <h2>Content for Tab 2</h2>
-      <p>This is the content of tab 2.</p>
-    </div>
-    <div class="tab-content" id="content3">
-      <h2>Content for Tab 3</h2>
-      <p>This is the content of tab 3.</p>
-    </div>
+    
 
     <!-- Hair removal just got waaaaay easier -->
     <div style="display: grid;gap: 30px;justify-items: center;margin-top:80px">
