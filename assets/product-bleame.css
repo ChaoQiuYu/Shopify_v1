@@ -242,10 +242,9 @@ body {
     font-size: 14px;
     color: #696771;
 }
-
 /* 产品信息折叠行结束 */
 
-
+/* Look At How Others Are Loving Their Bleame */
 .loving-bleame-all {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -264,6 +263,10 @@ body {
 .loving-bleame-info-title {
     text-align: center;
     font-weight: 700
+}
+
+.loving-bleame-info-description{
+    font-size: 16px;
 }
 
 /* 容器设置 */
