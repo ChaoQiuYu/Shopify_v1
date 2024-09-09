@@ -333,7 +333,7 @@ body {
 /* Look At How Others Are Loving Their Bleame结束 */
 
 
-.tab-container {
+/* .tab-container {
     width: 100%;
 }
 
@@ -383,8 +383,50 @@ body {
 #tab3:checked~#content3,
 #tab4:checked~#content4  {
     display: block;
-}
+} */
 
+
+.tabs {
+    display: flex;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    user-select: none;
+}
+.tab:hover {
+    background-color: #ccc;
+}
+.tab-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.tab-content.active {
+    display: block;
+}
+input[type="radio"] {
+    display: none;
+}
+input#tab1:checked ~ .tab-content#content1,
+input#tab2:checked ~ .tab-content#content2,
+input#tab3:checked ~ .tab-content#content3 {
+    display: block;
+}
+label[for="tab1"]:checked ~ .tabs #tab1,
+label[for="tab2"]:checked ~ .tabs #tab2,
+label[for="tab3"]:checked ~ .tabs #tab3 {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
 
 
 
