@@ -388,9 +388,9 @@ input#tab4:checked~.tab-content#content4 {
     display: block;
 }
 
-input#tab1:checked~.tab-container .tab1,
-input#tab2:checked~.tab-container .tab2,
-input#tab3:checked~.tab-container .tab3 {
+input#tab1:checked~ .tab1,
+input#tab2:checked~ .tab2,
+input#tab3:checked~ .tab3 {
     background-color: purple;
     color: #fff;
 }
