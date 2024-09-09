@@ -1,5 +1,7 @@
 body {
     font-family: "Harmonia Sans", sans-serif;
+    display: grid;
+    gap: 80px;
 }
 
 /* 产品评分 */
