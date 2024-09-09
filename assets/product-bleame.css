@@ -383,15 +383,15 @@ body {
 #tab3:checked~#content3,
 #tab4:checked~#content4  {
     display: block;
-} */
+} 
 
 
 .tabs {
     display: flex;
-    cursor: pointer;
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
-    border-bottom: none;
+    gap: 10px;
+    border: #ddd 1px solid;
+    padding: 5px;
+    border-radius: 10px;
 }
 .tab {
     flex: 1;
