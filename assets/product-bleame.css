@@ -416,7 +416,7 @@ input#tab4:checked~.tab-content#content4 {
     margin-top: 80px
 }
 
-hair-remove-title {
+.hair-remove-title {
     font-size: 36px;
     font-weight: 800
 }
