@@ -426,8 +426,10 @@ input#tab4:checked~.tab-content#content4 {
     color: grey
 }
 
-.hair-remove-content{
-    display: flex;gap: 30px;width:100%
+.hair-remove-content {
+    display: flex;
+    gap: 30px;
+    width: 100%
 }
 
 .product-info-all {
