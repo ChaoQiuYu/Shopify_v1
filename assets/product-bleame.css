@@ -339,6 +339,20 @@ body {
     max-width: 550px;
 }
 
+.header-text-title {
+    font-weight: 700;
+}
+
+.header-content-text {
+    font-style: italic;
+}
+
+.header-tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
 .tabs {
     display: flex;
     gap: 10px;
