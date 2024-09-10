@@ -466,12 +466,23 @@ input#tab4:checked~.tab-content#content4 {
     color: grey;
     font-size: 18px
 }
+
 /* Hair removal just got waaaaay easier结束 */
 
 /* The Future Is Hair-Free */
-.hair-free-all{
-    display: flex;margin-top:80px;
+.hair-free-all {
+    display: flex;
+    margin-top: 80px;
 }
+
+.hair-free-right {
+    flex: 0.5;
+    display: flex;
+    gap: 10px;
+    padding-left: 40px;
+    flex-direction: column;
+}
+
 .progress-container {
     display: flex;
     align-items: center;
@@ -536,6 +547,10 @@ input#tab4:checked~.tab-content#content4 {
             #7069bc 90%,
             #d6d2ff 90%,
             #d6d2ff 100%);
+}
+
+.progress-description{
+    font-size: 14px;
 }
 
 
