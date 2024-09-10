@@ -432,6 +432,13 @@ input#tab4:checked~.tab-content#content4 {
     width: 100%
 }
 
+.hair-remove-group {
+    flex: 0.5;
+    display: grid;
+    gap: 30px
+}
+
+
 .product-info-all {
     display: grid;
     gap: 16px;
