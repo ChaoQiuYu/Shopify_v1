@@ -469,9 +469,9 @@ input#tab4:checked~.tab-content#content4 {
 /* Hair removal just got waaaaay easier结束 */
 
 /* The Future Is Hair-Free */
-
-
-
+.hair-free-all{
+    display: flex;margin-top:80px;
+}
 .progress-container {
     display: flex;
     align-items: center;
