@@ -2,6 +2,19 @@ body {
     font-family: "Harmonia Sans", sans-serif;
 }
 
+.product-info-all {
+    display: grid;
+    gap: 16px;
+    max-height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.product-info-all::-webkit-scrollbar {
+    display: none;
+}
+
 /* 产品评分 */
 .product-rating {
     display: flex;
@@ -456,51 +469,8 @@ input#tab4:checked~.tab-content#content4 {
 /* Hair removal just got waaaaay easier结束 */
 
 
-.product-info-all {
-    display: grid;
-    gap: 16px;
-    max-height: 600px;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.product-info-all::-webkit-scrollbar {
-    display: none;
-}
 
 
-.video-scroll-container {
-    display: flex;
-    /* 使用 flexbox 布局 */
-    overflow-x: auto;
-    /* 允许水平滚动 */
-    gap: 20px;
-    /* 视频之间的间距 */
-    padding: 10px;
-    /* 容器内边距 */
-    scroll-behavior: smooth;
-    /* 平滑滚动效果 */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.video-scroll-container::-webkit-scrollbar {
-    display: none;
-}
-
-.video-scroll-container video {
-    width: 300px;
-    /* 每个视频的宽度 */
-    height: auto;
-    /* 保持视频比例 */
-    flex-shrink: 0;
-    /* 阻止视频缩小 */
-    border: 2px solid #ccc;
-    /* 添加视频边框 */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    /* 添加阴影效果 */
-}
 
 .progress-container {
     display: flex;
