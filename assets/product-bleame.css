@@ -301,7 +301,7 @@ body {
 /* 图片滚动的轨道 */
 .loving-bleame-slider-track {
     display: flex;
-    width: 400%;
+    width: 1212px;
     /* 根据图片数量设置轨道的宽度，这里有4张图，所以是400% */
     animation: scroll 15s linear infinite;
     /* 使用动画进行滚动 */
