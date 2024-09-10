@@ -444,8 +444,14 @@ input#tab4:checked~.tab-content#content4 {
     justify-items: center
 }
 
-.before-after-col-title{
+.before-after-col-title {
     font-weight: 700;
+}
+
+.before-after-col-content {
+    text-align: center;
+    color: grey;
+    font-size: 18px
 }
 
 
