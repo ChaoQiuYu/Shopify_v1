@@ -485,6 +485,7 @@ input#tab4:checked~.tab-content#content4 {
 
 .hair-free-right ul{
  list-style: none;
+ padding: 0;
 }
 
 .progress-container {
