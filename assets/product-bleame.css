@@ -438,10 +438,14 @@ input#tab4:checked~.tab-content#content4 {
     gap: 30px
 }
 
-.before_after_col {
+.before-after-col {
     display: grid;
     gap: 10px;
     justify-items: center
+}
+
+.before-after-col-title{
+    font-weight: 700;
 }
 
 
