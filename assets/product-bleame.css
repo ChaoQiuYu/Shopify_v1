@@ -334,7 +334,7 @@ body {
 /* Look At How Others Are Loving Their Bleame结束 */
 
 /* See it in action. */
-.tab-all{
+.tab-all {
     margin-top: 80px;
 }
 
@@ -409,10 +409,17 @@ input#tab4:checked~.tab-content#content4 {
 /* See it in action.结束 */
 
 /* Hair removal just got waaaaay easier */
-.hair-remove-all{
-    display: grid;gap: 30px;justify-items: center;margin-top:80px
+.hair-remove-all {
+    display: grid;
+    gap: 30px;
+    justify-items: center;
+    margin-top: 80px
 }
 
+hair-remove-title {
+    font-size: 36px;
+    font-weight: 800
+}
 
 
 .product-info-all {
