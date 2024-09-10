@@ -483,6 +483,11 @@ input#tab4:checked~.tab-content#content4 {
     flex-direction: column;
 }
 
+.hair-free-right h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+
 .hair-free-right ul{
  list-style: none;
  padding: 0;
