@@ -569,6 +569,9 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 18px;
 }
 
+.process-star-all{
+    display: flex;align-items: center;gap:5px
+}
 .process-star{
     color:#7069bc
 }
