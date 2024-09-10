@@ -600,6 +600,47 @@
       </div>
     </div>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const playButtons = document.querySelectorAll('.play-button');
+          const videoWrapper = document.querySelector('.video-wrapper');
+          const scrollLeftButton = document.querySelector('.scroll-left');
+          const scrollRightButton = document.querySelector('.scroll-right');
+          const videoWidth = document.querySelector('.video-container').offsetWidth + 10; // 视频宽度 + 间距
+          const scrollAmount = videoWidth * 2; // 滚动距离（显示2个视频的宽度）
+
+          // 控制播放和暂停
+          playButtons.forEach((button) => {
+              const video = button.previousElementSibling; // 获取视频元素
+
+              button.addEventListener('click', () => {
+                  if (video.paused) {
+                      video.play();
+                      button.textContent = '暂停';
+                  } else {
+                      video.pause();
+                      button.textContent = '播放';
+                  }
+              });
+          });
+
+          // 控制左右滚动
+          scrollLeftButton.addEventListener('click', () => {
+              videoWrapper.scrollBy({
+                  left: -scrollAmount,
+                  behavior: 'smooth'
+              });
+          });
+
+          scrollRightButton.addEventListener('click', () => {
+              videoWrapper.scrollBy({
+                  left: scrollAmount,
+                  behavior: 'smooth'
+              });
+          });
+      });
+  </script>
+
     <!-- What Babes Like You Are Saying -->
     <div style="display: flex;flex-direction: column;align-items: center;gap:10px;margin-top:80px">
       <div>
