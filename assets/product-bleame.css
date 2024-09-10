@@ -421,11 +421,14 @@ input#tab4:checked~.tab-content#content4 {
     font-weight: 800
 }
 
-.hair-remove-content {
+.hair-remove-description {
     font-size: 21px;
     color: grey
 }
 
+.hair-remove-content{
+    display: flex;gap: 30px;width:100%
+}
 
 .product-info-all {
     display: grid;
