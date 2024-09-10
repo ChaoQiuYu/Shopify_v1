@@ -391,9 +391,7 @@
       </div>
       <div class="loving-bleame-slider">
         <div class="loving-bleame-slider-track">
-          {% for image in product.images %}
-            <img src="{{ image.src | img_url: '503x283', crop:'center' }}" alt="Image 1">
-          {% endfor %}
+            <img src="{{ 'i_loving_bleame_1.jpg' |  asset_url }}" alt="Image 1">
         </div>
       </div>
     </div>
@@ -429,20 +427,19 @@
         <video autoplay muted loop>
         <source src="{{ 'v_Leg.mp4' |  asset_url }}" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
+       </video>
       </div>
       <div class="tab-content" id="content3">
-        <video autoplay muted loop>
-        <source src="{{ 'v_Arm.mp4' |  asset_url }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+          <video autoplay muted loop>
+          <source src="{{ 'v_Arm.mp4' |  asset_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div class="tab-content" id="content4">
-        
-      <video autoplay muted loop>
-        <source src="{{ 'v_Back.mp4' |  asset_url }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <video autoplay muted loop>
+          <source src="{{ 'v_Back.mp4' |  asset_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
     
