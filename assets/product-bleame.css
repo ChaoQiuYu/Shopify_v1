@@ -421,8 +421,9 @@ input#tab4:checked~.tab-content#content4 {
     font-weight: 800
 }
 
-.hair-remove-content{
-
+.hair-remove-content {
+    font-size: 21px;
+    color: grey
 }
 
 
