@@ -483,6 +483,10 @@ input#tab4:checked~.tab-content#content4 {
     flex-direction: column;
 }
 
+.hair-free-right ul{
+ list-style: none;
+}
+
 .progress-container {
     display: flex;
     align-items: center;
