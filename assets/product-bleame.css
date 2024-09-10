@@ -587,31 +587,26 @@ input#tab4:checked~.tab-content#content4 {
 
 .video-slider {
     position: relative;
-    width: 100vw; /* Full viewport width */
-    overflow: hidden; /* Hide overflow */
+    width: 100vw; /* 全宽 */
+    overflow: hidden; /* 隐藏超出部分 */
 }
 
 .video-wrapper {
     display: flex;
-    transition: transform 0.3s ease; /* Smooth scroll effect */
-    width: 100%; /* Ensure wrapper takes full width */
+    transition: transform 0.3s ease; /* 平滑滑动效果 */
 }
 
 .video-container {
     position: relative;
-    flex: 0 0 auto; /* Prevent flex items from shrinking */
-    width: 300px; /* Video width */
+    flex: 0 0 auto; /* 防止缩小 */
+    width: 300px; /* 视频宽度 */
     height: auto;
-    margin-right: 10px; /* Space between videos */
+    margin-right: 10px; /* 视频间隔 */
 }
 
 .video-container video {
     width: 100%;
     height: auto;
-}
-
-.play-pause-toggle {
-    display: none; /* Hide the checkbox */
 }
 
 .play-button {
@@ -627,14 +622,6 @@ input#tab4:checked~.tab-content#content4 {
     cursor: pointer;
     border-radius: 5px;
     z-index: 1;
-}
-
-.video-container input:checked ~ video {
-    display: none; /* Hide video when checkbox is checked (simulating play state) */
-}
-
-.video-container input:checked ~ .play-button {
-    display: block; /* Show play button when checkbox is checked */
 }
 
 .scroll-button {
@@ -656,10 +643,6 @@ input#tab4:checked~.tab-content#content4 {
 
 .scroll-right {
     right: 10px;
-}
-
-.scroll-toggle:checked ~ .video-wrapper {
-    transform: translateX(-100px); /* Adjust as per video width */
 }
 /* The Future Is Hair-Free 结束*/
 
