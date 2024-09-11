@@ -89,10 +89,10 @@
             <!-- 折扣率 -->
             <span class="discount-rate">
               SAVE&nbsp;{{- current_variant.compare_at_price
-              | minus: current_variant.price
-              | times: 100
-              | divided_by: current_variant.compare_at_price
-              -}}
+ | minus: current_variant.price
+ | times: 100
+ | divided_by: current_variant.compare_at_price
+-}}
               %</span>
           </div>
         </div>
@@ -226,6 +226,7 @@
               <div class="accordion-body accordion-body-text">
                 You can use your Bleame on just about any part of your body below the cheeks, including the bikini area
  
+ 
                 and face! Its completely safe to use!
               </div>
             </div>
@@ -248,6 +249,7 @@
               data-bs-parent="#accordionFlushExample">
               <div class="accordion-body accordion-body-text">
                 Using Nano-Crystalline technology, Bleame™ Crystal Hair Eraser allows the hair to clump and break from
+ 
  
                 the surface when rubbed gently on the skin. This process also helps exfoliate, revealing baby smooth
                 skin after use 💜
@@ -273,6 +275,7 @@
               <div class="accordion-body accordion-body-text">
                 No, friction does not cause darkness. In fact, it helps improve your complexion by exfoliating dead skin
  
+ 
                 cells, which can brighten and even out your skin tone.
               </div>
             </div>
@@ -295,6 +298,7 @@
               data-bs-parent="#accordionFlushExample">
               <div class="accordion-body accordion-body-text">
                 Absolutely! Bleame effectively improves the appearance of strawberry skin and razor bumps, which are
+ 
  
                 commonly caused by waxing and shaving.
               </div>
@@ -319,6 +323,7 @@
               <div class="accordion-body accordion-body-text">
                 Shipping Information: We process orders within 1-2 business days from our US warehouse. After dispatch,
  
+ 
                 the estimated delivery time varies based on the shipping method you choose, generally taking up to 2
                 days.
               </div>
@@ -342,6 +347,7 @@
               data-bs-parent="#accordionFlushExample">
               <div class="accordion-body accordion-body-text">
                 Our commitment to your satisfaction is evident in our products, backed by a 30-Day 100% Money Back
+ 
  
                 Guarantee.
 
@@ -391,10 +397,22 @@
       </div>
       <div class="loving-bleame-slider">
         <div class="loving-bleame-slider-track">
-            <img src="{{ 'i_loving_bleame_1.jpg' |  asset_url }}" alt="Image 1" width="303px">
-            <img src="{{ 'i_loving_bleame_2.jpg' |  asset_url }}" alt="Image 1" width="303px">
-            <img src="{{ 'i_loving_bleame_3.jpg' |  asset_url }}" alt="Image 1" width="303px">
-            <img src="{{ 'i_loving_bleame_4.jpg' |  asset_url }}" alt="Image 1" width="303px">
+          <img
+            src="{{ 'i_loving_bleame_1.jpg' |  asset_url }}"
+            alt="Image 1"
+            width="303px">
+          <img
+            src="{{ 'i_loving_bleame_2.jpg' |  asset_url }}"
+            alt="Image 1"
+            width="303px">
+          <img
+            src="{{ 'i_loving_bleame_3.jpg' |  asset_url }}"
+            alt="Image 1"
+            width="303px">
+          <img
+            src="{{ 'i_loving_bleame_4.jpg' |  asset_url }}"
+            alt="Image 1"
+            width="303px">
         </div>
       </div>
     </div>
@@ -413,39 +431,64 @@
           <label for="tab4" class="tab tab4">Back</label>
         </div>
       </div>
-  
-        <input type="radio" id="tab1" name="tabs" checked>
-        <input type="radio" id="tab2" name="tabs">
-        <input type="radio" id="tab3" name="tabs">
-        <input type="radio" id="tab4" name="tabs">
-   
-  
+
+      <input
+        type="radio"
+        id="tab1"
+        name="tabs"
+        checked>
+      <input
+        type="radio"
+        id="tab2"
+        name="tabs">
+      <input
+        type="radio"
+        id="tab3"
+        name="tabs">
+      <input
+        type="radio"
+        id="tab4"
+        name="tabs">
+
+
       <div class="tab-content" id="content1">
-        <video autoplay muted loop>
+        <video
+          autoplay
+          muted
+          loop>
           <source src="{{ 'v_Bikini.mp4' |  asset_url }}" type="video/mp4">
           Your browser does not support the video tag.
-      </video>
+        </video>
       </div>
       <div class="tab-content" id="content2">
-        <video autoplay muted loop>
-        <source src="{{ 'v_Leg.mp4' |  asset_url }}" type="video/mp4">
-        Your browser does not support the video tag.
-       </video>
+        <video
+          autoplay
+          muted
+          loop>
+          <source src="{{ 'v_Leg.mp4' |  asset_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div class="tab-content" id="content3">
-          <video autoplay muted loop>
+        <video
+          autoplay
+          muted
+          loop>
           <source src="{{ 'v_Arm.mp4' |  asset_url }}" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
       <div class="tab-content" id="content4">
-        <video autoplay muted loop>
+        <video
+          autoplay
+          muted
+          loop>
           <source src="{{ 'v_Back.mp4' |  asset_url }}" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
-    
+
 
     <!-- Hair removal just got waaaaay easier -->
     <div class="hair-remove-all">
@@ -508,25 +551,25 @@
         <button class="scroll-button scroll-left">&#9664;</button>
         <button class="scroll-button scroll-right">&#9654;</button>
         <div class="video-wrapper">
-            <div class="video-container">
-                <video src="{{ 'v_Bikini.mp4' |  asset_url}}"></video>
-                <button class="play-button">播放</button>
-            </div>
-            <div class="video-container">
-                <video src="video2.mp4"></video>
-                <button class="play-button">播放</button>
-            </div>
-            <div class="video-container">
-                <video src="video3.mp4"></video>
-                <button class="play-button">播放</button>
-            </div>
-            <div class="video-container">
-                <video src="video4.mp4"></video>
-                <button class="play-button">播放</button>
-            </div>
-            <!-- 添加更多视频 -->
+          <div class="video-container">
+            <video src="{{ 'v_Bikini.mp4' |  asset_url}}"></video>
+            <button class="play-button">播放</button>
+          </div>
+          <div class="video-container">
+            <video src="video2.mp4"></video>
+            <button class="play-button">播放</button>
+          </div>
+          <div class="video-container">
+            <video src="video3.mp4"></video>
+            <button class="play-button">播放</button>
+          </div>
+          <div class="video-container">
+            <video src="video4.mp4"></video>
+            <button class="play-button">播放</button>
+          </div>
+        <!-- 添加更多视频 -->
         </div>
-    </div>
+      </div>
       <div class="hair-free-right">
         <h1>The Future Is Hair-Free! 💜</h1>
         <div>
@@ -592,7 +635,7 @@
               </svg>
             {% endfor %}
           </div>
-          
+
           <span class="process-star-description">Excellent 4.8 | 1,319 trusted reviews</span>
         </div>
       </div>
@@ -606,11 +649,11 @@
           const scrollRightButton = document.querySelector('.scroll-right');
           const videoWidth = document.querySelector('.video-container').offsetWidth + 10; // 视频宽度 + 间距
           const scrollAmount = videoWidth * 2; // 滚动距离（显示2个视频的宽度）
-
+      
           // 控制播放和暂停
           playButtons.forEach((button) => {
               const video = button.previousElementSibling; // 获取视频元素
-
+      
               button.addEventListener('click', () => {
                   if (video.paused) {
                       video.play();
@@ -621,7 +664,7 @@
                   }
               });
           });
-
+      
           // 控制左右滚动
           scrollLeftButton.addEventListener('click', () => {
               videoWrapper.scrollBy({
@@ -629,7 +672,7 @@
                   behavior: 'smooth'
               });
           });
-
+      
           scrollRightButton.addEventListener('click', () => {
               videoWrapper.scrollBy({
                   left: scrollAmount,
@@ -637,7 +680,7 @@
               });
           });
       });
-  </script>
+    </script>
 
     <!-- What Babes Like You Are Saying -->
     <div style="display: flex;flex-direction: column;align-items: center;gap:10px;margin-top:80px">
@@ -665,6 +708,7 @@
             width="377">
           <p style="font-size: 16px;color:grey">
             I'm totally blown away. Ingrown hair and the skin irritation was the bane of my life for many years. Bleame
+ 
  
             has changed the way my skin looks forever!
           </p>
@@ -697,6 +741,7 @@
           <p style="font-size: 16px;color:grey">
             I have struggled with strawberry leg for years and waxing just wasn't cutting it, Bleame has really made a
  
+ 
             huge difference in my life and has given me so much confidence!
           </p>
           <img
@@ -727,6 +772,7 @@
             377">
           <p style="font-size: 16px;color:grey">
             It works great. I've used on my husband's body hair and surprisingly it cleans them up lol. Thank you for
+ 
  
             inventing this. Super exciting.
           </p>
@@ -784,6 +830,7 @@
         <h2 style="font-size:50px;font-weight:700;color:#f4f1ff;margin-bottom:32px">Hair-Free Guarantee</h2>
         <p style="font-size: 18px;color:#f4f1ff">
           We love our Bleame™ Crystal Hair Eraser and are confident you will too! That’s why we’re offering a 30-Day,
+ 
  
           Risk-Free Guarantee. If you’re not satisfied, we’ll gladly issue a full refund in accordance with our Return &
           Refund Policy
@@ -997,6 +1044,7 @@
           <p style="font-size:14px">
             This little device is incredible! I thought I'd give it a go and that it was probably a gimmick. It's not!
  
+ 
             It's awesome! So good, that my 18 and 20 yo daughters have 'borrowed' it, and I have to find it whenever I
             need it! It actually works and I have sent the link to my sisters and girlfriends! Love it. No mess and it
             exfoliates as well. Love it! 10 stars! Great Christmas presses too 🥰
@@ -1067,6 +1115,7 @@
           <p style="font-size:14px">
             This little device is incredible! I thought I'd give it a go and that it was probably a gimmick. It's not!
  
+ 
             It's awesome! So good, that my 18 and 20 yo daughters have 'borrowed' it, and I have to find it whenever I
             need it! It actually works and I have sent the link to my sisters and girlfriends! Love it. No mess and it
             exfoliates as well. Love it! 10 stars! Great Christmas presses too 🥰
@@ -1135,20 +1184,24 @@
               <p>
                 Bleame™ Crystal Hair Eraser is safe to use on knuckles, arms, legs, chest, back and bikini area.
  
+ 
                 However, we suggest not to overuse or rub too hard.
               </p>
               <p>
                 NOTE: If you have sensitive skin, try it on your arms/legs first before you use it on other delicate
+ 
  
                 parts.
               </p>
               <p>
                 *We don’t recommend using the Crystal Hair Remover on your underarms and due to the skin being uneven
  
+ 
                 and wrinkly. These areas are very prone to product overuse and overpressure.
               </p>
               <p>
                 *We don’t recommend using the Crystal Hair Remover on your underarms or face as your skin on those areas
+ 
  
                 are thin and delicate.
               </p>
@@ -1217,6 +1270,7 @@
             <div class="accordion-body" style="font-size:14px; color: #696771;">
               This varies for everyone. Some are comfortable using it 1-2 times a week. Others prefer once every 2
  
+ 
               weeks. Adjust accordingly based on the tolerance of your skin.
             </div>
           </div>
@@ -1241,6 +1295,7 @@
             <div class="accordion-body" style="font-size:14px; color: #696771;">
               It will! It actually improves the appearance of strawberry skin or razor bumps that you usually get from
  
+ 
               waxing and shaving.
             </div>
           </div>
@@ -1264,6 +1319,7 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body" style="font-size:14px; color: #696771;">
               Every after use, clean your Bleame under running water and brushing off any debris: hair, dead skin, etc.
+ 
  
               Store in a dry place.
             </div>
@@ -1311,9 +1367,9 @@
         height="370">
       <label style="background-color:rgba(0, 0, 0, 0.498);color:white;font-weight:700;font-size:12px;position: absolute;top: 20px;left: 20px;padding:10px;border-radius:10px">SAVE
         {{ current_variant.compare_at_price
-        | minus: current_variant.price
-        | times: 100
-        | divided_by: current_variant.compare_at_price
+ | minus: current_variant.price
+ | times: 100
+ | divided_by: current_variant.compare_at_price
         -}}
         %</label>
     </div>
@@ -1341,7 +1397,7 @@
   </div>
 
   <div>
-    <div>
+    <div style="display:flex">
       <h1 style="font-size: 50px;font-weight: 700;">Subscribe to our emails</h1>
       <p>Join our email list for exclusive offers and the latest news.</p>
       <div style="position: relative">
@@ -1360,9 +1416,9 @@
           placeholder="Emails"
           style="padding-left: 30px;width:300px;height:35px;border: 1px solid #ccd6e0;font-size:14px">
       </div>
+    </div>
   </div>
-  </div>
-    
+
 </section>
 
 {% schema %}
