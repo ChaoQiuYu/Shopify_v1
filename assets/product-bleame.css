@@ -199,7 +199,6 @@ body {
     color: #fd8935;
     font-size: 18px;
 }
-
 /* 产品库存日期结束 */
 
 /* 订单截止 */
@@ -473,6 +472,7 @@ input#tab4:checked~.tab-content#content4 {
 .hair-free-all {
     display: flex;
     margin-top: 80px;
+
 }
 
 .hair-free-right {
@@ -586,6 +586,7 @@ input#tab4:checked~.tab-content#content4 {
 }
 
 .video-slider {
+    flex:0.5;
     position: relative;
     width: 100vw; /* 全宽 */
     overflow: hidden; /* 隐藏超出部分 */
