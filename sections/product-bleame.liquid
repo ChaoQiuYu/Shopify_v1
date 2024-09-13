@@ -675,7 +675,7 @@
                   }
               });
           });
-          document.querySelector('.video-slider').addEventListener('wheel', (e) => {
+          document.querySelector('.video-slider').addEventListener('mousemove', (e) => {
             e.preventDefault();
             e.currentTarget.scrollLeft += e.deltaY;
         });
