@@ -608,7 +608,6 @@ input#tab4:checked~.tab-content#content4 {
     flex: 0 0 auto; /* 防止缩小 */
     width: 300px; /* 视频宽度 */
     height: auto;
-    margin-right: 5px; /* 视频间隔 */
 }
 
 .video-container video {
