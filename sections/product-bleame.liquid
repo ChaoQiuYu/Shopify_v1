@@ -663,13 +663,16 @@
               const video = button.previousElementSibling; // 获取视频元素
       
               button.addEventListener('click', () => {
-                  if (video.paused) {
-                      video.play();
-                      button.classList.remove('play-button-bg');
-                  } else {
-                      video.pause();
-                      button.classList.add('play-button-bg');
-                  }
+                video.addEventListener('play', () => {
+            playButton.classList.remove('play-button-bg');
+        });
+                  // if (video.paused) {
+                  //     video.play();
+                  //     button.classList.remove('play-button-bg');
+                  // } else {
+                  //     video.pause();
+                  //     button.classList.add('play-button-bg');
+                  // }
               });
           });
       
