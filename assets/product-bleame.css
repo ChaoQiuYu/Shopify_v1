@@ -594,6 +594,10 @@ input#tab4:checked~.tab-content#content4 {
     scrollbar-width: none; 
 }
 
+.video-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
 .video-wrapper {
     display: flex;
     transition: transform 0.3s ease; /* 平滑滑动效果 */
