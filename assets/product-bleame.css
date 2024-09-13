@@ -784,3 +784,8 @@ select:focus {
     transform: translateX(-50vw);
     /* Move slider to reveal second image */
 }
+
+.accordion-button:not(.collapsed){
+    color: white;
+    background-color: #000;
+}
