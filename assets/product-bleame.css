@@ -590,6 +590,8 @@ input#tab4:checked~.tab-content#content4 {
     position: relative;
     width: 100vw; /* 全宽 */
     overflow: hidden; /* 隐藏超出部分 */
+    overflow-x: auto;
+    scrollbar-width: none; 
 }
 
 .video-wrapper {
