@@ -550,8 +550,6 @@
     <!-- The Future Is Hair-Free -->
     <div class="hair-free-all">
       <div class="video-slider">
-        <button class="scroll-button scroll-left">&#9664;</button>
-        <button class="scroll-button scroll-right">&#9654;</button>
         <div class="video-wrapper">
           <div class="video-container">
             <video src="{{ 'v_hair_free_1.mp4' |  asset_url}}"></video>
@@ -660,8 +658,6 @@
       document.addEventListener('DOMContentLoaded', () => {
           const playButtons = document.querySelectorAll('.play-button');
           const videoWrapper = document.querySelector('.video-wrapper');
-          const scrollLeftButton = document.querySelector('.scroll-left');
-          const scrollRightButton = document.querySelector('.scroll-right');
           const videoWidth = document.querySelector('.video-container').offsetWidth + 10; // 视频宽度 + 间距
           const scrollAmount = videoWidth * 2; // 滚动距离（显示2个视频的宽度）
       
@@ -679,21 +675,11 @@
                   }
               });
           });
-      
-          // 控制左右滚动
-          scrollLeftButton.addEventListener('click', () => {
-              videoWrapper.scrollBy({
-                  left: -scrollAmount,
-                  behavior: 'smooth'
-              });
-          });
-      
-          scrollRightButton.addEventListener('click', () => {
-              videoWrapper.scrollBy({
-                  left: scrollAmount,
-                  behavior: 'smooth'
-              });
-          });
+          document.querySelector('.video-slider').addEventListener('wheel', (e) => {
+            e.preventDefault();
+            e.currentTarget.scrollLeft += e.deltaY;
+        });
+
       });
     </script>
 
