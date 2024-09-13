@@ -606,7 +606,7 @@ input#tab4:checked~.tab-content#content4 {
 .video-container {
     position: relative;
     flex: 0 0 auto; /* 防止缩小 */
-    width: 300px; /* 视频宽度 */
+    width: 280px; /* 视频宽度 */
     height: auto;
 }
 
