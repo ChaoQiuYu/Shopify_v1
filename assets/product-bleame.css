@@ -622,6 +622,7 @@ input#tab4:checked~.tab-content#content4 {
     cursor: pointer;
     border-radius: 50%;
     opacity: .9;
+    color: transparent;
 }
 
 .play-button-bg{
