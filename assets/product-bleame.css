@@ -625,6 +625,10 @@ input#tab4:checked~.tab-content#content4 {
     opacity: .9;
 }
 
+.play-button-bg{
+    background-color: #fff;
+}
+
 .scroll-button {
     position: absolute;
     top: 50%;
