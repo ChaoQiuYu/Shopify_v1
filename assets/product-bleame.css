@@ -622,6 +622,7 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 16px;
     cursor: pointer;
     border-radius: 50%;
+    opacity: .7;
 }
 
 .scroll-button {
