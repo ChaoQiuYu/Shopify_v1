@@ -665,10 +665,10 @@
               button.addEventListener('click', () => {
                   if (video.paused) {
                       video.play();
-                      button.removeChild();
+                      
                   } else {
                       video.pause();
-                      button.textContent = '播放';
+                      button.removeChild('play-button-bg');
                   }
               });
           });
