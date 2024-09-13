@@ -790,3 +790,7 @@ select:focus {
     background-color: #000;
     border-radius: 10px;
 }
+
+.collapsible-toggle {
+    border-radius: 14px;
+}
