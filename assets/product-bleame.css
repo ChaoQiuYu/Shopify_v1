@@ -606,7 +606,7 @@ input#tab4:checked~.tab-content#content4 {
 }
 
 .video-container video {
-    width:  250px;
+    width:  270px;
     height: auto;
     border-radius: 10px;
 }
