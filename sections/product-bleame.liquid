@@ -665,7 +665,7 @@
               button.addEventListener('click', () => {
                   if (video.paused) {
                       video.play();
-                      button.remove('play-button-bg')
+                      button.removeChild('play-button-bg')
                   } else {
                       video.pause();
                   }
