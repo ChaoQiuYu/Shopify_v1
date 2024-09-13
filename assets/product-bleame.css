@@ -621,8 +621,7 @@ input#tab4:checked~.tab-content#content4 {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    /* z-index: 1; */
+    border-radius: 50%;
 }
 
 .scroll-button {
