@@ -788,4 +788,5 @@ select:focus {
 .accordion-button:not(.collapsed){
     color: white;
     background-color: #000;
+    border-radius: 10px;
 }
