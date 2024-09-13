@@ -616,7 +616,6 @@ input#tab4:checked~.tab-content#content4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #e3d2fd;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -627,6 +626,7 @@ input#tab4:checked~.tab-content#content4 {
 
 .play-button-bg{
     background-color: #fff;
+    color: #e3d2fd;
 }
 
 .scroll-button {
