@@ -731,9 +731,14 @@ input#tab4:checked~.tab-content#content4 {
     flex:0.5;display: grid;justify-items: center;
 }
 
-.special-left-title[
+.special-left-title{
     font-size: 26px;font-weight:700
-]
+}
+
+.special-left-vs{
+    font-size: 19px;font-weight:500;color:grey
+}
+
 
 select {
     padding: 10px;
