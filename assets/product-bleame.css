@@ -739,6 +739,14 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 19px;font-weight:500;color:grey
 }
 
+.special-left-content{
+    font-size: 19px;color:grey;text-align:center
+}
+
+.bleame-special-right{
+    flex:0.5
+}
+
 
 select {
     padding: 10px;
