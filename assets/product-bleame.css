@@ -199,6 +199,7 @@ body {
     color: #fd8935;
     font-size: 18px;
 }
+
 /* 产品库存日期结束 */
 
 /* 订单截止 */
@@ -483,14 +484,14 @@ input#tab4:checked~.tab-content#content4 {
     flex-direction: column;
 }
 
-.hair-free-right h1{
+.hair-free-right h1 {
     font-size: 40px;
     font-weight: 700;
 }
 
-.hair-free-right ul{
- list-style: none;
- padding: 0;
+.hair-free-right ul {
+    list-style: none;
+    padding: 0;
 }
 
 .progress-container {
@@ -574,44 +575,53 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 18px;
 }
 
-.process-star-all{
-    display: flex;align-items: center;gap:5px
-}
-.process-star{
-    color:#7069bc
+.process-star-all {
+    display: flex;
+    align-items: center;
+    gap: 5px
 }
 
-.process-star-description{
-    font-size:16px
+.process-star {
+    color: #7069bc
+}
+
+.process-star-description {
+    font-size: 16px
 }
 
 .video-slider {
-    flex:0.5;
+    flex: 0.5;
     position: relative;
-    width: 100vw; /* 全宽 */
-    overflow: hidden; /* 隐藏超出部分 */
+    width: 100vw;
+    /* 全宽 */
+    overflow: hidden;
+    /* 隐藏超出部分 */
     overflow-x: auto;
-    scrollbar-width: none; 
+    scrollbar-width: none;
 }
 
 .video-slider::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in WebKit browsers */
+    display: none;
+    /* Hide scrollbar in WebKit browsers */
 }
 
 .video-wrapper {
     display: flex;
-    transition: transform 0.3s ease; /* 平滑滑动效果 */
+    transition: transform 0.3s ease;
+    /* 平滑滑动效果 */
 }
 
 .video-container {
     position: relative;
-    flex: 0 0 auto; /* 防止缩小 */
-    width: 290px; /* 视频宽度 */
+    flex: 0 0 auto;
+    /* 防止缩小 */
+    width: 290px;
+    /* 视频宽度 */
     height: auto;
 }
 
 .video-container video {
-    width:  270px;
+    width: 270px;
     height: auto;
     border-radius: 10px;
 }
@@ -630,7 +640,7 @@ input#tab4:checked~.tab-content#content4 {
     color: transparent;
 }
 
-.play-button-bg{
+.play-button-bg {
     background-color: #fff;
     color: #e3d2fd;
 }
@@ -655,8 +665,29 @@ input#tab4:checked~.tab-content#content4 {
 .scroll-right {
     right: 10px;
 }
+
 /* The Future Is Hair-Free 结束*/
 
+/* What Babes Like You Are Saying */
+.like-saying-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 80px
+}
+
+.like-saying-star{
+    color:#7069bc
+}
+
+.like-saying-star-text{
+    font-size:16px
+}
+
+.like-saying-content{
+    display: flex;flex-direction: column;align-items: center;gap:10px
+}
 
 select {
     padding: 10px;
@@ -785,7 +816,7 @@ select:focus {
     /* Move slider to reveal second image */
 }
 
-.accordion-button:not(.collapsed){
+.accordion-button:not(.collapsed) {
     color: white;
     background-color: #000;
     border-radius: 10px;
