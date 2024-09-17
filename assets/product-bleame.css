@@ -693,6 +693,14 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 16px;color:grey
 }
 
+.like-saying-content-img{
+    border-radius: 50%;
+}
+
+.like-saying-content-name{
+    font-size: 16px;font-weight:700
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
