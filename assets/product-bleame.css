@@ -722,6 +722,19 @@ input#tab4:checked~.tab-content#content4 {
 }
 /* What Babes Like You Are Saying 结束*/
 
+/*  What Makes Bleame So Special? */
+.bleame-special-all{
+    display: flex;flex-wrap: wrap;align-items: center;margin-top:30px;gap:20px
+}
+
+.bleame-special-left{
+    flex:0.5;display: grid;justify-items: center;
+}
+
+.special-left-title[
+    font-size: 26px;font-weight:700
+]
+
 select {
     padding: 10px;
     border-radius: 4px;
