@@ -794,19 +794,30 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 37px;
 }
 
-.reviews-rating{
+.reviews-rating {
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 25px;
 }
 
-.reviews-rating-star{
-    color:#7069bc
+.reviews-rating-star {
+    color: #7069bc
 }
 
-.reviews-rating-text{
-    font-size: 16px;margin-left:10px
+.reviews-rating-text {
+    font-size: 16px;
+    margin-left: 10px
+}
+
+.review-options {
+    list-style: none;
+    padding: 0px
+}
+
+.review-options li {
+    display: inline-block;
+    margin-right: 20px
 }
 
 select {
