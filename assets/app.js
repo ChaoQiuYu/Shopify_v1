@@ -3451,7 +3451,7 @@ $(".product-slider").slick({
 $(".product-slider-nav").slick({
   //产品导航滑块
 
-  infinite: true,
+  infinite: false,
   // 无限滚动
   arrows: false,
   // 不显示箭头
