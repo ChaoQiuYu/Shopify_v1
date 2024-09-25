@@ -736,6 +736,10 @@ input#tab4:checked~.tab-content#content4 {
     flex:0.5; 
 }
 
+.guarantee-left img{
+    border-radius:10px 0px 0px 10px
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
