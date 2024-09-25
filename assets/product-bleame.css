@@ -773,7 +773,16 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 18px;
     color: #f4f1ff
 }
+
 /*  Hair-Free Guarantee 结束*/
+
+/* Reviews */
+.reviews-all {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    gap: 20px;
+}
 
 select {
     padding: 10px;
