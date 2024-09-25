@@ -727,6 +727,15 @@ input#tab4:checked~.tab-content#content4 {
 }
 /*  What Makes Bleame So Special? 结束*/
 
+/*  Hair-Free Guarantee */
+.guarantee-all{
+    display:flex;margin-top:30px
+}
+
+.guarantee-left{
+    flex:0.5; 
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
