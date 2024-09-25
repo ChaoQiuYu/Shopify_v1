@@ -801,6 +801,10 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 25px;
 }
 
+.reviews-rating-star{
+    color:#7069bc
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
