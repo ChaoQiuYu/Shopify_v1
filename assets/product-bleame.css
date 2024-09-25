@@ -645,7 +645,7 @@ input#tab4:checked~.tab-content#content4 {
     background-color: #fff;
     color: #e3d2fd;
 }
-
+/* 
 .scroll-button {
     position: absolute;
     top: 50%;
@@ -657,15 +657,8 @@ input#tab4:checked~.tab-content#content4 {
     cursor: pointer;
     font-size: 24px;
     z-index: 2;
-}
+} */
 
-.scroll-left {
-    left: 10px;
-}
-
-.scroll-right {
-    right: 10px;
-}
 
 /* The Future Is Hair-Free 结束*/
 
