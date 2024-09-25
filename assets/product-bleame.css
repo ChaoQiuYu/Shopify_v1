@@ -762,6 +762,13 @@ input#tab4:checked~.tab-content#content4 {
     border-radius: 0px 10px 10px 0px
 }
 
+.guarantee-right h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #f4f1ff;
+    margin-bottom: 32px
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
