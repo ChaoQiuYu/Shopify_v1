@@ -755,6 +755,13 @@ input#tab4:checked~.tab-content#content4 {
     border-radius: 10px 0px 0px 10px
 }
 
+.guarantee-right {
+    background-color: rgba(46, 42, 57, 1);
+    flex: 0.5;
+    padding: 77px;
+    border-radius: 0px 10px 10px 0px
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
