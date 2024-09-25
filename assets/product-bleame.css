@@ -5,7 +5,7 @@ body {
 .product-info-all {
     display: grid;
     gap: 16px;
-    max-height: 650px;
+    max-height: 680px;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
