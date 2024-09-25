@@ -784,8 +784,14 @@ input#tab4:checked~.tab-content#content4 {
     gap: 20px;
 }
 
-.reviews-title{
-    display: flex;gap:20px;justify-content: center
+.reviews-title {
+    display: flex;
+    gap: 20px;
+    justify-content: center
+}
+
+.reviews-title p {
+    font-size: 37px;
 }
 
 select {
