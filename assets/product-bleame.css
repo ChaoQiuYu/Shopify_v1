@@ -769,6 +769,11 @@ input#tab4:checked~.tab-content#content4 {
     margin-bottom: 32px
 }
 
+.guarantee-right-text {
+    font-size: 18px;
+    color: #f4f1ff
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
