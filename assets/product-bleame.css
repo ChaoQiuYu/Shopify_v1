@@ -645,6 +645,7 @@ input#tab4:checked~.tab-content#content4 {
     background-color: #fff;
     color: #e3d2fd;
 }
+
 /* The Future Is Hair-Free 结束*/
 
 /* What Babes Like You Are Saying */
@@ -699,45 +700,59 @@ input#tab4:checked~.tab-content#content4 {
     text-align: center;
     margin-top: 30px
 }
+
 /* What Babes Like You Are Saying 结束*/
 
 /*  What Makes Bleame So Special? */
-.bleame-special-all{
-    display: flex;flex-wrap: wrap;align-items: center;margin-top:30px;gap:20px
+.bleame-special-all {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px
 }
 
-.bleame-special-left{
-    flex:0.5;display: grid;justify-items: center;
+.bleame-special-left {
+    flex: 0.5;
+    display: grid;
+    justify-items: center;
 }
 
-.special-left-title{
-    font-size: 26px;font-weight:700
+.special-left-title {
+    font-size: 26px;
+    font-weight: 700
 }
 
-.special-left-vs{
-    font-size: 19px;font-weight:500;color:grey
+.special-left-vs {
+    font-size: 19px;
+    font-weight: 500;
+    color: grey
 }
 
-.special-left-content{
-    font-size: 19px;color:grey;text-align:center
+.special-left-content {
+    font-size: 19px;
+    color: grey;
+    text-align: center
 }
 
-.bleame-special-right{
-    flex:0.5
+.bleame-special-right {
+    flex: 0.5
 }
+
 /*  What Makes Bleame So Special? 结束*/
 
 /*  Hair-Free Guarantee */
-.guarantee-all{
-    display:flex;margin-top:30px
+.guarantee-all {
+    display: flex;
+    margin-top: 30px
 }
 
-.guarantee-left{
-    flex:0.5; 
+.guarantee-left {
+    flex: 0.5;
 }
 
-.guarantee-left img{
-    border-radius:10px 0px 0px 10px
+.guarantee-left img {
+    border-radius: 10px 0px 0px 10px
 }
 
 select {
