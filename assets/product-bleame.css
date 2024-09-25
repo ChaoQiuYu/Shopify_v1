@@ -784,6 +784,10 @@ input#tab4:checked~.tab-content#content4 {
     gap: 20px;
 }
 
+.reviews-title{
+    display: flex;gap:20px;justify-content: center
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
