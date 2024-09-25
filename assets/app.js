@@ -3455,7 +3455,7 @@ $(".product-slider-nav").slick({
   // 无限滚动
   arrows: false,
   // 不显示箭头
-  slidesToShow: 4,
+  slidesToShow: 5,
   // 同时显示5张幻灯片
   asNavFor: ".product-slider",
   // 与指定的主轮播（`.product-slider`）关联
