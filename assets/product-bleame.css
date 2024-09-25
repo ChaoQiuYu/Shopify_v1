@@ -645,21 +645,6 @@ input#tab4:checked~.tab-content#content4 {
     background-color: #fff;
     color: #e3d2fd;
 }
-/* 
-.scroll-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 2;
-} */
-
-
 /* The Future Is Hair-Free 结束*/
 
 /* What Babes Like You Are Saying */
