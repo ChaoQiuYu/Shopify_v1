@@ -2,7 +2,7 @@
   <section data-section-id="{{ section.id }}" data-section-type="product">
   <div class="container mt-4" style="padding: 0px 61px 0px 61px;">
     <div class="row" style="gap: 60px;">
-      <div class="col-md-6" style="height: 600px;">
+      <div class="col-md-6">
         {%- assign current_variant = product.selected_or_first_available_variant -%}
         {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
 
