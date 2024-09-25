@@ -3446,8 +3446,6 @@ $(".product-slider").slick({
   //不显示循环
   slidesToShow: 1,
   //显示一张幻灯片
-  centerMode: true,
-  // 启用中心模式
   asNavFor: '.product-slider-nav' //指定了与当前轮播关联的导航轮播（.product-slider-nav）。这意味着它们之间会同步滑动，当在主轮播中切换时，关联的导航轮播也会相应地切换。
 });
 $(".product-slider-nav").slick({
