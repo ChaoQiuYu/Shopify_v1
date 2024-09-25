@@ -794,6 +794,13 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 37px;
 }
 
+.reviews-rating{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 25px;
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
