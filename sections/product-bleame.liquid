@@ -13,7 +13,7 @@
                       <a href="{{ image.src | img_url: '480x4800' }}" data-thumbnail-id="{{ image.id }}" data-product-single-thumbnail{% if featured_image == image %} aria-current="true"{% endif %}>
                         <img class="img-fluid" src="{{ image.src | img_url: '800x550', crop:'center' }}" alt="{{ image.alt | escape }}" style="
                         width: 100%;
-                        height: auto;
+                        height: 300px;
                     ">
                       </a>
                     </div>
