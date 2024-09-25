@@ -3451,7 +3451,7 @@ $(".product-slider").slick({
 $(".product-slider-nav").slick({
   //产品导航滑块
 
-  infinite: false,
+  infinite: true,
   // 无限滚动
   arrows: false,
   // 不显示箭头
@@ -3459,7 +3459,6 @@ $(".product-slider-nav").slick({
   // 同时显示5张幻灯片
   asNavFor: ".product-slider",
   // 与指定的主轮播（`.product-slider`）关联
-  // slidesToScroll: 1,            // 一次滚动1张幻灯片
   focusOnSelect: true // 在导航元素上点击时，将焦点设置到相应的主轮播元素
 });
 
