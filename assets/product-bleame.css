@@ -1074,6 +1074,10 @@ select:focus {
     margin-top: 80px
 }
 
+.questions-all h1{
+    font-size:36px;font-weight:700
+}
+
 
 .hair-free-container {
     width: 100%;
