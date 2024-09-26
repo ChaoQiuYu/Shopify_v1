@@ -987,14 +987,17 @@ input#tab4:checked~.tab-content#content4 {
     margin-top: -12px;
 }
 
-.reviewers-options-first{
+.reviewers-options-first {
     left: 600px;
 }
 
-.reviewers-options-second{
-    left:1200px;
+.reviewers-options-second {
+    left: 1200px;
 }
 
+.reviewers-info{
+    display:grid
+}
 select {
     padding: 10px;
     border-radius: 4px;
