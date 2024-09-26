@@ -1193,8 +1193,32 @@ select:focus {
     margin-bottom: 30px
 }
 
-.footer-top-email{
-    font-size: 17px;color:white;margin-bottom:15px
+.footer-top-email {
+    font-size: 17px;
+    color: white;
+    margin-bottom: 15px
+}
+
+.footer-top-input {
+    position: relative
+}
+
+.footer-top-input-text {
+    padding-left: 30px;
+    width: 400px;
+    height: 50px;
+    border: 1px solid #ccd6e0;
+    /* font-size:14px; */
+    background-color: transparent;
+    font-size: 16px;
+    color: rgba(244, 241, 255, .75);
+    border-radius: 10px;
+}
+
+.footer-top-input-svg {
+    position: absolute;
+    top: 17px;
+    left: 360px;
 }
 
 .hair-free-container {
