@@ -835,6 +835,13 @@ input#tab4:checked~.tab-content#content4 {
     position: relative
 }
 
+.review-options-scale-i {
+    width: 1px;
+    height: 8px;
+    display: inline-block;
+    border: 1px solid #7c7c7c
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
