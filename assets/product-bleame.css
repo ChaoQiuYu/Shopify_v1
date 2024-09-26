@@ -1193,6 +1193,10 @@ select:focus {
     margin-bottom: 30px
 }
 
+.footer-top-email{
+    font-size: 17px;color:white;margin-bottom:15px
+}
+
 .hair-free-container {
     width: 100%;
     /* Full viewport width */
