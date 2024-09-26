@@ -81,11 +81,15 @@ body {
     user-select: none;
     border: gainsboro 1px solid;
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.custom-radio-last{
+    border-radius: 10px 10px 0px 0px
 }
 
 /* 隐藏原生的单选按钮 */
