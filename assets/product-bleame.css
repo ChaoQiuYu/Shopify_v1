@@ -92,6 +92,10 @@ body {
     border-radius: 10px 10px 0px 0px
 }
 
+.custom-radio-other{
+    margin-bottom: 10px
+}
+
 /* 隐藏原生的单选按钮 */
 .custom-radio input[type="radio"] {
     position: absolute;
