@@ -1063,7 +1063,16 @@ select:focus {
 .pagination a.active {
     font-weight: 700;
 }
+
 /* Reviews结束 */
+
+/* Questions? We’ve Got You Covered */
+.questions-all {
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    margin-top: 80px
+}
 
 
 .hair-free-container {
