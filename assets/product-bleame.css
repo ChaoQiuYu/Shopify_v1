@@ -1015,6 +1015,10 @@ input#tab4:checked~.tab-content#content4 {
     font-size:15px;font-weight:700
 }
 
+.reviewers-details-text{
+    font-size:14px
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
