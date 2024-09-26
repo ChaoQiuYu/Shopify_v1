@@ -919,6 +919,18 @@ input#tab4:checked~.tab-content#content4 {
     display:flex;gap: 10px;
 }
 
+.reviews-content{
+    display:grid;gap:30px
+}
+
+.reviews-name{
+    font-size:14px;font-weight:700 
+}
+
+.review-verified{
+    font-size:14px;color: #1cc286;
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
