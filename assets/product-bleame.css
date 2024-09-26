@@ -1128,11 +1128,19 @@ select:focus {
     font-size: 18px;
     font-weight: 600;
 }
+
 /* Try Us Risk Free 结束*/
 
 /* You may also like */
-.also-like-all{
-    display:grid;gap: 20px;justify-content: center;margin-top:80px  
+.also-like-all {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 80px
+}
+
+.also-like-all h1{
+    font-size:36px;font-weight:700
 }
 
 .hair-free-container {
