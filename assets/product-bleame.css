@@ -1082,6 +1082,10 @@ select:focus {
     font-size: 18px;width:1000px
 }
 
+.questions-btn{
+    font-size: 17px;font-weight: 600;padding: 15px 24px 15px 24px
+}
+
 
 .hair-free-container {
     width: 100%;
