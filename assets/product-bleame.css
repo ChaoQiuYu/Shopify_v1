@@ -1162,9 +1162,36 @@ select:focus {
 
 .also-like-info-title {
     font-weight: 700;
-    font-size: 17px
+    font-size: 17px;
+    color: #000;
+    text-decoration: none;
 }
+
 /* You may also like结束 */
+
+/* footter */
+.footer-all {
+    background-color: rgb(46, 42, 57);
+    width: 100%;
+    color: white;
+    padding-bottom: 100px;
+    padding-top: 70px;
+    margin-top: 80px
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 40px 40px 40px
+}
+
+.footer-top h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px
+}
 
 .hair-free-container {
     width: 100%;
