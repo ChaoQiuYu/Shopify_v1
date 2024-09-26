@@ -1011,6 +1011,10 @@ input#tab4:checked~.tab-content#content4 {
     width: 40px;
 }
 
+.reviewers-details h2{
+    font-size:15px;font-weight:700
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
