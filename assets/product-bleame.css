@@ -26,6 +26,10 @@ body {
     color:#7069bc
 }
 
+.product-rating-text{
+    font-size: 16px;
+}
+
 /* 产品名 */
 .product-title {
     font-weight: 700
