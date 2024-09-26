@@ -1078,6 +1078,10 @@ select:focus {
     font-size:36px;font-weight:700
 }
 
+.questions-accordion{
+    font-size: 18px;width:1000px
+}
+
 
 .hair-free-container {
     width: 100%;
