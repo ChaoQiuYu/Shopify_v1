@@ -856,6 +856,13 @@ input#tab4:checked~.tab-content#content4 {
     left: 500px;
 }
 
+.review-options-span-second{
+    left: 800px;
+}
+
+.review-options-span-third{
+    left: 1100px;
+}
 
 
 select {
