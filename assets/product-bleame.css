@@ -849,19 +849,31 @@ input#tab4:checked~.tab-content#content4 {
     border-radius: 2px;
     position: absolute;
     margin-top: -12px;
-    
+
 }
 
-.review-options-span-first{
+.review-options-span-first {
     left: 500px;
 }
 
-.review-options-span-second{
+.review-options-span-second {
     left: 800px;
 }
 
-.review-options-span-third{
+.review-options-span-third {
     left: 1100px;
+}
+
+.review-write-btn {
+    border: gray 1px solid;
+    float: right;
+    margin-right: 10px;
+    padding: 10px;
+    box-shadow: 2px 3px 5px 0 #8888886b;
+}
+
+.review-write-btn svg{
+    color: #7069bc;margin-right:10px
 }
 
 
