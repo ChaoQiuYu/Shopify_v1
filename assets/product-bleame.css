@@ -1130,6 +1130,11 @@ select:focus {
 }
 /* Try Us Risk Free 结束*/
 
+/* You may also like */
+.also-like-all{
+    display:grid;gap: 20px;justify-content: center;margin-top:80px  
+}
+
 .hair-free-container {
     width: 100%;
     /* Full viewport width */
