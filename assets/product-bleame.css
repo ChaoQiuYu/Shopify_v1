@@ -897,6 +897,10 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 13px
 }
 
+.reviews-input{
+    position: relative
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
