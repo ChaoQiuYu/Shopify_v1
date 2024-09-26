@@ -999,9 +999,14 @@ input#tab4:checked~.tab-content#content4 {
     display:grid
 }
 
-.reviewers-info-age{
+.reviewers-info-title{
     font-size:11px;color:#2E2A39  
 }
+
+.reviewers-info-age{
+    font-size:13px;color:#2E2A39;border-bottom: 1px dotted #ccc;width: 40px;
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
