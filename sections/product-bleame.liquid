@@ -21,7 +21,7 @@
         <div class="product-slider-nav">
           {% if product.images.size > 1 %}
             {% for image in product.images %}
-                <img class="img-fluid px-3" src="{{ image.src | img_url: '200x150', crop:'center' }}" alt="{{ image.alt | escape }}" style="height: 100px;border-radius: 15px;">
+                <img class="img-fluid px-3 slider-nav-img" src="{{ image.src | img_url: '200x150', crop:'center' }}" alt="{{ image.alt | escape }}">
             {% endfor %}
           {% endif %}
         </div>
