@@ -877,7 +877,7 @@ input#tab4:checked~.tab-content#content4 {
     margin-right: 10px
 }
 
-.review-select-group {
+.review-select-all {
     margin-bottom: 20px;
     display: grid;
     gap: 20px
@@ -995,16 +995,20 @@ input#tab4:checked~.tab-content#content4 {
     left: 1200px;
 }
 
-.reviewers-info{
-    display:grid
+.reviewers-info {
+    display: grid
 }
 
-.reviewers-info-title{
-    font-size:11px;color:#2E2A39  
+.reviewers-info-title {
+    font-size: 11px;
+    color: #2E2A39
 }
 
-.reviewers-info-age{
-    font-size:13px;color:#2E2A39;border-bottom: 1px dotted #ccc;width: 40px;
+.reviewers-info-age {
+    font-size: 13px;
+    color: #2E2A39;
+    border-bottom: 1px dotted #ccc;
+    width: 40px;
 }
 
 select {
