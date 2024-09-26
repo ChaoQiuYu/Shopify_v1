@@ -872,10 +872,18 @@ input#tab4:checked~.tab-content#content4 {
     box-shadow: 2px 3px 5px 0 #8888886b;
 }
 
-.review-write-btn svg{
-    color: #7069bc;margin-right:10px
+.review-write-btn svg {
+    color: #7069bc;
+    margin-right: 10px
 }
 
+.review-select-group{
+    margin-bottom: 20px;display:grid;gap:20px
+}
+
+.reviews-tab{
+    color:#7069bc;border-bottom:3px #7069bc solid;padding:15px;font-size:14px;font-weight:bold;width: 150px
+}
 
 select {
     padding: 10px;
