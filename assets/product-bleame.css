@@ -22,6 +22,10 @@ body {
     gap: 5px;
 }
 
+.product-rating-star{
+    color:#7069bc
+}
+
 /* 产品名 */
 .product-title {
     font-weight: 700
