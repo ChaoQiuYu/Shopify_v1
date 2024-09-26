@@ -1238,6 +1238,10 @@ select:focus {
     padding: 0px 40px 0px 40px;
 }
 
+.footer-list-all img{
+    filter: invert(1);
+}
+
 .footer-list {
     max-width: 325px;
 }
