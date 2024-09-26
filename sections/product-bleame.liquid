@@ -1333,12 +1333,12 @@
   <!-- You may also like -->
   <div class="also-like-all">
     <h1>You may also like</h1>
-    <div style="position:relative">
+    <div class="also-like-img">
       <img
         src="{{ product.featured_image | img_url}}"
         width="270"
         height="370">
-      <label style="background-color:rgba(0, 0, 0, 0.498);color:white;font-weight:700;font-size:12px;position: absolute;top: 20px;left: 20px;padding:10px;border-radius:10px">SAVE
+      <label class="also-like-discount">SAVE
         {{ current_variant.compare_at_price
           | minus: current_variant.price
           | times: 100
