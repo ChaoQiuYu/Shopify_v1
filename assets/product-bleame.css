@@ -507,6 +507,10 @@ input#tab4:checked~.tab-content#content4 {
     font-size: 18px
 }
 
+.hair-remove-center{
+    flex: 1
+}
+
 /* Hair removal just got waaaaay easier结束 */
 
 /* The Future Is Hair-Free */
