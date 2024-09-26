@@ -2,6 +2,17 @@ body {
     font-family: "Harmonia Sans", sans-serif;
 }
 
+.slider-img {
+    padding: 0px 10px 0px 10px;
+    border-radius: 20px;
+    height: 550px;
+}
+
+.slider-nav-img {
+    height: 100px;
+    border-radius: 15px;
+}
+
 .product-info-all {
     display: grid;
     gap: 16px;
@@ -22,11 +33,11 @@ body {
     gap: 5px;
 }
 
-.product-rating-star{
-    color:#7069bc
+.product-rating-star {
+    color: #7069bc
 }
 
-.product-rating-text{
+.product-rating-text {
     font-size: 16px;
 }
 
@@ -96,11 +107,11 @@ body {
     justify-content: space-between;
 }
 
-.custom-radio-last{
+.custom-radio-last {
     border-radius: 10px 10px 0px 0px
 }
 
-.custom-radio-other{
+.custom-radio-other {
     margin-bottom: 10px
 }
 
@@ -1246,7 +1257,7 @@ select:focus {
     padding: 0px 40px 0px 40px;
 }
 
-.footer-list-all img{
+.footer-list-all img {
     filter: invert(1);
 }
 
@@ -1295,7 +1306,7 @@ select:focus {
     margin-top: 50px
 }
 
-.footer-description a{
+.footer-description a {
     color: white;
     text-decoration: none;
 }
