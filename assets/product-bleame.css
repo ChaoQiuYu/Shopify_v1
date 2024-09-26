@@ -2,11 +2,15 @@ body {
     font-family: "Harmonia Sans", sans-serif;
 }
 
-.row-gap{
+.container-all {
+    padding: 0px 61px 0px 61px;
+}
+
+.row-gap {
     gap: 60px;
 }
 
-.product-slider-all{
+.product-slider-all {
     height: 600px;
 }
 
