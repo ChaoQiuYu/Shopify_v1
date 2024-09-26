@@ -1086,7 +1086,9 @@ select:focus {
     font-size: 17px;font-weight: 600;padding: 15px 24px 15px 24px
 }
 
-
+.questions-accordion-body{
+    font-size:14px; color: #696771;
+}
 .hair-free-container {
     width: 100%;
     /* Full viewport width */
