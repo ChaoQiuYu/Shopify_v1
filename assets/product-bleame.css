@@ -1221,6 +1221,22 @@ select:focus {
     left: 360px;
 }
 
+.footer-list{
+    max-width: 325px;
+}
+
+.footer-list h2{
+    color: #F4F1FF;margin-bottom: 20px;font-weight: 700;
+}
+
+.footer-list-ul{
+    list-style: none;padding: 0px;font-size: 16px;color: #F4F1FF;
+}
+
+.footer-list-ul li{
+    padding-bottom: 6px;
+}
+
 .hair-free-container {
     width: 100%;
     /* Full viewport width */
