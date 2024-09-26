@@ -1074,30 +1074,44 @@ select:focus {
     margin-top: 80px
 }
 
-.questions-all h1{
-    font-size:36px;font-weight:700
+.questions-all h1 {
+    font-size: 36px;
+    font-weight: 700
 }
 
-.questions-accordion{
-    font-size: 18px;width:1000px
+.questions-accordion {
+    font-size: 18px;
+    width: 1000px
 }
 
-.questions-btn{
-    font-size: 17px;font-weight: 600;padding: 15px 24px 15px 24px
+.questions-btn {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 15px 24px 15px 24px
 }
 
-.questions-accordion-body{
-    font-size:14px; color: #696771;
+.questions-accordion-body {
+    font-size: 14px;
+    color: #696771;
 }
+
 /* Questions? We’ve Got You Covered结束*/
 
 /* Try Us Risk Free */
-.try-free-all{
-    display:grid;gap:30px;justify-items: center;margin-top:80px 
+.try-free-all {
+    display: grid;
+    gap: 30px;
+    justify-items: center;
+    margin-top: 80px
 }
 
-.try-free-all text{
-    font-size:36px;font-weight:700 
+.try-free-all h1 {
+    font-size: 36px;
+    font-weight: 700
+}
+
+.try-free-group{
+    display:flex;gap:40px;width:100%
 }
 
 .hair-free-container {
