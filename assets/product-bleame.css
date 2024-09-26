@@ -946,6 +946,10 @@ input#tab4:checked~.tab-content#content4 {
     list-style:none;padding:0px
 }
 
+.reviewers-options li{
+    display: inline-block;margin-right:20px
+}
+
 select {
     padding: 10px;
     border-radius: 4px;
