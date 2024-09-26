@@ -1263,6 +1263,22 @@ select:focus {
     margin-top: 50px;
 }
 
+.footer-description {
+    margin-inline-start: 114px;
+    margin-inline-end: 114px;
+    font-size: 13px;
+    text-align: center;
+    display: inline-block;
+    border-bottom: 1px solid #f4f1ff14;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-top: 50px
+}
+
+.footer-description a{
+    
+}
+
 .hair-free-container {
     width: 100%;
     /* Full viewport width */
