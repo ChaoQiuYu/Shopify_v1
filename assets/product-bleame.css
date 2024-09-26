@@ -978,8 +978,21 @@ input#tab4:checked~.tab-content#content4 {
     border: 1px solid #7c7c7c
 }
 
-.reviewers-options-span{
-    width: 15px;height:15px;background-color:#696771;border-radius: 2px;position:absolute;margin-top: -12px;
+.reviewers-options-span {
+    width: 15px;
+    height: 15px;
+    background-color: #696771;
+    border-radius: 2px;
+    position: absolute;
+    margin-top: -12px;
+}
+
+.reviewers-options-first{
+    left: 600px;
+}
+
+.reviewers-options-second{
+    left:1200px;
 }
 
 select {
