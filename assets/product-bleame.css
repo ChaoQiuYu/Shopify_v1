@@ -1221,20 +1221,46 @@ select:focus {
     left: 360px;
 }
 
-.footer-list{
+.footer-list-all {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    margin-inline-start: 114px;
+    margin-inline-end: 114px;
+    padding: 0px 40px 0px 40px;
+}
+
+.footer-list {
     max-width: 325px;
 }
 
-.footer-list h2{
-    color: #F4F1FF;margin-bottom: 20px;font-weight: 700;
+.footer-list h2 {
+    color: #F4F1FF;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
-.footer-list-ul{
-    list-style: none;padding: 0px;font-size: 16px;color: #F4F1FF;
+.footer-list-ul {
+    list-style: none;
+    padding: 0px;
+    font-size: 16px;
+    color: #F4F1FF;
 }
 
-.footer-list-ul li{
+.footer-list-ul li {
     padding-bottom: 6px;
+}
+
+.footer-list-description {
+    font-size: 16px;
+    color: #F4F1FF;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
 }
 
 .hair-free-container {
