@@ -919,23 +919,31 @@ input#tab4:checked~.tab-content#content4 {
     display:flex;gap: 10px;
 }
 
-.reviews-content{
+.reviewers-content{
     display:grid;gap:30px
 }
 
-.reviews-name{
+.reviewers-name{
     font-size:14px;font-weight:700 
 }
 
-.reviews-verified{
+.reviewers-verified{
     font-size:14px;color: #1cc286;
 }
 
-.reciews-product-rating{
+.reviewers-product-rating{
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 25px;
+}
+
+.reviewers-product-rating svg{
+    color:#7069bc
+}
+
+.reviewers-options{
+    list-style:none;padding:0px
 }
 
 select {
