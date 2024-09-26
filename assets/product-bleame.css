@@ -1276,7 +1276,8 @@ select:focus {
 }
 
 .footer-description a{
-    
+    color: white;
+    text-decoration: none;
 }
 
 .hair-free-container {
