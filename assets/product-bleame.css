@@ -1221,6 +1221,10 @@ select:focus {
     left: 360px;
 }
 
+.footer-list{
+    max-width: 325px;
+}
+
 .hair-free-container {
     width: 100%;
     /* Full viewport width */
