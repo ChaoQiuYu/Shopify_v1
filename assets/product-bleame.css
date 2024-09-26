@@ -835,7 +835,7 @@ input#tab4:checked~.tab-content#content4 {
     position: relative
 }
 
-.review-options-scale-i {
+.review-options-scale i:nth-child(n+2):nth-last-child(n+2) {
     width: 1px;
     height: 8px;
     display: inline-block;
