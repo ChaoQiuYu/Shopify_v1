@@ -1110,9 +1110,25 @@ select:focus {
     font-weight: 700
 }
 
-.try-free-group{
-    display:flex;gap:40px;width:100%
+.try-free-group {
+    display: flex;
+    gap: 40px;
+    width: 100%
 }
+
+.try-free-img {
+    display: flex;
+    width: 33.33%;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.try-free-text {
+    font-size: 18px;
+    font-weight: 600;
+}
+/* Try Us Risk Free 结束*/
 
 .hair-free-container {
     width: 100%;
