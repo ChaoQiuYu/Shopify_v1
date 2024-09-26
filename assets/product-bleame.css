@@ -1026,15 +1026,14 @@ select:focus {
     width: 40px;
 }
 
-.reviewers-details h2{
-    font-size:15px;font-weight:700
+.reviewers-details h2 {
+    font-size: 15px;
+    font-weight: 700
 }
 
-.reviewers-details-text{
-    font-size:14px
+.reviewers-details-text {
+    font-size: 14px
 }
-
-
 
 .pagination {
     display: flex;
@@ -1064,6 +1063,7 @@ select:focus {
 .pagination a.active {
     font-weight: 700;
 }
+/* Reviews结束 */
 
 
 .hair-free-container {
