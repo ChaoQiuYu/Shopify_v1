@@ -75,10 +75,10 @@
             <!-- 折扣率 -->
             <span class="discount-rate">
               SAVE&nbsp;{{- current_variant.compare_at_price
- | minus: current_variant.price
- | times: 100
- | divided_by: current_variant.compare_at_price
--}}
+            | minus: current_variant.price
+            | times: 100
+            | divided_by: current_variant.compare_at_price
+            -}}
               %</span>
           </div>
         </div>
@@ -1327,9 +1327,8 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- You may also like -->
+      <!-- You may also like -->
   <div class="also-like-all">
     <h1>You may also like</h1>
     <div class="also-like-img">
@@ -1367,6 +1366,9 @@
       </div>
     </div>
   </div>
+  </div>
+
+
 
   <!-- footter -->
   <div class="footer-all">
