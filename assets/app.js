@@ -3363,7 +3363,7 @@ if (document.querySelector('.shopify-product-form')) {
 Vue.filter('money', function (value) {
   var sign = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '$';
   if (!value) return 0;
-  return sign + (value / 100).toFixed(2);
+  return sign + (value / 100).toFixed(0);
 });
 
 /***/ }),
@@ -3446,6 +3446,8 @@ $(".product-slider").slick({
   //不显示循环
   slidesToShow: 1,
   //显示一张幻灯片
+  centerMode: true,
+  // 启用中心模式
   asNavFor: '.product-slider-nav' //指定了与当前轮播关联的导航轮播（.product-slider-nav）。这意味着它们之间会同步滑动，当在主轮播中切换时，关联的导航轮播也会相应地切换。
 });
 $(".product-slider-nav").slick({
@@ -3459,6 +3461,10 @@ $(".product-slider-nav").slick({
   // 同时显示5张幻灯片
   asNavFor: ".product-slider",
   // 与指定的主轮播（`.product-slider`）关联
+  slidesToScroll: 1,
+  // 一次滚动1张幻灯片
+  centerMode: true,
+  // 启用中心模式
   focusOnSelect: true // 在导航元素上点击时，将焦点设置到相应的主轮播元素
 });
 
