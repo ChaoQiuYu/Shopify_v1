@@ -10,7 +10,8 @@
           {% if product.images.size >= 1 %}
             {% for image in product.images %}
               <div>
-                      <a href="{{ image.src | img_url: '480x4800' }}" data-thumbnail-id="{{ image.id }}" data-product-single-thumbnail{% if featured_image == image %} aria-current="true"{% endif %}>
+                      <a href="{{ image.src | img_url: '480x4800' }}" data-thumbnail-id="{{ image.id }}" 
+                    data-product-single-thumbnail{% if featured_image == image %} aria-current="true"{% endif %}>
                         <img class="img-fluid slider-img" src="{{ image.src | img_url: '600x550', crop:'center' }}" alt="{{ image.alt | escape }}" width="600">
                       </a>
                     </div>
@@ -1329,43 +1330,43 @@
     </div>
 
       <!-- You may also like -->
-  <div class="also-like-all">
-    <h1>You may also like</h1>
-    <div class="also-like-img">
-      <img
-        src="{{ product.featured_image | img_url}}"
-        width="270"
-        height="370">
-      <label class="also-like-discount">SAVE
-        {{ current_variant.compare_at_price
-          | minus: current_variant.price
-          | times: 100
-          | divided_by: current_variant.compare_at_price
-                  -}}
-        %</label>
-    </div>
-    <div>
-      <!-- 标题 -->
-      <a class="also-like-info-title">{{ product.title }}</a>
+    <div class="also-like-all">
+      <h1>You may also like</h1>
+      <div class="also-like-img">
+        <img
+          src="{{ product.featured_image | img_url}}"
+          width="270"
+          height="370">
+        <label class="also-like-discount">SAVE
+          {{ current_variant.compare_at_price
+            | minus: current_variant.price
+            | times: 100
+            | divided_by: current_variant.compare_at_price
+                    -}}
+          %</label>
+      </div>
+      <div>
+        <!-- 标题 -->
+        <a class="also-like-info-title">{{ product.title }}</a>
 
-      <!-- 价格列表 -->
-      <div data-price-wrapper>
-        <!-- 折扣价 -->
-        {% if product.compare_at_price_max > product.price %}
-          <s data-compare-price class="compare-price">
-            {% if current_variant.compare_at_price > current_variant.price %}
-              {{ current_variant.compare_at_price | money }}
-            {% endif %}
-          </s>
-        {% endif %}
+        <!-- 价格列表 -->
+        <div data-price-wrapper>
+          <!-- 折扣价 -->
+          {% if product.compare_at_price_max > product.price %}
+            <s data-compare-price class="compare-price">
+              {% if current_variant.compare_at_price > current_variant.price %}
+                {{ current_variant.compare_at_price | money }}
+              {% endif %}
+            </s>
+          {% endif %}
 
-        <!-- 原价 -->
-        <span data-product-price class="original-price">
-          {{ current_variant.price | money }}
-        </span>
+          <!-- 原价 -->
+          <span data-product-price class="original-price">
+            {{ current_variant.price | money }}
+          </span>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 
 
@@ -1432,7 +1433,9 @@
 
     <div class="footer-description">Safety precautions found at 
       <a href="http://bleame.com/MustKnows">Bleame.com/MustKnows</a> 
-      must be read before use. In case of discomfort, discontinue use immediately. Note that all content and resources provided on our website are not medical advice nor should they be used as a substitute for professional medical treatment. For medical concerns and/or emergencies, consult your health care provider and emergency services immediately.
+      must be read before use. In case of discomfort, discontinue use immediately. 
+      Note that all content and resources provided on our website are not medical advice nor should they be used as a substitute for professional medical treatment. 
+      For medical concerns and/or emergencies, consult your health care provider and emergency services immediately.
     </div>
   </div>
 
