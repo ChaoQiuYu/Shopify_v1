@@ -312,10 +312,10 @@
   console.log(items);
   items.forEach((item) => {
     item.addEventListener('mouseover', () => {
-      item.setAttribute('open', true);
-      item.querySelector('.dropdown-menu').addEventListener('mouseleave', () => {
-        item.removeAttribute('open');
-      });
+      item.querySelector.setAttribute('open', true);
+      // item.querySelector('.dropdown-menu').addEventListener('mouseleave', () => {
+      //   item.removeAttribute('open');
+      // });
       item.addEventListener('mouseleave', () => {
         item.removeAttribute('open');
       });
