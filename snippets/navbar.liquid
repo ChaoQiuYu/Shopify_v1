@@ -93,8 +93,13 @@
 
                         {% if image_url != blank %}
                           <a href="{{ link.url }}" class="menu-drawer__menu-item-link">
-                            <img src="{{ image_url }}" alt="{{ link.title | escape }}" class="menu-drawer__image" width=""
-                            height="">
+                            <img
+                              src="{{ image_url }}"
+                              alt="{{ link.title | escape }}"
+                              class="menu-drawer__image"
+                              width=""
+                              height=""
+                            >
                           </a>
                         {% endif %}
                       </div>
@@ -140,8 +145,12 @@
         </ul>
       </div>
       <a class="navbar-brand center-image" href="#">
-        <img src="{{section.settings.logo | img_url:'master' }}" alt="" width="{{section.settings.logo_max_width}}px"
-        height="">
+        <img
+          src="{{section.settings.logo | img_url:'master' }}"
+          alt=""
+          width="{{section.settings.logo_max_width}}px"
+          height=""
+        >
       </a>
     </div>
   </nav>
@@ -152,8 +161,12 @@
   >
     <div class="header-position-{{ section.settings.logo_position }}">
       <a class="navbar-brand" href="#">
-        <img src="{{section.settings.logo | img_url:'master' }}" alt="" width="{{section.settings.logo_max_width}}px"
-        height="">
+        <img
+          src="{{section.settings.logo | img_url:'master' }}"
+          alt=""
+          width="{{section.settings.logo_max_width}}px"
+          height=""
+        >
       </a>
       <button
         class="navbar-toggler"
@@ -255,8 +268,13 @@
 
                         {% if image_url != blank %}
                           <a href="{{ link.url }}" class="menu-drawer__menu-item-link">
-                            <img src="{{ image_url }}" alt="{{ link.title | escape }}" class="menu-drawer__image" width=""
-                            height="">
+                            <img
+                              src="{{ image_url }}"
+                              alt="{{ link.title | escape }}"
+                              class="menu-drawer__image"
+                              width=""
+                              height=""
+                            >
                           </a>
                         {% endif %}
                       </div>
@@ -312,12 +330,32 @@
   console.log(items);
   items.forEach((item) => {
     item.addEventListener('mouseover', () => {
-      item.querySelector('.dropdown-menu').style.display = 'block'; // 显示下拉框
+      item.setAttribute('open', true); // 设置属性以显示下拉框
     });
 
     item.addEventListener('mouseleave', () => {
-      item.querySelector('.dropdown-menu').style.display = 'none'; // 隐藏下拉框
+      item.removeAttribute('open'); // 移除属性以隐藏下拉框
     });
+
+    item.querySelector('.dropdown-menu').addEventListener('mouseleave', () => {
+      item.removeAttribute('open'); // 移除属性以隐藏下拉框
+    });
+    // item.addEventListener('mouseover', () => {
+    //   item.querySelector.setAttribute('open', true);
+    //   item.querySelector('.dropdown-menu').addEventListener('mouseleave', () => {
+    //     item.removeAttribute('open');
+    //   });
+    //   item.addEventListener('mouseleave', () => {
+    //     item.removeAttribute('open');
+    //   });
+    // });
+    // item.addEventListener('mouseover', () => {
+    //   item.querySelector('.dropdown-menu').style.display = 'block'; // 显示下拉框
+    // });
+
+    // item.addEventListener('mouseleave', () => {
+    //   item.querySelector('.dropdown-menu').style.display = 'none'; // 隐藏下拉框
+    // });
   });
 </script>
 
