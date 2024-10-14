@@ -330,15 +330,18 @@
   console.log(items);
   items.forEach((item) => {
     item.addEventListener('mouseover', () => {
-      item.setAttribute('open', true); // 设置属性以显示下拉框
+      item.setAttribute('open', true); // 显示下拉框
+      item.querySelector('.dropdown-menu').style.display = 'block'; // 确保下拉框显示
     });
 
     item.addEventListener('mouseleave', () => {
-      item.removeAttribute('open'); // 移除属性以隐藏下拉框
+      item.removeAttribute('open'); // 隐藏下拉框
+      item.querySelector('.dropdown-menu').style.display = 'none'; // 确保下拉框隐藏
     });
 
     item.querySelector('.dropdown-menu').addEventListener('mouseleave', () => {
-      item.removeAttribute('open'); // 移除属性以隐藏下拉框
+      item.removeAttribute('open'); // 隐藏下拉框
+      item.querySelector('.dropdown-menu').style.display = 'none'; // 确保下拉框隐藏
     });
     // item.addEventListener('mouseover', () => {
     //   item.querySelector.setAttribute('open', true);
