@@ -3505,6 +3505,10 @@ details-disclosure > details {
   top: 30px !important;
 }
 
-.btn-buy-it-now:hover {background:#a1a2ad  !important;}
+.btn-buy-it-now:hover {
+  background:#e8e1f0  !important;
+}
 
-.btn-add-to-cart:hover {background:#a1a2ad  !important;}
+.btn-add-to-cart:hover {
+  background:#e8e1f0  !important;
+}
