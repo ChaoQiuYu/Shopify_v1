@@ -3516,3 +3516,7 @@ details-disclosure > details {
 .dropdown-menu {
   background: #fcebf5 !important;
 }
+
+.page-title { 
+  display:none !important
+}
