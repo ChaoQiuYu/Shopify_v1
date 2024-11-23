@@ -47,6 +47,38 @@
                 {% endif %}
               </span>
           </button>
+          <button
+            type="button"
+            @click="addToCart" //点击调用addToCart方法
+            class="btn btn-primary"
+            name="add"
+            data-submit-button
+            {% unless current_variant.available %} disabled="disabled" {% endunless %}
+              style="width: 490px;background-color:#7069bc;justify-items:center;padding: 10px;">
+              <span data-submit-button-text style="font-size:18px;font-weight:700">
+                {% if current_variant.available %}
+                  ADD TO CART
+                {% else %}
+                  {{ 'products.product.sold_out' | t }}
+                {% endif %}
+              </span>
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            name="add"
+            data-submit-button
+            {% unless current_variant.available %} disabled="disabled" {% endunless %}
+              style="width: 490px;background-color:#7069bc;justify-items:center;padding: 10px;">
+              <span data-submit-button-text style="font-size:18px;font-weight:700">
+                {% if current_variant.available %}
+                  BUY IT NOW
+                {% else %}
+                  {{ 'products.product.sold_out' | t }}
+                {% endif %}
+              </span>
+          </button>
+
           {% if product.tags.size > 0 %}
             <div class="product-single__tags">
               <p>
