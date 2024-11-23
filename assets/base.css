@@ -3512,3 +3512,7 @@ details-disclosure > details {
 .btn-add-to-cart:hover {
   background:#e8e1f0  !important;
 }
+
+.dropdown-menu {
+  background: #000a7d !important;
+}
