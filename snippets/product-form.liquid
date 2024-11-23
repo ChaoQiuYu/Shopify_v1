@@ -47,14 +47,14 @@
                 {% endif %}
               </span>
           </button>
-         <div style="padding: 10px;"></div>
+
           <button
             type="button"
             class="btn btn-primary"
             name="add"
             data-submit-button
             {% unless current_variant.available %} disabled="disabled" {% endunless %}
-              style="width: 490px;background-color:#7069bc;justify-items:center;padding: 10px;">
+              style="width: 490px;background-color:#7069bc;justify-items:center;padding: 10px;margin-top:10px">
               <span data-submit-button-text style="font-size:18px;font-weight:700">
                 {% if current_variant.available %}
                   BUY IT NOW
