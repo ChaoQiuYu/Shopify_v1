@@ -7,9 +7,13 @@
     <meta name="theme-color" content="{{ settings.color_accent }}">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+
     {%- if settings.favicon != blank -%}
       <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
     {%- endif -%}
+
+
 
     <!-- Test comment -->
 
