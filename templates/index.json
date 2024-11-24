@@ -69,8 +69,7 @@
       "block_order": [
         "image_RjBraA"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "image-slider": {
       "type": "image-slider",
@@ -245,6 +244,35 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "raw_6F3qLR": {
+      "type": "raw",
+      "blocks": {
+        "text_tBRQVJ": {
+          "type": "text",
+          "settings": {
+            "title": "RAW Element",
+            "section_html": "<p>Here goes your JS or HTML code, so make sure to hit that like BUTTON</p>\n<button>点击</button>",
+            "heading_size": "large",
+            "text_alignment": "left"
+          }
+        },
+        "page_reNkfT": {
+          "type": "page",
+          "settings": {
+            "show_heading": true,
+            "heading_size": "large",
+            "page": "rapid-search-results"
+          }
+        }
+      },
+      "block_order": [
+        "text_tBRQVJ",
+        "page_reNkfT"
+      ],
+      "settings": {
+        "width": "regular"
+      }
     }
   },
   "order": [
@@ -253,6 +281,7 @@
     "image-slider",
     "pricing_table_tqRGhE",
     "featured_collection_E4jQCR",
-    "custom_liquid_aP7xqg"
+    "custom_liquid_aP7xqg",
+    "raw_6F3qLR"
   ]
 }
