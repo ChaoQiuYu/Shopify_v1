@@ -3520,3 +3520,7 @@ details-disclosure > details {
 .page-title { 
   display:none !important
 }
+
+.price-list.compare-price  {
+  color: #EE0000
+}
