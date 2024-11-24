@@ -3524,3 +3524,7 @@ details-disclosure > details {
 .price-list.compare-price  {
   color: #EE0000
 }
+
+.banner__box * {
+  color: #32a852;
+  }
