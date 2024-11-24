@@ -61,18 +61,19 @@
           <div data-price-wrapper class="my-2 price-list">
 
             <!-- 原价 -->
-            <span data-product-price class="original-price">
-              {{ current_variant.price | money }}
-            </span>
-
-            <!-- 折扣价 -->
             {% if product.compare_at_price_max > product.price %}
-              <s data-compare-price class="compare-price">
+              <s data-compare-price class="original-price">
                 {% if current_variant.compare_at_price > current_variant.price %}
                   {{ current_variant.compare_at_price | money }}
                 {% endif %}
               </s>
             {% endif %}
+
+            <!-- 折扣价 -->
+            <span data-product-price class="compare-price">
+              {{ current_variant.price | money }}
+            </span>
+           
 
             <!-- 折扣率 -->
             <span class="discount-rate">
