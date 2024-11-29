@@ -3549,7 +3549,7 @@ details-disclosure>details {
 }
 
 .btn-add-to-cart{
-  background: linear-gradient(90deg,rgba(9,229,255,1) 0%,rgba(117,115,255,1) 50%,rgba(239,0,255,1) 100%);
+  background: linear-gradient(90deg,rgba(247, 230, 239,1) 0%,rgba(117,115,255,1) 50%,rgba(239,0,255,1) 100%);
 }
 .btn-buy-it-now {
    background: linear-gradient(90deg,rgba(9,229,255,1) 0%,rgba(117,115,255,1) 50%,rgba(239,0,255,1) 100%);
