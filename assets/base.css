@@ -3547,3 +3547,8 @@ details-disclosure>details {
 .badge--bottom-left {
   background: #db8f96 !important;
 }
+
+.btn-buy-it-now {
+  background:#90f502  !important;
+  color: #f70525 !important;
+  } 
