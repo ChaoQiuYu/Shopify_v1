@@ -3528,3 +3528,10 @@ details-disclosure > details {
 .banner__box * {
   color: #f7d7da;
   }
+
+  .badge--bottom-left {
+    background: #0d7310 !important;
+    }
+    span.badge.price__badge-sale{
+    background: #0d7310 !important;
+    }
