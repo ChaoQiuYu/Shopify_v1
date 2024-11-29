@@ -13,8 +13,6 @@
       <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
     {%- endif -%}
 
-
-
     <!-- Test comment -->
 
     {%- capture seo_title -%}
@@ -304,6 +302,18 @@
     <style>
       .w-100 h1 {
         display: none;
+      }
+    </style>
+
+    <style>
+      .header__menu-item {
+        font-size: 18px !important;
+      }
+
+      @media (max-width: 749px) {
+        .menu-drawer__menu-item {
+          font-size: 12px !important;
+        }
       }
     </style>
   </body>
