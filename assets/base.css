@@ -3560,3 +3560,9 @@ details-disclosure>details {
 .btn-buy-it-now {
   background: linear-gradient(90deg, rgba(9, 229, 255, 1) 0%, rgba(117, 115, 255, 1) 50%, rgba(239, 0, 255, 1) 100%);
 }
+
+.videoBoxInfoBtn{
+  background: #2bbedf! important;
+  color: #20e742! important;
+  box-shadow: none! important;
+}
