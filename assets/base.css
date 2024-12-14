@@ -3566,3 +3566,7 @@ details-disclosure>details {
   color: white! important;
   box-shadow: none! important;
 }
+
+.rps_sticky_widget_top_right{
+  display: none !important
+}
