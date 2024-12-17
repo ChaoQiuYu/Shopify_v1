@@ -3570,3 +3570,7 @@ details-disclosure>details {
 .rps_sticky_widget_top_right{
   display: none !important
 }
+
+.navbar-nav:hover{
+  color: #f22e2e !important;
+}
