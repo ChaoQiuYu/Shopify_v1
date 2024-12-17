@@ -37,7 +37,7 @@
       {% if linklists[footer_linklist].links.size > 0 %}
         <ul class="nav justify-content-center">
           {% for link in linklists[footer_linklist].links %}
-            <li  class="nav-item"><a href="{{ link.url }}" >{{ link.title }}</a></li>
+            <li  class="nav-item"><a href="{{ link.url }}" class="nav-link active" >{{ link.title }}</a></li>
           {% endfor %}
         </ul>
       {% endif %}
