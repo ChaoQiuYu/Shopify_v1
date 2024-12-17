@@ -3571,6 +3571,6 @@ details-disclosure>details {
   display: none !important
 }
 
-.navbar-nav:hover{
+.nav-item:hover{
   color: #f22e2e !important;
 }
