@@ -3574,3 +3574,9 @@ details-disclosure>details {
 .nav-link:hover{
   color: #f5c1c1 !important;
 }
+
+@media screen and (min-width: 990px) {
+  .nav-link {
+      color: #fcba03 !important;
+  }
+}
