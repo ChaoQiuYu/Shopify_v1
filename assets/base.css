@@ -3561,22 +3561,26 @@ details-disclosure>details {
   background: linear-gradient(90deg, rgba(9, 229, 255, 1) 0%, rgba(117, 115, 255, 1) 50%, rgba(239, 0, 255, 1) 100%);
 }
 
-.imageBoxInfoBtn{
-  background: #e8c8d5! important;
-  color: white! important;
-  box-shadow: none! important;
+.imageBoxInfoBtn {
+  background: #e8c8d5 ! important;
+  color: white ! important;
+  box-shadow: none ! important;
 }
 
-.rps_sticky_widget_top_right{
+.rps_sticky_widget_top_right {
   display: none !important
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: #f5c1c1 !important;
 }
 
 @media screen and (min-width: 990px) {
   .nav-link {
-      color: #fcba03 !important;
+    color: #fcba03 !important;
+  }
+
+  .link {
+    color: #fcba03 !important;
   }
 }
