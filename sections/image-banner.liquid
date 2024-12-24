@@ -1,3 +1,31 @@
+{% if section.settings.link != blank %}
+ 
+  <a class="ezfy-custom-link" 
+     href="{{ section.settings.link }}"
+     {% if section.settings.new_tab %}target="_blank"{% endif %}
+     ></a>
+  <style>
+  .image-banner-section{
+      position: relative;
+  }
+   
+  #shopify-section-header{
+  z-index: 4 !important;
+  }
+   
+  .image-banner-section a.ezfy-custom-link{
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+  }
+  </style>
+  {% endif %}
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
