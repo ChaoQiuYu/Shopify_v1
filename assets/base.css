@@ -3584,3 +3584,7 @@ details-disclosure>details {
     color: #fcba03 !important;
   }
 }
+
+.header__icon--cart {
+  color: #EF333F !important;
+}
