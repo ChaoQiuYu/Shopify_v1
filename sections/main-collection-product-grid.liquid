@@ -1,3 +1,5 @@
+{% render 'rapid-search-results-template' %}
+{% render 'rapid-search-results-template-v2' %}
 <h1>{{ collection.title }} - {{ collection.all_products_count }}</h1>
 <div class="description">{{ collection.description }}this is description</div>
 {%  paginate  collection.products by 2 %} 
